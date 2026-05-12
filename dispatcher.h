@@ -42,3 +42,4 @@ void Dispatcher_Update(void);
 u8 Dispatcher_AssignTask(u8 call_floor, CallDirection_t call_dir);
 
 #endif /* DISPATCHER_H */
+/* DISPATCHER_H */
