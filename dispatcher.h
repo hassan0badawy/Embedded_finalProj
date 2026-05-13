@@ -1,7 +1,7 @@
 #ifndef DISPATCHER_H
 #define DISPATCHER_H
 
-#include "shared_types.h"
+#include "shared.h"
 
 /* ─────────────────────────────────────────
  * HALLWAY CALL DEFINITIONS
