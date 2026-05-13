@@ -13,18 +13,18 @@
  * RX Pin  : PA10 → Alternate Function 7 (USART1_RX)
  *
  * Baud    : 115200
- * fAPB2   : 84 MHz
- * BRR     : 84000000 / 115200 = 729.16
- *           → Mantissa = 729 (0x2D9)
- *           → Fraction = 0.16 × 16 = ~3 (0x3)
- *           → BRR = 0x2D93
+ * fAPB2   : 16 MHz
+ * BRR     : 16000000 / 115200 = 138.88
+ *           → Mantissa = 138 (0x08A)
+ *           → Fraction = 0.88 × 16 = ~14 (0xE)
+ *           → BRR = 0x08AE
  *
  * DMA     : DMA2, Stream 7, Channel 4 (USART1_TX)
  * ───────────────────────────────────────── */
 #define USART1_BASE_ADDR    0x40011000UL
 #define DMA2_BASE_ADDR      0x40026400UL
 
-#define UART_BRR_VALUE      0x2D93u     /* 115200 baud @ 84MHz APB2 */
+#define UART_BRR_VALUE      0x08AEu     /* 115200 baud @ 16MHz APB2 */
 #define UART_TX_BUF_SIZE    128u        /* Telemetry string max size */
 
 /* ─────────────────────────────────────────

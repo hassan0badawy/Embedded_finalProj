@@ -121,7 +121,7 @@ void TIM6_Init(void)
     /* Disable timer before configuring */
     CLEAR_BIT(TIM6->CR1, 0);
 
-    /* Set prescaler: 42MHz / (41999+1) = 1000Hz = 1kHz */
+    /* Set prescaler: 16MHz / (15999+1) = 1000Hz = 1kHz */
     TIM6->PSC = TIM6_PSC_VALUE;
 
     /* Set auto-reload: 1kHz / (499+1) = 2Hz = 500ms */

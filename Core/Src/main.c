@@ -169,7 +169,7 @@ int main(void)
      * INFINITE MAIN LOOP
      * ══════════════════════════════════════════════════════════════════════════
      *
-     * This loop runs at full CPU speed (84 MHz) with NO blocking calls.
+     * This loop runs at full CPU speed (16 MHz) with NO blocking calls.
      * All timing is managed by ISRs and non-blocking flags:
      *   - ISRs set flags: GSS.telem_flag, GSS.floor_request[]
      *   - Main loop reads flags, acts on them, clears them
@@ -292,8 +292,8 @@ int main(void)
  * ─────────────────────────────────────────────────────────────────────────────
  *
  * If you're using SysTick for timing, configure it for 50ms (20Hz):
- *   STM32F401VE @ 84MHz SysTick clock
- *   50ms = 0.050s → Count = 84MHz × 0.050 = 4,200,000
+ *   STM32F401VE @ 16MHz SysTick clock
+ *   50ms = 0.050s → Count = 16MHz × 0.050 = 800,000
  *
  * Uncomment and integrate if needed:
  *

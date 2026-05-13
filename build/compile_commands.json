@@ -1,97 +1,109 @@
 [
 {
   "directory": "D:/embedded final proj/Embedded_finalProj/build",
-  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=1 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -std=c11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -g -o CMakeFiles\\Embedded_finalProj_Master.elf.dir\\Core\\Src\\Elevator.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\Elevator.c\"",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=1 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -o CMakeFiles\\Embedded_finalProj_Master.elf.dir\\Core\\Src\\Elevator.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\Elevator.c\"",
   "file": "D:/embedded final proj/Embedded_finalProj/Core/Src/Elevator.c",
   "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/Elevator.c.obj"
 },
 {
   "directory": "D:/embedded final proj/Embedded_finalProj/build",
-  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=1 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -std=c11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -g -o CMakeFiles\\Embedded_finalProj_Master.elf.dir\\Core\\Src\\dispatcher.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\dispatcher.c\"",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=1 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -o CMakeFiles\\Embedded_finalProj_Master.elf.dir\\Core\\Src\\dispatcher.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\dispatcher.c\"",
   "file": "D:/embedded final proj/Embedded_finalProj/Core/Src/dispatcher.c",
   "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/dispatcher.c.obj"
 },
 {
   "directory": "D:/embedded final proj/Embedded_finalProj/build",
-  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=1 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -std=c11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -g -o CMakeFiles\\Embedded_finalProj_Master.elf.dir\\Core\\Src\\ipc.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\ipc.c\"",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=1 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -o CMakeFiles\\Embedded_finalProj_Master.elf.dir\\Core\\Src\\hallway_buttons.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\hallway_buttons.c\"",
+  "file": "D:/embedded final proj/Embedded_finalProj/Core/Src/hallway_buttons.c",
+  "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/hallway_buttons.c.obj"
+},
+{
+  "directory": "D:/embedded final proj/Embedded_finalProj/build",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=1 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -o CMakeFiles\\Embedded_finalProj_Master.elf.dir\\Core\\Src\\ipc.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\ipc.c\"",
   "file": "D:/embedded final proj/Embedded_finalProj/Core/Src/ipc.c",
   "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/ipc.c.obj"
 },
 {
   "directory": "D:/embedded final proj/Embedded_finalProj/build",
-  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=1 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -std=c11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -g -o CMakeFiles\\Embedded_finalProj_Master.elf.dir\\Core\\Src\\main.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\main.c\"",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=1 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -o CMakeFiles\\Embedded_finalProj_Master.elf.dir\\Core\\Src\\main.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\main.c\"",
   "file": "D:/embedded final proj/Embedded_finalProj/Core/Src/main.c",
   "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/main.c.obj"
 },
 {
   "directory": "D:/embedded final proj/Embedded_finalProj/build",
-  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=1 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -std=c11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -g -o CMakeFiles\\Embedded_finalProj_Master.elf.dir\\Core\\Src\\pwm.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\pwm.c\"",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=1 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -o CMakeFiles\\Embedded_finalProj_Master.elf.dir\\Core\\Src\\pwm.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\pwm.c\"",
   "file": "D:/embedded final proj/Embedded_finalProj/Core/Src/pwm.c",
   "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/pwm.c.obj"
 },
 {
   "directory": "D:/embedded final proj/Embedded_finalProj/build",
-  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=1 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -std=c11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -g -o CMakeFiles\\Embedded_finalProj_Master.elf.dir\\Core\\Src\\spi.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\spi.c\"",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=1 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -o CMakeFiles\\Embedded_finalProj_Master.elf.dir\\Core\\Src\\spi.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\spi.c\"",
   "file": "D:/embedded final proj/Embedded_finalProj/Core/Src/spi.c",
   "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/spi.c.obj"
 },
 {
   "directory": "D:/embedded final proj/Embedded_finalProj/build",
-  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=1 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -std=c11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -g -o CMakeFiles\\Embedded_finalProj_Master.elf.dir\\Core\\Src\\uart_dma.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\uart_dma.c\"",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=1 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -o CMakeFiles\\Embedded_finalProj_Master.elf.dir\\Core\\Src\\uart_dma.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\uart_dma.c\"",
   "file": "D:/embedded final proj/Embedded_finalProj/Core/Src/uart_dma.c",
   "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/uart_dma.c.obj"
 },
 {
   "directory": "D:/embedded final proj/Embedded_finalProj/build",
-  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=1 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -g -o CMakeFiles\\Embedded_finalProj_Master.elf.dir\\startup\\STM32F4xx\\STM32F401xE.s.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\startup\\STM32F4xx\\STM32F401xE.s\"",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=1 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -o CMakeFiles\\Embedded_finalProj_Master.elf.dir\\startup\\STM32F4xx\\STM32F401xE.s.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\startup\\STM32F4xx\\STM32F401xE.s\"",
   "file": "D:/embedded final proj/Embedded_finalProj/startup/STM32F4xx/STM32F401xE.s",
   "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Master.elf.dir/startup/STM32F4xx/STM32F401xE.s.obj"
 },
 {
   "directory": "D:/embedded final proj/Embedded_finalProj/build",
-  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=0 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -std=c11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -g -o CMakeFiles\\Embedded_finalProj_Slave.elf.dir\\Core\\Src\\Elevator.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\Elevator.c\"",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=0 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -o CMakeFiles\\Embedded_finalProj_Slave.elf.dir\\Core\\Src\\Elevator.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\Elevator.c\"",
   "file": "D:/embedded final proj/Embedded_finalProj/Core/Src/Elevator.c",
   "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/Elevator.c.obj"
 },
 {
   "directory": "D:/embedded final proj/Embedded_finalProj/build",
-  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=0 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -std=c11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -g -o CMakeFiles\\Embedded_finalProj_Slave.elf.dir\\Core\\Src\\dispatcher.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\dispatcher.c\"",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=0 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -o CMakeFiles\\Embedded_finalProj_Slave.elf.dir\\Core\\Src\\dispatcher.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\dispatcher.c\"",
   "file": "D:/embedded final proj/Embedded_finalProj/Core/Src/dispatcher.c",
   "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/dispatcher.c.obj"
 },
 {
   "directory": "D:/embedded final proj/Embedded_finalProj/build",
-  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=0 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -std=c11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -g -o CMakeFiles\\Embedded_finalProj_Slave.elf.dir\\Core\\Src\\ipc.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\ipc.c\"",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=0 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -o CMakeFiles\\Embedded_finalProj_Slave.elf.dir\\Core\\Src\\hallway_buttons.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\hallway_buttons.c\"",
+  "file": "D:/embedded final proj/Embedded_finalProj/Core/Src/hallway_buttons.c",
+  "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/hallway_buttons.c.obj"
+},
+{
+  "directory": "D:/embedded final proj/Embedded_finalProj/build",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=0 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -o CMakeFiles\\Embedded_finalProj_Slave.elf.dir\\Core\\Src\\ipc.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\ipc.c\"",
   "file": "D:/embedded final proj/Embedded_finalProj/Core/Src/ipc.c",
   "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/ipc.c.obj"
 },
 {
   "directory": "D:/embedded final proj/Embedded_finalProj/build",
-  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=0 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -std=c11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -g -o CMakeFiles\\Embedded_finalProj_Slave.elf.dir\\Core\\Src\\main.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\main.c\"",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=0 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -o CMakeFiles\\Embedded_finalProj_Slave.elf.dir\\Core\\Src\\main.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\main.c\"",
   "file": "D:/embedded final proj/Embedded_finalProj/Core/Src/main.c",
   "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/main.c.obj"
 },
 {
   "directory": "D:/embedded final proj/Embedded_finalProj/build",
-  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=0 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -std=c11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -g -o CMakeFiles\\Embedded_finalProj_Slave.elf.dir\\Core\\Src\\pwm.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\pwm.c\"",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=0 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -o CMakeFiles\\Embedded_finalProj_Slave.elf.dir\\Core\\Src\\pwm.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\pwm.c\"",
   "file": "D:/embedded final proj/Embedded_finalProj/Core/Src/pwm.c",
   "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/pwm.c.obj"
 },
 {
   "directory": "D:/embedded final proj/Embedded_finalProj/build",
-  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=0 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -std=c11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -g -o CMakeFiles\\Embedded_finalProj_Slave.elf.dir\\Core\\Src\\spi.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\spi.c\"",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=0 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -o CMakeFiles\\Embedded_finalProj_Slave.elf.dir\\Core\\Src\\spi.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\spi.c\"",
   "file": "D:/embedded final proj/Embedded_finalProj/Core/Src/spi.c",
   "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/spi.c.obj"
 },
 {
   "directory": "D:/embedded final proj/Embedded_finalProj/build",
-  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=0 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -std=c11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -g -o CMakeFiles\\Embedded_finalProj_Slave.elf.dir\\Core\\Src\\uart_dma.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\uart_dma.c\"",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=0 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -o CMakeFiles\\Embedded_finalProj_Slave.elf.dir\\Core\\Src\\uart_dma.c.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\Core\\Src\\uart_dma.c\"",
   "file": "D:/embedded final proj/Embedded_finalProj/Core/Src/uart_dma.c",
   "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/uart_dma.c.obj"
 },
 {
   "directory": "D:/embedded final proj/Embedded_finalProj/build",
-  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=0 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -g -o CMakeFiles\\Embedded_finalProj_Slave.elf.dir\\startup\\STM32F4xx\\STM32F401xE.s.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\startup\\STM32F4xx\\STM32F401xE.s\"",
+  "command": "C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe -DIS_MASTER=0 -I\"D:/embedded final proj/Embedded_finalProj/Core/Inc\" -I\"D:/embedded final proj/Embedded_finalProj/startup\" -g -o CMakeFiles\\Embedded_finalProj_Slave.elf.dir\\startup\\STM32F4xx\\STM32F401xE.s.obj -c \"D:\\embedded final proj\\Embedded_finalProj\\startup\\STM32F4xx\\STM32F401xE.s\"",
   "file": "D:/embedded final proj/Embedded_finalProj/startup/STM32F4xx/STM32F401xE.s",
   "output": "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Slave.elf.dir/startup/STM32F4xx/STM32F401xE.s.obj"
 }

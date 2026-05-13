@@ -82,7 +82,7 @@ static void SPI1_GPIO_Init(void)
  * CPOL=0, CPHA=0 (Mode 0)
  * 8-bit data, MSB first
  * Software NSS (SSM=1, SSI=1)
- * Baud = fPCLK2/16 ≈ 5.25MHz
+ * Baud = fPCLK2/4 = 4.0MHz
  * Interrupts: RXNE only
  *   (TX triggered per-transfer in TransmitReceive_IT)
  * ───────────────────────────────────────── */
@@ -109,8 +109,8 @@ void SPI_MasterInit(SPI_Handle_t *hSpi)
     hSpi->Instance->CR1 = 0;  /* Clear all first */
 
     /* CPOL=0, CPHA=0 → Mode 0 (bits 0,1 stay 0) */
-    /* Baud rate: BR[2:0] = 011 → fPCLK/16        */
-    hSpi->Instance->CR1 |= SPI_BAUD_DIV16;
+    /* Baud rate: BR[2:0] = 001 → fPCLK/4         */
+    hSpi->Instance->CR1 |= SPI_BAUD_DIV4;
     /* Master mode */
     SET_BIT(hSpi->Instance->CR1, SPI_CR1_MSTR);
     /* Software slave management — we control CS manually */

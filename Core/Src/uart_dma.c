@@ -14,7 +14,7 @@ volatile u8 UART_DMA_Busy = 0u;
  * Full initialization of USART1 + DMA2 Stream7.
  *
  * Clock sources:
- *   USART1 → APB2 @ 84MHz
+ *   USART1 → APB2 @ 16MHz
  *   DMA2   → AHB1
  *   GPIOA  → AHB1
  * ───────────────────────────────────────── */
@@ -54,7 +54,7 @@ void UART_DMA_Init(void)
     /* Disable USART before configuration */
     CLEAR_BIT(USART1->CR1, USART_CR1_UE);
 
-    /* Set baud rate: 115200 @ 84MHz APB2 */
+    /* Set baud rate: 115200 @ 16MHz APB2 */
     USART1->BRR = UART_BRR_VALUE;
 
     /* CR1: Enable TX, RX (no parity, 8-bit data, 1 stop bit = defaults) */

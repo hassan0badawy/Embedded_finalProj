@@ -119,13 +119,13 @@ typedef struct {
 /* ─────────────────────────────────────────
  * BASIC TIMER TIM6 — 500ms telemetry tick
  * ─────────────────────────────────────────
- * TIM6 is on APB1 (42MHz).
+ * TIM6 is on APB1 (16MHz).
  * We want a 500ms interrupt.
  *
  * Formula: T = (PSC+1)(ARR+1) / fCLK
- * 0.5s = (PSC+1)(ARR+1) / 42000000
- * (PSC+1)(ARR+1) = 21000000
- * Choose: PSC = 41999 → divides by 42000 → 1kHz tick
+ * 0.5s = (PSC+1)(ARR+1) / 16000000
+ * (PSC+1)(ARR+1) = 8000000
+ * Choose: PSC = 15999 → divides by 16000 → 1kHz tick
  *         ARR = 499   → 500 ticks → 500ms
  * ───────────────────────────────────────── */
 #define TIM6_BASE_ADDR      0x40001000UL
@@ -144,7 +144,7 @@ typedef struct {
 } TIM6_RegDef_t;
 
 #define TIM6                ((TIM6_RegDef_t *) TIM6_BASE_ADDR)
-#define TIM6_PSC_VALUE      41999u  /* 42MHz / 42000 = 1kHz tick */
+#define TIM6_PSC_VALUE      15999u  /* 16MHz / 16000 = 1kHz tick */
 #define TIM6_ARR_VALUE      499u    /* 1kHz / 500    = 2Hz = 500ms */
 #define TIM6_IRQn           54      /* TIM6 and DAC IRQ number */
 #define RCC_APB1ENR_TIM6EN  (1u << 4)

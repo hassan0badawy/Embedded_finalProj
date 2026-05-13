@@ -15,9 +15,9 @@
  *   PA7 → MOSI
  * ───────────────────────────────────────── */
 
-/* Baud rate: fPCLK2/16 → 84MHz/16 = 5.25MHz
- * BR[2:0] = 011 for divide by 16             */
-#define SPI_BAUD_DIV16      (0x3UL << SPI_CR1_BR0)
+/* Baud rate: fPCLK2/4 → 16MHz/4 = 4.0MHz
+ * BR[2:0] = 001 for divide by 4              */
+#define SPI_BAUD_DIV4       (0x1UL << SPI_CR1_BR0)
 
 /* ─────────────────────────────────────────
  * SPI PACKET SIZE

@@ -58,7 +58,7 @@ void PWM_Init(void)
     /* Disable counter while configuring */
     CLEAR_BIT(PWM_TIM->CR1, TIM_CR1_CEN);
 
-    /* Set prescaler: divides 84MHz by (83+1) = 1 MHz tick */
+    /* Set prescaler: divides 16MHz by (15+1) = 1 MHz tick */
     PWM_TIM->PSC = PWM_PSC;
 
     /* Set auto-reload: 100 ticks per PWM period → 1MHz/100 = 10kHz */
