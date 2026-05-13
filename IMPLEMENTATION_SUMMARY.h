@@ -418,6 +418,25 @@
  * SUMMARY: System design is COMPLETE and CORRECT for deployment.
  *          All ISRs and main loop verified per requirements.
  *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * HARDWARE PINOUT MAPPING (STM32F401VE)
+ * ─────────────────────────────────────────────────────────────────────────────
+ *  Actuators & Communications:
+ *    - PWM Motor Simulation:    PA8 (TIM1_CH1)
+ *    - UART2 Telemetry (DMA):   PA2 (TX), PA3 (RX)
+ *    - SPI1 IPC (Master/Slave): PA5 (SCK), PA6 (MISO), PA7 (MOSI), PA4 (CS)
+ *
+ *  Inputs (Sensors & Buttons):
+ *    - Emergency Stop:          PD0  (EXTI0 - Highest Priority)
+ *    - Floor 1 Sensor:          PC0  (Polled in main to avoid EXTI0 conflict)
+ *    - Floor 2 Sensor:          PC1  (EXTI1)
+ *    - Floor 3 Sensor:          PC2  (EXTI2)
+ *    - Floor 4 Sensor:          PC3  (EXTI3)
+ *    - Cabin F1 Button:         PA0  (Polled in main to avoid EXTI0 conflict)
+ *    - Cabin F2 Button:         PA1  (Polled in main to avoid EXTI1 conflict)
+ *    - Cabin F3 Button:         PA4  (EXTI4)
+ *    - Cabin F4 Button:         PA5  (EXTI5)
+ *    - Hallway Calls (U1-D4):   PB6, PB7, PB8, PB9, PB10, PB12 (EXTI multi-lines)
+ *
  * ═════════════════════════════════════════════════════════════════════════════
  */
-

@@ -32,12 +32,13 @@
  */
 
 #include "std_types.h"
-#include "Elevator/Elevator.h"
-#include "uart_DMA/uart_dma.h"
-#include "PWM/pwm.h"
-#include "IPC/ipc.h"
-#include "SPI/spi.h"
+#include "Elevator.h"
+#include "uart_dma.h"
+#include "pwm.h"
+#include "ipc.h"
+#include "spi.h"
 #include "Bit_Math.h"
+#include "dispatcher.h"
 
 /* ─────────────────────────────────────────────────────────────────────────────
  * POLLING HELPERS (for unpinned pins: PC0=F1 sensor, PA0/PA1=cabin buttons)
@@ -134,6 +135,7 @@ int main(void)
      *   - Initialize IPC/SPI (Slave controller link)
      */
     Elevator_Init();
+    Dispatcher_Init();
 
     /*
      * Step 2: Configure this MCU as SPI Master in IPC layer
@@ -174,6 +176,7 @@ int main(void)
          *   - Better responsiveness if main loop can preempt FSM updates
          */
         Elevator_Update();
+        Dispatcher_Update();
 
         /* ──────────────────────────────────────────────────────────────────
          * STEP 2: Telemetry Transmission (500ms cadence via TIM6)

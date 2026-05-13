@@ -1,4 +1,4 @@
-#include "elevator.h"
+#include "Elevator.h"
 #include "shared.h"
 #include "Bit_Math.h"
 #include <stdarg.h>     /* va_list for ELV_Sprintf */
