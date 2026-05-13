@@ -177,7 +177,6 @@ void EXTI_Init(void)
      *
      * PD0  — E-Stop
      * PC1,PC2,PC3 — Floor sensors
-     * PA4,PA5  — Cabin buttons
      * PB6,PB7,PB8,PB9,PB10,PB12 — Hall buttons
      */
 
@@ -188,10 +187,6 @@ void EXTI_Init(void)
     /* PC1, PC2, PC3 — pull-up */
     GPIOC->PUPDR &= ~((0x3UL << 2) | (0x3UL << 4) | (0x3UL << 6));
     GPIOC->PUPDR |=  ((0x1UL << 2) | (0x1UL << 4) | (0x1UL << 6));
-
-    /* PA4, PA5 — pull-up */
-    GPIOA->PUPDR &= ~((0x3UL << 8) | (0x3UL << 10));
-    GPIOA->PUPDR |=  ((0x1UL << 8) | (0x1UL << 10));
 
     /* PB6,PB7,PB8,PB9,PB10,PB12 — pull-up */
     GPIOB->PUPDR &= ~((0x3UL << 12) | (0x3UL << 14) | (0x3UL << 16) |
@@ -210,8 +205,6 @@ void EXTI_Init(void)
      *   EXTI1  → PC (0x2)  Floor sensor F2
      *   EXTI2  → PC (0x2)  Floor sensor F3
      *   EXTI3  → PC (0x2)  Floor sensor F4
-     *   EXTI4  → PA (0x0)  Cabin button F3
-     *   EXTI5  → PA (0x0)  Cabin button F4
      *   EXTI6  → PB (0x1)  Hall button
      *   EXTI7  → PB (0x1)  Hall button
      *   EXTI8  → PB (0x1)  Hall button
@@ -227,10 +220,8 @@ void EXTI_Init(void)
     SYSCFG->EXTICR[0] |= (SYSCFG_PORT_C << 8);   /* EXTI2 bits [11:8]  */
     SYSCFG->EXTICR[0] |= (SYSCFG_PORT_C << 12);  /* EXTI3 bits [15:12] */
 
-    /* EXTICR[1]: EXTI4=PA(0), EXTI5=PA(0), EXTI6=PB(1), EXTI7=PB(1) */
+    /* EXTICR[1]: EXTI6=PB(1), EXTI7=PB(1) */
     SYSCFG->EXTICR[1]  = 0u;
-    SYSCFG->EXTICR[1] |= (SYSCFG_PORT_A << 0);   /* EXTI4 bits [3:0]   */
-    SYSCFG->EXTICR[1] |= (SYSCFG_PORT_A << 4);   /* EXTI5 bits [7:4]   */
     SYSCFG->EXTICR[1] |= (SYSCFG_PORT_B << 8);   /* EXTI6 bits [11:8]  */
     SYSCFG->EXTICR[1] |= (SYSCFG_PORT_B << 12);  /* EXTI7 bits [15:12] */
 
@@ -251,8 +242,6 @@ void EXTI_Init(void)
     EXTI->FTSR |= (1UL << 1);    /* EXTI1  — Floor sensor PC1  */
     EXTI->FTSR |= (1UL << 2);    /* EXTI2  — Floor sensor PC2  */
     EXTI->FTSR |= (1UL << 3);    /* EXTI3  — Floor sensor PC3  */
-    EXTI->FTSR |= (1UL << 4);    /* EXTI4  — Cabin button PA4  */
-    EXTI->FTSR |= (1UL << 5);    /* EXTI5  — Cabin button PA5  */
     EXTI->FTSR |= (1UL << 6);    /* EXTI6  — Hall button PB6   */
     EXTI->FTSR |= (1UL << 7);    /* EXTI7  — Hall button PB7   */
     EXTI->FTSR |= (1UL << 8);    /* EXTI8  — Hall button PB8   */
@@ -267,8 +256,6 @@ void EXTI_Init(void)
     EXTI->IMR |= (1UL << 1);
     EXTI->IMR |= (1UL << 2);
     EXTI->IMR |= (1UL << 3);
-    EXTI->IMR |= (1UL << 4);
-    EXTI->IMR |= (1UL << 5);
     EXTI->IMR |= (1UL << 6);
     EXTI->IMR |= (1UL << 7);
     EXTI->IMR |= (1UL << 8);
@@ -294,11 +281,7 @@ void EXTI_Init(void)
     NVIC_SET_PRIORITY(IRQ_EXTI3, 2);
     NVIC_ENABLE_IRQ(IRQ_EXTI3);
 
-    /* EXTI4 — Cabin Button PA4 — priority 3 */
-    NVIC_SET_PRIORITY(IRQ_EXTI4, 3);
-    NVIC_ENABLE_IRQ(IRQ_EXTI4);
-
-    /* EXTI9_5 — Cabin PA5, Hall PB6–PB9 — priority 3 */
+    /* EXTI9_5 — Hall PB6–PB9 — priority 3 */
     NVIC_SET_PRIORITY(IRQ_EXTI9_5, 3);
     NVIC_ENABLE_IRQ(IRQ_EXTI9_5);
 
@@ -670,7 +653,6 @@ void System_Logger(void)
  * Responsibilities:
  *   Line 0      → E-Stop: latch emergency, kill PWM
  *   Lines 1–3   → Floor sensors: update position
- *   Lines 4–5   → Cabin buttons: set floor_request
  *   Lines 6–12  → Hallway buttons: set floor_request
  *
  * No debounce hardware assumed — a 1ms software
@@ -720,22 +702,6 @@ void EXTI_Callback(u8 exti_line)
         case 3u:
         {
             GSS.position = 3u;   /* Arrived at floor 4 */
-            break;
-        }
-
-        /* ── LINES 4–5: Cabin Buttons (PA4=F3, PA5=F4) ──
-         * Cabin button pressed → request that floor.
-         * PA4 → floor 2 request (0-indexed)
-         * PA5 → floor 3 request
-         */
-        case 4u:
-        {
-            GSS.floor_request[2u] = 1u;  /* Cabin button → F3 */
-            break;
-        }
-        case 5u:
-        {
-            GSS.floor_request[3u] = 1u;  /* Cabin button → F4 */
             break;
         }
 

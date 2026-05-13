@@ -8,23 +8,23 @@
 /* ─────────────────────────────────────────
  * UART + DMA HARDWARE MAPPING
  * ─────────────────────────────────────────
- * UART    : USART2 (APB1)
- * TX Pin  : PA2 → Alternate Function 7 (USART2_TX)
- * RX Pin  : PA3 → Alternate Function 7 (USART2_RX)
+ * UART    : USART1 (APB2)
+ * TX Pin  : PA9 → Alternate Function 7 (USART1_TX)
+ * RX Pin  : PA10 → Alternate Function 7 (USART1_RX)
  *
  * Baud    : 115200
- * fAPB1   : 42 MHz (84MHz / 2)
- * BRR     : 42000000 / 115200 = 364.58
- *           → Mantissa = 364 (0x16C)
- *           → Fraction = 0.58 × 16 = ~9 (0x9)
- *           → BRR = 0x16C9
+ * fAPB2   : 84 MHz
+ * BRR     : 84000000 / 115200 = 729.16
+ *           → Mantissa = 729 (0x2D9)
+ *           → Fraction = 0.16 × 16 = ~3 (0x3)
+ *           → BRR = 0x2D93
  *
- * DMA     : DMA1, Stream 6, Channel 4 (USART2_TX)
+ * DMA     : DMA2, Stream 7, Channel 4 (USART1_TX)
  * ───────────────────────────────────────── */
-#define USART2_BASE_ADDR    0x40004400UL
-#define DMA1_BASE_ADDR      0x40026000UL
+#define USART1_BASE_ADDR    0x40011000UL
+#define DMA2_BASE_ADDR      0x40026400UL
 
-#define UART_BRR_VALUE      0x16C9u     /* 115200 baud @ 42MHz APB1 */
+#define UART_BRR_VALUE      0x2D93u     /* 115200 baud @ 84MHz APB2 */
 #define UART_TX_BUF_SIZE    128u        /* Telemetry string max size */
 
 /* ─────────────────────────────────────────
@@ -40,7 +40,7 @@ typedef struct {
     volatile u32 GTPR;      /* 0x18  Guard time & prescaler      */
 } USART_RegDef_t;
 
-#define USART2              ((USART_RegDef_t *) USART2_BASE_ADDR)
+#define USART1              ((USART_RegDef_t *) USART1_BASE_ADDR)
 
 /* ─────────────────────────────────────────
  * USART CR1 BIT POSITIONS
@@ -61,9 +61,9 @@ typedef struct {
 #define USART_SR_TXE        7   /* TX data register empty            */
 
 /* ─────────────────────────────────────────
- * DMA1 REGISTER STRUCTS
+ * DMA2 REGISTER STRUCTS
  * ─────────────────────────────────────────
- * DMA1 has 8 streams (Stream 0–7).
+ * DMA2 has 8 streams (Stream 0–7).
  * Each stream has its own register set.
  * Interrupt status is in LISR/HISR/LIFCR/HIFCR.
  * ───────────────────────────────────────── */
@@ -84,9 +84,9 @@ typedef struct {
     DMA_Stream_RegDef_t Stream[8]; /* Streams 0–7               */
 } DMA_RegDef_t;
 
-#define DMA1                ((DMA_RegDef_t *) DMA1_BASE_ADDR)
-/* USART2_TX → DMA1 Stream 6 */
-#define DMA1_S6             (&DMA1->Stream[6])
+#define DMA2                ((DMA_RegDef_t *) DMA2_BASE_ADDR)
+/* USART1_TX → DMA2 Stream 7 */
+#define DMA2_S7             (&DMA2->Stream[7])
 
 /* ─────────────────────────────────────────
  * DMA STREAM CR BIT POSITIONS
@@ -113,21 +113,21 @@ typedef struct {
 #define DMA_CH4_SELECT          (0x4UL << DMA_CR_CHSEL0)
 
 /* ─────────────────────────────────────────
- * DMA1 HISR / HIFCR bits for Stream 6
+ * DMA2 HISR / HIFCR bits for Stream 7
  * Streams 4–7 are in the HIGH status register.
- * Stream 6 bits start at offset 16 in HISR.
+ * Stream 7 bits start at offset 22 in HISR.
  * ───────────────────────────────────────── */
-#define DMA_S6_TCIF_BIT     21  /* Transfer complete flag  (HISR)    */
-#define DMA_S6_HTIF_BIT     20  /* Half transfer flag      (HISR)    */
-#define DMA_S6_TEIF_BIT     19  /* Transfer error flag     (HISR)    */
-#define DMA_S6_DMEIF_BIT    18  /* Direct mode error flag  (HISR)    */
-#define DMA_S6_FEIF_BIT     16  /* FIFO error flag         (HISR)    */
+#define DMA_S7_TCIF_BIT     27  /* Transfer complete flag  (HISR)    */
+#define DMA_S7_HTIF_BIT     26  /* Half transfer flag      (HISR)    */
+#define DMA_S7_TEIF_BIT     25  /* Transfer error flag     (HISR)    */
+#define DMA_S7_DMEIF_BIT    24  /* Direct mode error flag  (HISR)    */
+#define DMA_S7_FEIF_BIT     22  /* FIFO error flag         (HISR)    */
 
 /* ─────────────────────────────────────────
  * IRQ NUMBERS FOR UART + DMA
  * ───────────────────────────────────────── */
-#define IRQ_DMA1_STREAM6    17  /* DMA1 Stream6 global interrupt     */
-#define IRQ_USART2          38  /* USART2 global interrupt           */
+#define IRQ_DMA2_STREAM7    70  /* DMA2 Stream7 global interrupt     */
+#define IRQ_USART1          37  /* USART1 global interrupt           */
 
 /* ─────────────────────────────────────────
  * GLOBAL TX BUFFER (filled by System_Logger)
@@ -142,8 +142,8 @@ extern volatile u8  UART_DMA_Busy;   /* 1 = DMA transfer in progress */
 /*
  * UART_DMA_Init()
  * ───────────────
- * Initializes USART2 (PA2/PA3) at 115200 baud
- * and configures DMA1 Stream6 Ch4 for TX.
+ * Initializes USART1 (PA9/PA10) at 115200 baud
+ * and configures DMA2 Stream7 Ch4 for TX.
  * Call once in main() at startup.
  */
 void UART_DMA_Init(void);
@@ -152,16 +152,16 @@ void UART_DMA_Init(void);
  * UART_DMA_Transmit()
  * ────────────────────
  * Starts a non-blocking DMA transfer of 'len'
- * bytes from UART_TxBuf to USART2->DR.
+ * bytes from UART_TxBuf to USART1->DR.
  * Returns immediately. Sets UART_DMA_Busy=1.
- * DMA1_Stream6_IRQHandler clears it when done.
+ * DMA2_Stream7_IRQHandler clears it when done.
  *
  * Parameters:
  *   len → number of bytes to transmit
  */
 void UART_DMA_Transmit(u8 len);
 
-/* DMA1 Stream6 IRQ handler — clears TC flag */
-void DMA1_Stream6_IRQHandler(void);
+/* DMA2 Stream7 IRQ handler — clears TC flag */
+void DMA2_Stream7_IRQHandler(void);
 
 #endif /* UART_DMA_H */
