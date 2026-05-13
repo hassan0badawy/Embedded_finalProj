@@ -3,6 +3,20 @@
 
 #include "std_types.h"
 
+/* CMSIS intrinsics — inline ARM assembly replacements */
+static inline u32 __get_PRIMASK(void) {
+    u32 result;
+    __asm volatile ("MRS %0, primask" : "=r"(result));
+    return result;
+}
+static inline void __disable_irq(void) {
+    __asm volatile ("CPSID I" ::: "memory");
+}
+static inline void __set_PRIMASK(u32 priMask) {
+    __asm volatile ("MSR primask, %0" :: "r"(priMask) : "memory");
+}
+
+
 /* ─────────────────────────────────────────
  * BASE ADDRESSES
  * ───────────────────────────────────────── */
@@ -82,6 +96,60 @@ typedef struct {
 #define SPI_SR_MODF         5   /* Mode fault               */
 #define SPI_SR_OVR          6   /* Overrun flag             */
 #define SPI_SR_BSY          7   /* Busy flag                */
+
+
+/* ── TIMER REGISTER STRUCT ── */
+typedef struct {
+    volatile u32 CR1;
+    volatile u32 CR2;
+    volatile u32 SMCR;
+    volatile u32 DIER;
+    volatile u32 SR;
+    volatile u32 EGR;
+    volatile u32 CCMR1;
+    volatile u32 CCMR2;
+    volatile u32 CCER;
+    volatile u32 CNT;
+    volatile u32 PSC;
+    volatile u32 ARR;
+    volatile u32 RCR;
+    volatile u32 CCR1;
+    volatile u32 CCR2;
+    volatile u32 CCR3;
+    volatile u32 CCR4;
+    volatile u32 BDTR;
+    volatile u32 DCR;
+    volatile u32 DMAR;
+} TIM_RegDef_t;
+
+#define TIM1_BASE           (APB2_BASE + 0x0000UL)
+#define TIM2_BASE           (APB1_BASE + 0x0000UL)
+
+
+#define TIM1                ((TIM_RegDef_t *) TIM1_BASE)
+#define TIM2                ((TIM_RegDef_t *) TIM2_BASE)
+
+
+/* TIM CR1 bits */
+#define TIM_CR1_CEN         0u
+#define TIM_CR1_ARPE        7u
+
+/* TIM CCMR1 bits */
+#define TIM_OC_PWM_MODE1    (0x6UL << 4)   /* OC1M = 110 in bits [6:4] */
+#define TIM_CCMR1_OC1PE     3u
+
+/* TIM CCER bits */
+#define TIM_CCER_CC1E       0u
+
+/* TIM BDTR bits */
+#define TIM_BDTR_MOE        15u
+
+/* RCC APB1ENR bits for timers */
+#define RCC_APB1ENR_TIM2EN  (1u << 0)
+#define RCC_APB1ENR_TIM6EN  (1u << 4)
+/* RCC APB2ENR bit for TIM1 already defined above with SPI1 */
+#define RCC_APB2ENR_TIM1EN  (1u << 0)
+
 
 /* ─────────────────────────────────────────
  * RCC APB2ENR BIT for SPI1
