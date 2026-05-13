@@ -38,7 +38,7 @@ set(TARGETS ${PROJECT_NAME}_Master.elf ${PROJECT_NAME}_Slave.elf)
 foreach(TARGET_NAME ${TARGETS})
     add_executable(${TARGET_NAME} ${SOURCES} ${ASM_SOURCES})
 
-    if(CMAKE_SYSTEM_PROCESSOR STREQUAL "arm")
+    if(TRUE)
         target_compile_options(${TARGET_NAME} PRIVATE
             -mcpu=cortex-m4
             -mthumb
