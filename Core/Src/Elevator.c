@@ -99,8 +99,7 @@ void Elevator_Init(void)
     /* ── 5. Basic timer TIM6 for 500ms telemetry flag ── */
     TIM6_Init();
 
-    /* ── 6. IPC/SPI layer (this MCU = Master) ── */
-    IPC_Init(1u);  /* 1 = Master */
+    /* ── 6. IPC/SPI layer: initialized by caller (main) ── */
 }
 
 /* ─────────────────────────────────────────
@@ -187,6 +186,14 @@ void EXTI_Init(void)
     /* PC1, PC2, PC3 — pull-up */
     GPIOC->PUPDR &= ~((0x3UL << 2) | (0x3UL << 4) | (0x3UL << 6));
     GPIOC->PUPDR |=  ((0x1UL << 2) | (0x1UL << 4) | (0x1UL << 6));
+
+    /* PC0 — floor sensor F1 (polled) */
+    GPIOC->PUPDR &= ~(0x3UL << 0);
+    GPIOC->PUPDR |=  (0x1UL << 0);
+
+    /* PA0..PA3 — cabin buttons (polled) */
+    GPIOA->PUPDR &= ~((0x3UL << 0) | (0x3UL << 2) | (0x3UL << 4) | (0x3UL << 6));
+    GPIOA->PUPDR |=  ((0x1UL << 0) | (0x1UL << 2) | (0x1UL << 4) | (0x1UL << 6));
 
     /* PB6,PB7,PB8,PB9,PB10,PB12 — pull-up */
     GPIOB->PUPDR &= ~((0x3UL << 12) | (0x3UL << 14) | (0x3UL << 16) |

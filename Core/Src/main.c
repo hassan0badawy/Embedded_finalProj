@@ -40,6 +40,7 @@
 #include "Bit_Math.h"
 #include "dispatcher.h"
 
+
 /* ─────────────────────────────────────────────────────────────────────────────
  * POLLING HELPERS (for unpinned pins: PC0=F1 sensor, PA0/PA1=cabin buttons)
  * ─────────────────────────────────────────────────────────────────────────────
@@ -163,7 +164,25 @@ int main(void)
      *   - Enables SPI1 with DMA
      *   - Starts periodic SPI exchanges (if SysTick is configured)
      */
-    IPC_Init(1u);  /* 1 = Master mode; 0 = Slave mode */
+    /* IPC role determined by build definition `IS_MASTER` set in CMake */
+#if defined(IS_MASTER) && (IS_MASTER == 1)
+    IPC_Init(1u);  /* Master */
+#else
+    IPC_Init(0u);  /* Slave */
+#endif
+
+    /* Configure SysTick to drive IPC_Update() every 50ms */
+    {
+        /* Cortex-M SysTick registers */
+        volatile uint32_t *SYST_CSR = (uint32_t *)0xE000E010UL;
+        volatile uint32_t *SYST_RVR = (uint32_t *)0xE000E014UL;
+        volatile uint32_t *SYST_CVR = (uint32_t *)0xE000E018UL;
+        const uint32_t reload = 800000UL - 1UL; /* 16MHz * 0.05s - 1 */
+        *SYST_RVR = reload;
+        *SYST_CVR = 0UL;
+        /* Enable SysTick: CLKSOURCE=Core, TICKINT=1, ENABLE=1 */
+        *SYST_CSR = (1UL << 2) | (1UL << 1) | (1UL << 0);
+    }
 
     /* ══════════════════════════════════════════════════════════════════════════
      * INFINITE MAIN LOOP
@@ -301,15 +320,13 @@ int main(void)
  *   
  *   void SysTick_Handler(void)
  *   {
- *       systick_count++;
- *       
- *       // IPC 50ms tick
- *       if (systick_count >= 1)  // 50ms = 1 tick
- *       {
- *           IPC_Update();
- *           systick_count = 0;
- *       }
+ *       // Simple 50ms ticker: call IPC_Update() each SysTick
  *   }
+
+void SysTick_Handler(void)
+{
+    IPC_Update();
+}
  *
  * ─────────────────────────────────────────────────────────────────────────────
  */
