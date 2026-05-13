@@ -507,10 +507,11 @@ void Elevator_Update(void)
         {
             PWM_SetDuty(PWM_DUTY_STOP);
 
-            /* Use telem_flag as our 500ms tick source */
-            if (GSS.telem_flag)
+            /* Use a one-shot telem_tick as our 500ms tick source */
+            if (GSS.telem_tick)
             {
                 door_tick_count++;
+                GSS.telem_tick = 0u; /* consume one-shot tick */
             }
 
             if (door_tick_count >= DOOR_OPEN_TICKS)
@@ -674,8 +675,9 @@ void EXTI_Callback(u8 exti_line)
              * (safe: PWM_SetDuty only writes CCR1)    */
             PWM_SetDuty(PWM_DUTY_STOP);
 
-            /* Update IPC frame emergency flag */
-            IPC_Handle.TxFrame.flags |= IPC_FLAG_EMERGENCY;
+            /* Do NOT write shared IPC frame from ISR.
+             * Let main loop rebuild IPC_Handle.TxFrame
+             * under its critical section to avoid races. */
 
             break;
         }
@@ -914,8 +916,10 @@ void TIM6_DAC_IRQHandler(void)
         /* Clear the UIF flag — mandatory, or IRQ fires forever */
         CLEAR_BIT(TIM6->SR, 0);
 
-        /* Signal main loop to transmit telemetry */
+        /* Signal main loop to transmit telemetry (may be retried until DMA free) */
         GSS.telem_flag = 1u;
+        /* Also emit a one-shot tick used for timing (door timeout, etc.) */
+        GSS.telem_tick = 1u;
 
         /* Mirror IPC comm fault into shared state */
         GSS.comm_fault = IPC_Handle.CommFault;

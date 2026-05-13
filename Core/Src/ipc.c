@@ -43,20 +43,27 @@ void IPC_EncodeFrame(IPC_Frame_t *pFrame, volatile u8 *pBuf)
     pFrame->header   = IPC_HEADER;
     pFrame->reserved = 0x00u;
 
-    /* Pack struct fields into raw byte buffer */
-    pBuf[0] = pFrame->header;
-    pBuf[1] = pFrame->current_floor;
-    pBuf[2] = pFrame->fsm_state;
-    pBuf[3] = pFrame->target_floor;
-    pBuf[4] = pFrame->motor_speed;
-    pBuf[5] = pFrame->flags;
-    pBuf[6] = pFrame->reserved;
+    /* Pack struct fields into raw byte buffer inside a critical section
+     * to avoid concurrent ISR/DMA reads of the raw buffer while we write it. */
+    {
+        u32 _pm = Enter_Critical();
 
-    /* Compute and store checksum as byte 7 */
-    pBuf[7] = IPC_ComputeChecksum(pBuf);
+        pBuf[0] = pFrame->header;
+        pBuf[1] = pFrame->current_floor;
+        pBuf[2] = pFrame->fsm_state;
+        pBuf[3] = pFrame->target_floor;
+        pBuf[4] = pFrame->motor_speed;
+        pBuf[5] = pFrame->flags;
+        pBuf[6] = pFrame->reserved;
 
-    /* Also store checksum back in struct for reference */
-    pFrame->checksum = pBuf[7];
+        /* Compute and store checksum as byte 7 */
+        pBuf[7] = IPC_ComputeChecksum(pBuf);
+
+        /* Also store checksum back in struct for reference */
+        pFrame->checksum = pBuf[7];
+
+        Exit_Critical(_pm);
+    }
 }
 
 /* ─────────────────────────────────────────

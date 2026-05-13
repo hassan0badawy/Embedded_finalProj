@@ -191,6 +191,7 @@ typedef struct __attribute__((packed)) {
     volatile u8  door_open;         /* 1 = doors currently open          */
     volatile u8  comm_fault;        /* 1 = IPC link lost                 */
     volatile u8  telem_flag;        /* 1 = TIM6 fired, send telemetry    */
+    volatile u8  telem_tick;        /* 1 = TIM6 500ms tick (one-shot)    */
     volatile u8  floor_request[NUM_FLOORS]; /* Pending floor requests    */
 } GlobalSharedState;
 
