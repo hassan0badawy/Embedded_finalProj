@@ -74,19 +74,23 @@ static void Poll_FloorSensorF1(void)
 }
 
 /*
- * Poll_CabinButtonsF1F2()
+ * Poll_CabinButtons()
  * ────────────────────────
  * PA0 = Cabin button F1 (floor 0)
  * PA1 = Cabin button F2 (floor 1)
+ * PA2 = Cabin button F3 (floor 2)
+ * PA3 = Cabin button F4 (floor 3)
  *
  * PA0 conflicts with EXTI0 on PD0 (E-Stop), so we poll PA0.
  * PA1 could conflict with EXTI1 on PC1 (Floor sensor), so we poll PA1.
- * Both use same logic as Poll_FloorSensorF1().
+ * PA2/PA3 could conflict with EXTI2/3 on PC2/PC3 (Floor sensors), so we poll them.
  */
 static volatile u8 poll_pa0_last = 1u;
 static volatile u8 poll_pa1_last = 1u;
+static volatile u8 poll_pa2_last = 1u;
+static volatile u8 poll_pa3_last = 1u;
 
-static void Poll_CabinButtonsF1F2(void)
+static void Poll_CabinButtons(void)
 {
     /* PA0 — Cabin button F1 (floor 0) */
     u8 pa0_now = (u8)READ_BIT(GPIOA->IDR, 0);
@@ -103,6 +107,22 @@ static void Poll_CabinButtonsF1F2(void)
         GSS.floor_request[1u] = 1u;
     }
     poll_pa1_last = pa1_now;
+
+    /* PA2 — Cabin button F3 (floor 2) */
+    u8 pa2_now = (u8)READ_BIT(GPIOA->IDR, 2);
+    if (poll_pa2_last && !pa2_now)
+    {
+        GSS.floor_request[2u] = 1u;
+    }
+    poll_pa2_last = pa2_now;
+
+    /* PA3 — Cabin button F4 (floor 3) */
+    u8 pa3_now = (u8)READ_BIT(GPIOA->IDR, 3);
+    if (poll_pa3_last && !pa3_now)
+    {
+        GSS.floor_request[3u] = 1u;
+    }
+    poll_pa3_last = pa3_now;
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -117,7 +137,7 @@ static void Poll_CabinButtonsF1F2(void)
  *      - Elevator_Update()    → FSM, speed ramp, IPC TxFrame sync
  *      - System_Logger()      → Send telemetry via DMA (if telem_flag set)
  *      - Poll_FloorSensorF1() → Handle unpinned F1 sensor
- *      - Poll_CabinButtonsF1F2() → Handle unpinned cabin buttons
+ *      - Poll_CabinButtons()  → Handle unpinned cabin buttons
  *
  * ─────────────────────────────────────────────────────────────────────────────
  */
@@ -222,7 +242,7 @@ int main(void)
          * Debounce: Built into Poll_* functions (static last-state tracking)
          */
         Poll_FloorSensorF1();
-        Poll_CabinButtonsF1F2();
+        Poll_CabinButtons();
 
         /* ──────────────────────────────────────────────────────────────────
          * STEP 4: IPC Periodic Update (Optional — if SysTick not configured)
