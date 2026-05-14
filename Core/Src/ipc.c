@@ -2,6 +2,7 @@
 #include "Bit_Math.h"
 #include "shared.h" /* for SystemState */
 #include "stdint.h"
+#include "spi_it.h"
 
 /* ─────────────────────────────────────────
  * GLOBAL INSTANCES

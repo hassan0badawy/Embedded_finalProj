@@ -1,136 +1,90 @@
-#include "pwm.h"
-#include "shared.h"     /* RCC struct */
+/**
+ * Pwm.c
+ *
+ *  Created on: 4/12/2026
+ *  Author    : AbdallahDarwish
+ */
+
+#include "Pwm.h"
+#include "Timer_Private.h"   /* TimerType struct + base addresses */
 #include "Bit_Math.h"
+#include "Timer.h"
 
-/* ─────────────────────────────────────────
- * PWM_Init()
- * ─────────────────────────────────────────
- * Configures TIM1 Channel 1 on PA8 for
- * 10 kHz PWM motor simulation output.
- *
- * Register-level steps:
- *   1. Clock gating  → RCC AHB1ENR (GPIOA)
- *                    → RCC APB2ENR (TIM1)
- *   2. GPIO PA8      → MODER=AF, OSPEEDR=High, AFRH=AF1
- *   3. TIM1 config   → PSC, ARR, CCMR1, CCER, BDTR, CR1
- *   4. Start counter → CR1.CEN = 1
- *
- * Why BDTR.MOE?
- *   TIM1 is an "advanced-control" timer.
- *   Its outputs are disabled by default as a
- *   safety feature (break input logic).
- *   MOE (Main Output Enable) must be set to
- *   allow any PWM signal to appear on the pin.
- * ───────────────────────────────────────── */
-void PWM_Init(void)
-{
-    /* ── Step 1: Enable peripheral clocks ── */
+static uint32 Pwm_BaseAddresses[4] = {TIM2_BASE_ADDR, TIM3_BASE_ADDR, TIM4_BASE_ADDR,TIM5_BASE_ADDR};
 
-    /* GPIOA clock on AHB1 (bit 0) */
-    SET_BIT(RCC->AHB1ENR, 0);
+#define CCR_REG(TIMER, CHANNEL)  *((volatile uint32 *) (&(TIMER->CCR1) + (CHANNEL - 1)))
 
-    /* TIM1 clock on APB2 (bit 0) */
-    SET_BIT(RCC->APB2ENR, 0);
 
-    /* ── Step 2: Configure PA8 → AF1 (TIM1_CH1) ── */
+void Pwm_Init(uint8 TimerId, uint8 Channel, uint16 Prescaler, uint16 AutoReload) {
+    TimerType *timer = (TimerType *)Pwm_BaseAddresses[TimerId - TIMER2];
 
-    /* PA8 is in the high nibble of GPIOA registers.
-     * MODER bits [17:16] for pin 8 → set to 10 (AF mode) */
-    volatile u32 *GPIOA_MODER   = (volatile u32 *)(0x40020000UL + 0x00);
-    volatile u32 *GPIOA_OSPEEDR = (volatile u32 *)(0x40020000UL + 0x08);
-    volatile u32 *GPIOA_AFRH   = (volatile u32 *)(0x40020000UL + 0x24);
+    /*Time-base*/
+    timer->CR1 = 0;
+    timer->PSC = Prescaler;
+    timer->ARR = AutoReload;
+    timer->CNT = 0;
 
-    /* Clear MODER[17:16], then set to 10 (Alternate Function) */
-    *GPIOA_MODER &= ~(0x3UL << 16);
-    *GPIOA_MODER |=  (0x2UL << 16);
-
-    /* Set OSPEEDR[17:16] = 10 → High speed (enough for 10kHz) */
-    *GPIOA_OSPEEDR &= ~(0x3UL << 16);
-    *GPIOA_OSPEEDR |=  (0x2UL << 16);
-
-    /* AFRH controls pins 8–15.
-     * Pin 8 → AFRH bits [3:0] → set to 0001 (AF1 = TIM1_CH1) */
-    *GPIOA_AFRH &= ~(0xFUL << 0);
-    *GPIOA_AFRH |=  (0x1UL << 0);   /* AF1 */
-
-    /* ── Step 3: Configure TIM1 ── */
-
-    /* Disable counter while configuring */
-    CLEAR_BIT(PWM_TIM->CR1, TIM_CR1_CEN);
-
-    /* Set prescaler: divides 16MHz by (15+1) = 1 MHz tick */
-    PWM_TIM->PSC = PWM_PSC;
-
-    /* Set auto-reload: 100 ticks per PWM period → 1MHz/100 = 10kHz */
-    PWM_TIM->ARR = PWM_ARR;
-
-    /* Repetition counter = 0 (not needed for basic PWM) */
-    PWM_TIM->RCR = 0u;
-
-    /* ── CCMR1: Configure CH1 as PWM output ──
+    /* Channel: PWM Mode 1 + output-compare preload */
+    /*
+     * OCxM[2:0] = 110   → PWM mode 1
+     * OCxPE     = 1     → preload enable
+     * Byte value        = 0x68
      *
-     * CC1S  [1:0] = 00  → CH1 is output (not capture)
-     * OC1PE [3]   = 1   → Preload enable (CCR1 buffered)
-     * OC1M  [6:4] = 110 → PWM Mode 1
-     *   (output high while CNT < CCR1, low otherwise)
+     * Channels 1,2 → CCMR1      Channels 3,4 → CCMR2
+     * Channel 1,3  → bits 0-7   Channel 2,4 → bits 8-15
      */
-    PWM_TIM->CCMR1 = 0u;   /* Clear first */
-    PWM_TIM->CCMR1 |= TIM_OC_PWM_MODE1;          /* OC1M = 110        */
-    SET_BIT(PWM_TIM->CCMR1, TIM_CCMR1_OC1PE);    /* OC1PE = 1         */
-
-    /* ── CCER: Enable CH1 output, active-high ──
-     *
-     * CC1E [0] = 1  → Enable CH1 output
-     * CC1P [1] = 0  → Active high (pin HIGH when CNT < CCR1)
-     */
-    PWM_TIM->CCER = 0u;
-    SET_BIT(PWM_TIM->CCER, TIM_CCER_CC1E);
-
-    /* ── Start with motor STOPPED (0% duty cycle) ── */
-    PWM_TIM->CCR1 = PWM_DUTY_STOP;
-
-    /* ── CR1: Enable auto-reload preload ──
-     * ARPE [7] = 1 → ARR register is buffered
-     * (prevents glitches when ARR is updated)     */
-    SET_BIT(PWM_TIM->CR1, TIM_CR1_ARPE);
-
-    /* ── BDTR: Enable Main Output (REQUIRED for TIM1) ──
-     * MOE [15] = 1 → All PWM outputs enabled
-     * Without this, TIM1 CH1 stays LOW regardless
-     * of CCMR1 or CCER settings.                  */
-    SET_BIT(PWM_TIM->BDTR, TIM_BDTR_MOE);
-
-    /* ── Generate an update event to load PSC and ARR ──
-     * Writing UG bit forces an update:
-     *   - PSC and ARR shadow registers are refreshed
-     *   - Counter resets to 0                       */
-    SET_BIT(PWM_TIM->EGR, 0);   /* UG bit = bit 0 */
-
-    /* ── Step 4: Start the counter ── */
-    SET_BIT(PWM_TIM->CR1, TIM_CR1_CEN);
-}
-
-/* ─────────────────────────────────────────
- * PWM_SetDuty()
- * ─────────────────────────────────────────
- * Updates the CCR1 (capture/compare register)
- * to change the motor's PWM duty cycle.
- *
- * Since OC1PE=1 (preload enabled), the new
- * CCR1 value takes effect at the NEXT update
- * event (next PWM period), preventing glitches.
- *
- *  duty=0  → CCR1=0  → 0/100  = 0%   STOP
- *  duty=20 → CCR1=20 → 20/100 = 20%  SLOW
- *  duty=99 → CCR1=99 → 99/100 = 99%  FULL
- * ───────────────────────────────────────── */
-void PWM_SetDuty(u8 duty)
-{
-    /* Clamp to valid range [0, ARR] */
-    if (duty > PWM_ARR)
-    {
-        duty = (u8)PWM_ARR;
+    if (Channel <= 2) {
+        uint8 shift = (Channel - 1) * 8;
+        timer->CCMR1 &= ~((uint32) 0xFF << shift);
+        timer->CCMR1 |= ((uint32) CCMR_OC_PWM1_PRELOAD << shift);
+    } else {
+        uint8 shift = (Channel - 3) * 8;
+        timer->CCMR2 &= ~((uint32) 0xFF << shift);
+        timer->CCMR2 |= ((uint32) CCMR_OC_PWM1_PRELOAD << shift);
     }
 
-    PWM_TIM->CCR1 = (u32)duty;
+    /* Enable channel output in CCER (CCxE bit)*/
+    SET_BIT(timer->CCER, (Channel - 1) * 4);
+
+    CCR_REG(timer, Channel) = 0;
+
+    /* Auto-reload preload + force update to load shadows ── */
+    SET_BIT(timer->CR1, CR1_ARPE);
+    SET_BIT(timer->EGR, EGR_UG);
+    timer->SR = 0;
+}
+
+/**
+ *  Fixed-point duty-cycle conversion (no float!)
+ *  CCR = (DutyPercent * ARR) / 100
+ */
+void Pwm_SetDutyPercent(uint8 TimerId, uint8 Channel, uint8 DutyPercent) {
+    TimerType *timer  = (TimerType *)Pwm_BaseAddresses[TimerId - TIMER2];
+
+    if (DutyPercent > 100) {
+        DutyPercent = 100;
+    }
+
+    uint32 arr = timer->ARR;
+    uint32 ccr = ((uint32) DutyPercent * arr) / 100UL;
+
+    CCR_REG(timer, Channel) = ccr;
+}
+
+void Pwm_Start(uint8 TimerId, uint8 Channel) {
+    TimerType *tim = (TimerType *)Pwm_BaseAddresses[TimerId - TIMER2];
+
+    /* Make sure channel output is enabled */
+    SET_BIT(tim->CCER, (Channel - 1) * 4);
+    /* Start the counter */
+    SET_BIT(tim->CR1, CR1_CEN);
+}
+
+void Pwm_Stop(uint8 TimerId, uint8 Channel) {
+    TimerType *tim = ( TimerType *)Pwm_BaseAddresses[TimerId - TIMER2];
+
+    /* Disable channel output */
+    CLEAR_BIT(tim->CCER, (Channel - 1) * 4);
+
+    CLEAR_BIT(tim->CR1, CR1_CEN);
 }

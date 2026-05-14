@@ -1,9 +1,17 @@
-#ifndef BIT_MATH_H
-#define BIT_MATH_H
+/**
+ * Bit_Operations.h
+ *
+ *  Created on: Sun Mar 26 2023
+ *  Author    : Abdullah Darwish
+ */
+#ifndef BIT_OPERATIONS_H
+#define BIT_OPERATIONS_H
 
-#define SET_BIT(REG, BIT)     ((REG) |= (1UL << (BIT)))
-#define CLEAR_BIT(REG, BIT)   ((REG) &= ~(1UL << (BIT)))
-#define TOGGLE_BIT(REG, BIT)  ((REG) ^= (1UL << (BIT)))
-#define READ_BIT(REG, BIT)    (((REG) >> (BIT)) & 1UL)
+#define SET_BIT(X, BIT)            ((X) |= (0x1 << (BIT)))
+#define CLEAR_BIT(X, BIT)          ((X) &= ~(0x1 << (BIT)))
+#define READ_BIT(X, BIT)           (((X) >> (BIT)) & 0x1)
+#define TOGGLE_BIT(X, BIT)         ((X) ^= (0x1 << (BIT)))
 
-#endif
+
+
+#endif /* BIT_OPERATIONS_H */

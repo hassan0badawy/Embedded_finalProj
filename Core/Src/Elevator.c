@@ -679,13 +679,12 @@ void EXTI_Callback(u8 exti_line)
         /* ── LINE 0: Emergency Stop (PD0) ── */
         case 0u:
         {
-            /* Latch emergency flag — ISR runs at priority 0
-             * so it will preempt any ongoing FSM work        */
-            GSS.emergency = 1u;
-
-            /* Kill PWM immediately from ISR context
-             * (safe: PWM_SetDuty only writes CCR1)    */
-            PWM_SetDuty(PWM_DUTY_STOP);
+                {
+                    u32 _pm = Enter_Critical();
+                    GSS.emergency = 1u;
+                    PWM_SetDuty(PWM_DUTY_STOP);
+                    Exit_Critical(_pm);
+                }
 
             /* Do NOT write shared IPC frame from ISR.
              * Let main loop rebuild IPC_Handle.TxFrame
@@ -705,17 +704,23 @@ void EXTI_Callback(u8 exti_line)
          */
         case 1u:
         {
+            u32 _pm = Enter_Critical();
             GSS.position = 1u;   /* Arrived at floor 2 */
+            Exit_Critical(_pm);
             break;
         }
         case 2u:
         {
+            u32 _pm = Enter_Critical();
             GSS.position = 2u;   /* Arrived at floor 3 */
+            Exit_Critical(_pm);
             break;
         }
         case 3u:
         {
+            u32 _pm = Enter_Critical();
             GSS.position = 3u;   /* Arrived at floor 4 */
+            Exit_Critical(_pm);
             break;
         }
 
@@ -729,37 +734,57 @@ void EXTI_Callback(u8 exti_line)
         case 6u:
         {
             /* PB6 -> Hall call U1 */
-            Dispatcher_RegisterCall(1u, DIR_UP);
+            {
+                u32 _pm = Enter_Critical();
+                Dispatcher_RegisterCall(1u, DIR_UP);
+                Exit_Critical(_pm);
+            }
             break;
         }
         case 7u:
         {
             /* PB7 -> Hall call D2 */
-            Dispatcher_RegisterCall(2u, DIR_DOWN);
+            {
+                u32 _pm = Enter_Critical();
+                Dispatcher_RegisterCall(2u, DIR_DOWN);
+                Exit_Critical(_pm);
+            }
             break;
         }
         case 8u:
         {
             /* PB8 -> Hall call U2 */
-            Dispatcher_RegisterCall(2u, DIR_UP);
+            {
+                u32 _pm = Enter_Critical();
+                Dispatcher_RegisterCall(2u, DIR_UP);
+                Exit_Critical(_pm);
+            }
             break;
         }
         case 9u:
         {
             /* PB9 -> Hall call D3 */
-            Dispatcher_RegisterCall(3u, DIR_DOWN);
+            {
+                u32 _pm = Enter_Critical();
+                Dispatcher_RegisterCall(3u, DIR_DOWN);
+                Exit_Critical(_pm);
+            }
             break;
         }
 
         /* PB10 -> Hall call U3, PB12 -> Hall call D4 */
         case 10u:
         {
+            u32 _pm = Enter_Critical();
             Dispatcher_RegisterCall(3u, DIR_UP);
+            Exit_Critical(_pm);
             break;
         }
         case 12u:
         {
+            u32 _pm = Enter_Critical();
             Dispatcher_RegisterCall(4u, DIR_DOWN);
+            Exit_Critical(_pm);
             break;
         }
 
@@ -930,13 +955,16 @@ void TIM6_DAC_IRQHandler(void)
         /* Clear the UIF flag — mandatory, or IRQ fires forever */
         CLEAR_BIT(TIM6->SR, 0);
 
-        /* Signal main loop to transmit telemetry (may be retried until DMA free) */
-        GSS.telem_flag = 1u;
-        /* Also emit a one-shot tick used for timing (door timeout, etc.) */
-        GSS.telem_tick = 1u;
-
-        /* Mirror IPC comm fault into shared state */
-        GSS.comm_fault = IPC_Handle.CommFault;
+        {
+            u32 _pm = Enter_Critical();
+            /* Signal main loop to transmit telemetry (may be retried until DMA free) */
+            GSS.telem_flag = 1u;
+            /* One-shot tick: only set if not already set */
+            if (GSS.telem_tick == 0u) GSS.telem_tick = 1u;
+            /* Mirror IPC comm fault into shared state */
+            GSS.comm_fault = IPC_Handle.CommFault;
+            Exit_Critical(_pm);
+        }
 
         /* Advance IPC 50ms update cycle (10 × 50ms = 500ms) */
         /* IPC_Update() is called at 50ms rate from SysTick,
