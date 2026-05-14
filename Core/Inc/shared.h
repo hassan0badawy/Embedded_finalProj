@@ -56,14 +56,19 @@ typedef struct {
 /* ── Global Elevator Shared State ── */
 
 /* 
- * FSM States 
- * 0: Idle, 1: Up, 2: Down, 3: Emergency
+ * FSM States (matches IPC ElevatorState_t values from ipc.h)
+ * IMPORTANT: These must remain in sync with ElevatorState_t
+ * used in IPC communication (Byte 2 of SPI packet)
+ * 
+ * FSM_State_t is used internally by Dispatcher and Elevator
+ * but the values must match ElevatorState_t for IPC compatibility
  */
 typedef enum {
-    STATE_IDLE      = 0,
-    STATE_UP        = 1,
-    STATE_DOWN      = 2,
-    STATE_EMERGENCY = 3
+    STATE_IDLE      = 0,      /* Idle */
+    STATE_UP        = 1,      /* Moving UP (matches ELV_MOVING_UP) */
+    STATE_DOWN      = 2,      /* Moving DOWN (matches ELV_MOVING_DOWN) */
+    STATE_DOOR_OPEN = 3,      /* Doors OPEN (matches ELV_DOORS_OPEN) */
+    STATE_EMERGENCY = 4       /* Emergency (matches ELV_EMERGENCY) */
 } FSM_State_t;
 
 /* 
@@ -80,16 +85,39 @@ typedef struct {
     u8 checksum;        /* Byte 7: XOR sum of bytes 0..6 */
 } SPI_Packet_t;
 
-/* 
- * Global Shared State
- * Used by Member C (Dispatcher) and Member D (Telemetry)
- */
-typedef struct {
-    SPI_Packet_t master_state; /* Elevator A */
-    SPI_Packet_t slave_state;  /* Elevator B */
-    volatile u8 comm_fault;    /* 1 if SPI fails (timeout) */
+/* ─────────────────────────────────────────
+ * UNIFIED GLOBAL SHARED STATE
+ * Single struct used by ALL modules: Elevator.c, Dispatcher.c, IPC.c, uart_dma.c
+ * ───────────────────────────────────────── */
+typedef struct __attribute__((packed)) {
+    /* ─ Master Elevator Local State ─ */
+    volatile u8  position;          /* Current floor (0–3) */
+    volatile u8  target;            /* Target floor  (0–3) */
+    volatile u8  direction;         /* 0=none, 1=up, 2=down */
+    volatile u8  speed;             /* PWM duty: 0, 20, or 100 */
+    volatile u8  fsm_state;         /* FSM_State_t value */
+    volatile u8  emergency;         /* 1 = emergency stop active */
+    volatile u8  door_open;         /* 1 = doors currently open */
+    volatile u8  comm_fault;        /* 1 = IPC link lost (timeout) */
+    volatile u8  telem_flag;        /* 1 = TIM6 fired, send telemetry */
+    volatile u8  telem_tick;        /* 1 = TIM6 500ms tick */
+    volatile u8  floor_request[4];  /* Pending cabin floor requests */
+    
+    /* ─ Slave Elevator State (from last SPI RX) ─ */
+    volatile u8  slave_position;    /* Slave's current floor */
+    volatile u8  slave_fsm_state;   /* Slave's FSM state */
+    volatile u8  slave_target;      /* Slave's target floor */
+    volatile u8  slave_speed;       /* Slave's PWM speed */
+    volatile u8  slave_flags;       /* Slave's status flags */
+    
+    /* ─ IPC Management ─ */
+    SPI_Packet_t last_rx_packet;    /* Last valid SPI packet received */
+    volatile u32 last_valid_rx_tick;/* Tick of last good RX (for timeout) */
 } GlobalSharedState_t;
 
-extern GlobalSharedState_t SystemState;
+/* ─────────────────────────────────────────
+ * GLOBAL INSTANCE (defined in Elevator.c)
+ * ───────────────────────────────────────── */
+extern volatile GlobalSharedState_t GSS;
 
 #endif /* SHARED_H */

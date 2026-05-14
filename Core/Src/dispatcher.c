@@ -8,8 +8,8 @@
  * ───────────────────────────────────────── */
 static volatile HallwayCall_t HallwayQueue[TOTAL_HALLWAY_CALLS];
 
-/* Provide the actual instance for the global system state */
-GlobalSharedState_t SystemState;
+/* Use extern GSS defined in Elevator.c (shared.h) */
+/* Do NOT create a local SystemState — use GSS directly */
 
 /* ─────────────────────────────────────────
  * HELPERS
@@ -75,42 +75,37 @@ void Dispatcher_RegisterCall(u8 floor, CallDirection_t direction) {
 
 u8 Dispatcher_AssignTask(u8 call_floor, CallDirection_t call_dir) {
     /* 1. Comm Fault Handling: Master (Elv A) takes everything */
-    if (SystemState.comm_fault) {
+    if (GSS.comm_fault) {
         return ELV_A;
     }
 
-    /* 2. Get Current States */
-    u8 elvA_floor = SystemState.master_state.current_floor;
-    /* Map IPC fsm_state to internal FSM_State_t (treat DOORS_OPEN as IDLE)
-     * Master/Slave send fsm values as in ipc.h (0..4). Convert to
-     * Dispatcher FSM_State_t which uses: STATE_IDLE=0, STATE_UP=1,
-     * STATE_DOWN=2, STATE_EMERGENCY=3. */
+    /* 2. Get Current States - Master elevator (local) */
+    u8 elvA_floor = GSS.position;
     FSM_State_t elvA_state;
-    switch (SystemState.master_state.fsm_state)
-    {
-        case 1: elvA_state = STATE_UP; break;      /* MOVING_UP */
-        case 2: elvA_state = STATE_DOWN; break;    /* MOVING_DOWN */
-        case 3: elvA_state = STATE_IDLE; break;    /* DOORS_OPEN -> treat as IDLE */
-        case 4: elvA_state = STATE_EMERGENCY; break;
-        default: elvA_state = STATE_IDLE; break;
+    
+    /* Map IPC fsm_state to FSM_State_t (0-4 to 0-3)
+     * Treat DOORS_OPEN (3) as IDLE for assignment purposes */
+    if (GSS.fsm_state > STATE_EMERGENCY) {
+        elvA_state = STATE_IDLE;  /* Safety: invalid state */
+    } else {
+        elvA_state = (FSM_State_t)GSS.fsm_state;
     }
 
-    u8 elvB_floor = SystemState.slave_state.current_floor;
+    /* 3. Get Current States - Slave elevator (from last SPI RX) */
+    u8 elvB_floor = GSS.slave_position;
     FSM_State_t elvB_state;
-    switch (SystemState.slave_state.fsm_state)
-    {
-        case 1: elvB_state = STATE_UP; break;
-        case 2: elvB_state = STATE_DOWN; break;
-        case 3: elvB_state = STATE_IDLE; break;
-        case 4: elvB_state = STATE_EMERGENCY; break;
-        default: elvB_state = STATE_IDLE; break;
+    
+    if (GSS.slave_fsm_state > STATE_EMERGENCY) {
+        elvB_state = STATE_IDLE;  /* Safety: invalid state */
+    } else {
+        elvB_state = (FSM_State_t)GSS.slave_fsm_state;
     }
 
-    /* 3. Calculate Scores (Lower is better) */
+    /* 4. Calculate Scores (Lower is better) */
     s8 scoreA = CalculateScore(elvA_floor, elvA_state, call_floor, call_dir);
     s8 scoreB = CalculateScore(elvB_floor, elvB_state, call_floor, call_dir);
 
-    /* 4. Comparison */
+    /* 5. Comparison */
     if (scoreA <= scoreB) {
         return ELV_A;
     } else {
@@ -126,25 +121,24 @@ void Dispatcher_Update(void) {
             
             /* Master handles updating its own targets or sending Slave's target via SPI */
             if (assigned == ELV_B) {
-                /* Place the assigned target into master_state.reserved
-                 * so the Elevator/IPC layer will forward it to the Slave
-                 * inside the next 50ms IPC cycle. */
-                SystemState.master_state.reserved = (u8)HallwayQueue[i].floor;
+                /* Place the assigned target into GSS for IPC layer to forward to Slave
+                 * during the next 50ms IPC cycle via SPI packet */
+                GSS.last_rx_packet.target_floor = (u8)HallwayQueue[i].floor;
             }
         }
         
         /* Check if call is completed (elevator reached floor and doors open) */
         u8 f = HallwayQueue[i].floor;
         if (HallwayQueue[i].assigned_to == ELV_A) {
-            /* Door open detected via flags bit */
-            u8 master_door = (SystemState.master_state.flags & IPC_FLAG_DOOR_OPEN) ? 1u : 0u;
-            if (SystemState.master_state.current_floor == f && master_door == 1) {
+            /* Master elevator: check if it reached the floor and doors are open */
+            if (GSS.position == f && GSS.door_open) {
                 HallwayQueue[i].is_active = 0;
                 HallwayQueue[i].assigned_to = ELV_NONE;
             }
         } else if (HallwayQueue[i].assigned_to == ELV_B) {
-            u8 slave_door = (SystemState.slave_state.flags & IPC_FLAG_DOOR_OPEN) ? 1u : 0u;
-            if (SystemState.slave_state.current_floor == f && slave_door == 1) {
+            /* Slave elevator: check if it reached the floor and doors are open */
+            u8 slave_door_open = (GSS.slave_flags & IPC_FLAG_DOOR_OPEN) ? 1u : 0u;
+            if (GSS.slave_position == f && slave_door_open) {
                 HallwayQueue[i].is_active = 0;
                 HallwayQueue[i].assigned_to = ELV_NONE;
             }

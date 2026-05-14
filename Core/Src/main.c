@@ -218,6 +218,31 @@ int main(void)
         Dispatcher_Update();
 
         /* ──────────────────────────────────────────────────────────────────
+         * COMM FAULT DETECTION (150ms timeout)
+         * ──────────────────────────────────────────────────────────────────
+         * If SPI hasn't received a valid frame in 150ms,
+         * declare comm fault and Master takes all calls (fallback).
+         * When comm is restored, clear fault flag.
+         */
+        {
+            u32 time_since_last_valid = IPC_Handle.SysTickMs - IPC_Handle.LastValidRxTick;
+            
+            if (time_since_last_valid > IPC_TIMEOUT_MS) {
+                /* Comm fault detected */
+                u32 pm = Enter_Critical();
+                IPC_Handle.CommFault = 1;
+                GSS.comm_fault = 1;  /* Propagate to Dispatcher */
+                Exit_Critical(pm);
+            } else {
+                /* Link is OK */
+                u32 pm = Enter_Critical();
+                IPC_Handle.CommFault = 0;
+                GSS.comm_fault = 0;
+                Exit_Critical(pm);
+            }
+        }
+
+        /* ──────────────────────────────────────────────────────────────────
          * STEP 2: Telemetry Transmission (500ms cadence via TIM6)
          * ──────────────────────────────────────────────────────────────────
          * System_Logger() is called ONLY when TIM6 fires every 500ms:
@@ -325,6 +350,7 @@ int main(void)
 */
 void SysTick_Handler(void)
 {
+    /* Trigger IPC exchange every 50ms (SysTickMs incremented inside IPC_Update) */
     IPC_Update();
 }
 

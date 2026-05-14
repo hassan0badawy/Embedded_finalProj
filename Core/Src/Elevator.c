@@ -7,9 +7,9 @@
 #include <stdarg.h> 
 
 /* ─────────────────────────────────────────
- * GLOBAL SHARED STATE
+ * GLOBAL SHARED STATE (UNIFIED definition)
  * ───────────────────────────────────────── */
-volatile GlobalSharedState GSS;
+volatile GlobalSharedState_t GSS;
 
 /* ─────────────────────────────────────────
  * PWM CONFIGURATION (حسب حسابات الـ 10kHz)
@@ -66,39 +66,29 @@ static u8 FindNearestDown(void)
 /* ─────────────────────────────────────────
  * Elevator_Init()
  * ───────────────────────────────────────── */
-void Elevator_Init(void)
-{
-    u8 i;
-    u32 primask;
+void EXTI_Init(void) {
+    // 1. Ensure SYSCFG Clock is ON
+    RCC->APB2ENR |= (1 << 14);
 
-    primask = Enter_Critical();
-    GSS.position      = 0u;
-    GSS.target        = 0u;
-    GSS.direction     = 0u;
-    GSS.speed         = PWM_DUTY_STOP;
-    GSS.fsm_state     = (u8)ELV_IDLE;
-    GSS.emergency     = 0u;
-    GSS.door_open     = 0u;
-    GSS.comm_fault    = 0u;
-    GSS.telem_flag    = 0u;
+    // 2. Map Hallway Buttons (PB6-PB12) to EXTI
+    // SYSCFG_EXTICR2 (for pins 4-7) and EXTICR3 (for pins 8-11)
+    // 0x0001 sets the source to Port B
+    SYSCFG->EXTICR[1] |= 0x1100; // Lines 6, 7 -> Port B
+    SYSCFG->EXTICR[2] |= 0x1111; // Lines 8, 9, 10, 11 -> Port B
+    
+    // 3. Map Emergency Stop (PD0)
+    SYSCFG->EXTICR[0] &= ~0x000F;
+    SYSCFG->EXTICR[0] |= 0x0003; // Line 0 -> Port D
 
-    for (i = 0u; i < NUM_FLOORS; i++)
-    {
-        GSS.floor_request[i] = 0u;
-    }
-    Exit_Critical(primask);
+    // 4. Unmask and set falling edge triggers
+    EXTI->IMR |= (1 << 0) | (1 << 6) | (1 << 7) | (1 << 8) | (1 << 9) | (1 << 10) | (1 << 12);
+    EXTI->FTSR |= (1 << 0) | (1 << 6) | (1 << 7) | (1 << 8) | (1 << 9) | (1 << 10) | (1 << 12);
 
-    /* ── 2. PWM motor output باستخدام الـ Driver الجديد ── */
-    /* بنستخدم الـ Macros اللي عرفناها فوق عشان نحقق الـ 10kHz */
-    Pwm_Init(ELV_PWM_TIMER, ELV_PWM_CH, ELV_PWM_PSC, ELV_PWM_ARR);
-    Pwm_Start(ELV_PWM_TIMER, ELV_PWM_CH);
-
-    /* ── الباقي كما هو ── */
-    UART_DMA_Init();
-    EXTI_Init();
-    TIM6_Init();
+    // 5. Enable in NVIC
+    NVIC_ENABLE_IRQ(IRQ_EXTI0);
+    NVIC_ENABLE_IRQ(IRQ_EXTI9_5);
+    NVIC_ENABLE_IRQ(40); // EXTI15_10 is IRQ 40 on STM32F401
 }
-
 /* ─────────────────────────────────────────
  * Elevator_Update()
  * ───────────────────────────────────────── */
@@ -147,6 +137,7 @@ void Elevator_Update(void)
             up_target = FindNearestUp();
             dn_target = FindNearestDown();
 
+            u8 speed_to_set = PWM_DUTY_STOP;
             primask = Enter_Critical();
             if (up_target != 0xFFu)
             {
@@ -154,6 +145,7 @@ void Elevator_Update(void)
                 GSS.direction = 1u;
                 GSS.fsm_state = (u8)ELV_MOVING_UP;
                 GSS.speed     = PWM_DUTY_FULL;
+                speed_to_set  = PWM_DUTY_FULL;
             }
             else if (dn_target != 0xFFu)
             {
@@ -161,9 +153,10 @@ void Elevator_Update(void)
                 GSS.direction = 2u;
                 GSS.fsm_state = (u8)ELV_MOVING_DOWN;
                 GSS.speed     = PWM_DUTY_FULL;
+                speed_to_set  = PWM_DUTY_FULL;
             }
             Exit_Critical(primask);
-            PWM_SetDuty(GSS.speed);
+            PWM_SetDuty(speed_to_set);  /* Use snapshot, not volatile GSS.speed */
             break;
         }
 
@@ -177,7 +170,7 @@ void Elevator_Update(void)
                     primask = Enter_Critical();
                     GSS.speed = PWM_DUTY_SLOW;
                     Exit_Critical(primask);
-                    PWM_SetDuty(PWM_DUTY_SLOW);
+                    PWM_SetDuty(PWM_DUTY_SLOW);  /* Constant, safe to use */
                 }
             }
             else if (GSS.speed != PWM_DUTY_FULL)
@@ -185,12 +178,11 @@ void Elevator_Update(void)
                 primask = Enter_Critical();
                 GSS.speed = PWM_DUTY_FULL;
                 Exit_Critical(primask);
-                PWM_SetDuty(PWM_DUTY_FULL);
+                PWM_SetDuty(PWM_DUTY_FULL);  /* Constant, safe to use */
             }
 
             if (GSS.position == GSS.target)
             {
-                PWM_SetDuty(PWM_DUTY_STOP);
                 primask = Enter_Critical();
                 GSS.speed = PWM_DUTY_STOP;
                 GSS.floor_request[GSS.position] = 0u;
@@ -198,6 +190,7 @@ void Elevator_Update(void)
                 GSS.fsm_state = (u8)ELV_DOORS_OPEN;
                 door_tick_count = 0u;
                 Exit_Critical(primask);
+                PWM_SetDuty(PWM_DUTY_STOP);
             }
             break;
         }
@@ -211,7 +204,7 @@ void Elevator_Update(void)
                     primask = Enter_Critical();
                     GSS.speed = PWM_DUTY_SLOW;
                     Exit_Critical(primask);
-                    PWM_SetDuty(PWM_DUTY_SLOW);
+                    PWM_SetDuty(PWM_DUTY_SLOW);  /* Constant, safe to use */
                 }
             }
             else if (GSS.speed != PWM_DUTY_FULL)
@@ -219,12 +212,11 @@ void Elevator_Update(void)
                 primask = Enter_Critical();
                 GSS.speed = PWM_DUTY_FULL;
                 Exit_Critical(primask);
-                PWM_SetDuty(PWM_DUTY_FULL);
+                PWM_SetDuty(PWM_DUTY_FULL);  /* Constant, safe to use */
             }
 
             if (GSS.position == GSS.target)
             {
-                PWM_SetDuty(PWM_DUTY_STOP);
                 primask = Enter_Critical();
                 GSS.speed = PWM_DUTY_STOP;
                 GSS.floor_request[GSS.position] = 0u;
@@ -232,6 +224,7 @@ void Elevator_Update(void)
                 GSS.fsm_state = (u8)ELV_DOORS_OPEN;
                 door_tick_count = 0u;
                 Exit_Critical(primask);
+                PWM_SetDuty(PWM_DUTY_STOP);
             }
             break;
         }

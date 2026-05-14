@@ -28,6 +28,10 @@
  * FSM STATES
  * Shared between Master and Slave so both
  * sides speak the same language over SPI
+ * 
+ * CRITICAL: These values are sent in IPC Byte 2
+ * and must match the Dispatcher's FSM_State_t enum
+ * (defined in shared.h)
  * ───────────────────────────────────────── */
 typedef enum {
     ELV_IDLE         = 0x00,
@@ -36,6 +40,15 @@ typedef enum {
     ELV_DOORS_OPEN   = 0x03,
     ELV_EMERGENCY    = 0x04
 } ElevatorState_t;
+
+/* COMPILE-TIME CHECK: FSM state values must not exceed 4 (4 bits) */
+#define _STATIC_ASSERT_ELEVATOR_STATE_VALID \
+    extern int assert_elevator_state_idle[(ELV_IDLE == 0x00) ? 1 : -1]; \
+    extern int assert_elevator_state_up[(ELV_MOVING_UP == 0x01) ? 1 : -1]; \
+    extern int assert_elevator_state_down[(ELV_MOVING_DOWN == 0x02) ? 1 : -1]; \
+    extern int assert_elevator_state_doors[(ELV_DOORS_OPEN == 0x03) ? 1 : -1]; \
+    extern int assert_elevator_state_emergency[(ELV_EMERGENCY == 0x04) ? 1 : -1];
+_STATIC_ASSERT_ELEVATOR_STATE_VALID
 
 /* ─────────────────────────────────────────
  * FLAGS BYTE (Byte 5) BIT DEFINITIONS
