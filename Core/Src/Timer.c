@@ -42,7 +42,7 @@ void Timer_Init(void)
     TIM2->CR1  |= TIM_CR1_CEN;
 
     /* Enable TIM2 IRQ in NVIC (IRQ 28) */
-    Nvic_EnableIrq(28);
+    NVIC_ENABLE_IRQ(28);
 }
 
 void delay_ms(uint32_t ms)

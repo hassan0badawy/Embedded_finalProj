@@ -35,16 +35,16 @@ typedef struct {
     volatile u8      RxBuffer[8];       /* ISR fills this during Slave RX     */
 
     u8               State;             /* SPI_STATE_READY or SPI_STATE_BUSY  */
-} SPI_Handle_t;
+} SPI_HandleTypeDef;
 
-extern SPI_Handle_t SPI1_Handle;
+extern SPI_HandleTypeDef SPI1_Handle;
 
 /* ─────────────────────────────────────────
  * API
  * ───────────────────────────────────────── */
-void SPI_MasterInit(SPI_Handle_t *h);
-void SPI_SlaveInit(SPI_Handle_t *h);
-void SPI_TransmitReceive_IT(SPI_Handle_t *h, volatile u8 *pTx, volatile u8 *pRx, u8 len);
+void SPI_MasterInit(SPI_HandleTypeDef *h);
+void SPI_SlaveInit(SPI_HandleTypeDef *h);
+void SPI_TransmitReceive_IT(SPI_HandleTypeDef *h, volatile u8 *pTx, volatile u8 *pRx, u8 len);
 
 /*
  * SPI_SlavePreload()
@@ -56,7 +56,7 @@ void SPI_TransmitReceive_IT(SPI_Handle_t *h, volatile u8 *pTx, volatile u8 *pRx,
  *
  * Must be called BEFORE Master pulls CS low.
  */
-void SPI_SlavePreload(SPI_Handle_t *h, volatile u8 *pTxBuffer);
+void SPI_SlavePreload(SPI_HandleTypeDef *h, volatile u8 *pTxBuffer);
 
 /* Chip-select control */
 void SPI_CS_Enable(void);

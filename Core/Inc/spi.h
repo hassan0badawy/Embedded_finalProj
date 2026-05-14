@@ -17,6 +17,6 @@ void Spi1_Init(uint8 MasterSlave, uint8 ClkPol, uint8 ClkPhase);
 uint8 Spi1_TransmitReceiveByte(uint8 TxData, uint8* RxData);
 void Spi1_CS_Select(void);
 void Spi1_CS_Release(void);
-void SPI_SlavePreload(SPI_Handle_t *pHandle, volatile u8 *pBuf);
+
 
 #endif /* SPI_H_ */

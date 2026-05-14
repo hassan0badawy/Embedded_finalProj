@@ -10,7 +10,7 @@
  * TXE/RXNE interrupts to shift bytes. CS (PA4) is driven using GPIOA.
  */
 
-SPI_Handle_t SPI1_Handle;
+SPI_HandleTypeDef SPI1_Handle;
 
 static volatile u8 *g_txBuf = 0;
 static u8 g_txLen = 0;
@@ -32,7 +32,7 @@ void SPI_CS_Disable(void)
     Gpio_WritePin(GPIO_A, 4, 1);
 }
 
-void SPI_MasterInit(SPI_Handle_t *h)
+void SPI_MasterInit(SPI_HandleTypeDef *h)
 {
     h->Instance = SPI1;
     h->State = SPI_STATE_READY;
@@ -49,7 +49,7 @@ void SPI_MasterInit(SPI_Handle_t *h)
     CLR_BIT(SPI1->CR2, (1UL << SPI_CR2_TXEIE));
 }
 
-void SPI_SlaveInit(SPI_Handle_t *h)
+void SPI_SlaveInit(SPI_HandleTypeDef *h)
 {
     h->Instance = SPI1;
     h->State = SPI_STATE_READY;
@@ -66,7 +66,7 @@ void SPI_SlaveInit(SPI_Handle_t *h)
     CLR_BIT(SPI1->CR2, (1UL << SPI_CR2_TXEIE));
 }
 
-void SPI_SlavePreload(SPI_Handle_t *h, volatile u8 *pTxBuffer)
+void SPI_SlavePreload(SPI_HandleTypeDef *h, volatile u8 *pTxBuffer)
 {
     /* Preload first byte into DR so Master will read it when clocked */
     u8 first = pTxBuffer[0];
@@ -75,7 +75,7 @@ void SPI_SlavePreload(SPI_Handle_t *h, volatile u8 *pTxBuffer)
     SPI1->DR = (u32)first;
 }
 
-void SPI_TransmitReceive_IT(SPI_Handle_t *h, volatile u8 *pTx, volatile u8 *pRx, u8 len)
+void SPI_TransmitReceive_IT(SPI_HandleTypeDef *h, volatile u8 *pTx, volatile u8 *pRx, u8 len)
 {
     if (h->State != SPI_STATE_READY) return;
 

@@ -33,12 +33,14 @@ typedef struct {
 /* Register Bit Definitions */
 #define CR1_CEN       0
 #define CR1_OPM       3
+#define CR1_ARPE      7
 #define SR_UIF        0
 #define EGR_UG        0
 #define DIER_UIE      0
 
 /* CCMR Definitions */
-#define CCMR_OC_TOGGLE 0x3u
+#define CCMR_OC_TOGGLE       0x3u
+#define CCMR_OC_PWM1_PRELOAD 0x68u
 
 /* Timer IDs */
 #define TIMER1        0

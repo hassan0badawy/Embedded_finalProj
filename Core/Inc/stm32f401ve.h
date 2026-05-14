@@ -209,10 +209,19 @@ typedef struct {
 #define NVIC_DISABLE_IRQ(irq)       (NVIC->ICER[(irq) >> 5] = (1UL << ((irq) & 0x1F)))
 #define NVIC_SET_PRIORITY(irq, pri) (NVIC->IP[irq] = (u8)((pri) << 4))
 
+/* Aliases for case-insensitive/mixed-case usage */
+#define Nvic_EnableIrq(irq)         NVIC_ENABLE_IRQ(irq)
+#define Nvic_DisableIrq(irq)        NVIC_DISABLE_IRQ(irq)
+#define Nvic_SetPriority(irq, pri)  NVIC_SET_PRIORITY(irq, pri)
+
 /* ─────────────────────────────────────────
  * CRITICAL SECTION MACROS
  * ───────────────────────────────────────── */
 #define ENTER_CRITICAL()    __asm volatile ("CPSID I" ::: "memory")
 #define EXIT_CRITICAL()     __asm volatile ("CPSIE I" ::: "memory")
+
+/* Aliases for case-insensitive/mixed-case usage */
+#define Enter_Critical()    ({ u32 _pm = __get_PRIMASK(); __disable_irq(); _pm; })
+#define Exit_Critical(pm)   __set_PRIMASK(pm)
 
 #endif /* STM32F401VE_H */
