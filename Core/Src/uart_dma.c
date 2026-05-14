@@ -5,7 +5,7 @@
 #include "uart_dma.h"
 #include "stm32f401ve.h"
 #include "RCC.h"
-#include "Gpio.h"
+#include "../INC/gpio.h"
 #include "nvic.h"
 #include "Bit_Math.h"
 
@@ -19,10 +19,10 @@ void UART_DMA_Init(void)
     RCC_EnableClock(RCC_DMA2);
 
     /* 2. Configure PA9 (TX) and PA10 (RX) as AF7 */
-    Gpio_Init(GPIO_A, 9, GPIO_AF, GPIO_PUSH_PULL);
-    Gpio_Init(GPIO_A, 10, GPIO_AF, GPIO_PUSH_PULL);
-    Gpio_SetAF(GPIO_A, 9, GPIO_AF7);
-    Gpio_SetAF(GPIO_A, 10, GPIO_AF7);
+    Gpio_Init(GPIOA, 9, GPIO_AF, GPIO_PUSH_PULL);
+    Gpio_Init(GPIOA, 10, GPIO_AF, GPIO_PUSH_PULL);
+    Gpio_SetAF(GPIOA, 9, GPIO_AF7);
+    Gpio_SetAF(GPIOA, 10, GPIO_AF7);
 
     /* 3. USART1 Configuration */
     USART1->CR1 = 0;

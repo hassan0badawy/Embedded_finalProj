@@ -20,9 +20,6 @@ CMAKE_ADDR2LINE:FILEPATH=C:/arm-gnu-toolchain/bin/arm-none-eabi-addr2line.exe
 //Path to a program.
 CMAKE_AR:FILEPATH=C:/arm-gnu-toolchain/bin/arm-none-eabi-ar.exe
 
-//ASM compiler
-CMAKE_ASM_COMPILER:STRING=C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe
-
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
 CMAKE_ASM_COMPILER_AR:FILEPATH=C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar.exe
@@ -48,9 +45,6 @@ CMAKE_ASM_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //No help, variable specified on the command line.
 CMAKE_BUILD_TYPE:STRING=Debug
-
-//C compiler
-CMAKE_C_COMPILER:STRING=C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -252,6 +246,7 @@ CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 CMAKE_AR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ASM_COMPILER
 CMAKE_ASM_COMPILER-ADVANCED:INTERNAL=1
+CMAKE_ASM_COMPILER:INTERNAL=C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe
 //ADVANCED property for variable: CMAKE_ASM_COMPILER_AR
 CMAKE_ASM_COMPILER_AR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ASM_COMPILER_RANLIB
@@ -284,6 +279,7 @@ CMAKE_CTEST_COMMAND:INTERNAL=C:/Program Files/CMake/bin/ctest.exe
 CMAKE_CXX_COMPILER:INTERNAL=C:/arm-gnu-toolchain/bin/arm-none-eabi-g++.exe
 //ADVANCED property for variable: CMAKE_C_COMPILER
 CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
+CMAKE_C_COMPILER:INTERNAL=C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe
 //ADVANCED property for variable: CMAKE_C_COMPILER_AR
 CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
@@ -349,8 +345,6 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
 CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
-//ADVANCED property for variable: CMAKE_OBJCOPY
-CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 CMAKE_OBJCOPY:INTERNAL=C:/arm-gnu-toolchain/bin/arm-none-eabi-objcopy.exe
 //ADVANCED property for variable: CMAKE_OBJDUMP
 CMAKE_OBJDUMP-ADVANCED:INTERNAL=1
