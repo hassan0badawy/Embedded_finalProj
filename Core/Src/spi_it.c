@@ -3,6 +3,7 @@
 #include "Bit_Math.h"
 #include "ipc.h"
 #include "shared.h"
+#include "../Inc/Gpio.h"
 
 /* Simple interrupt-driven SPI1 implementation to satisfy ipc.c expectations.
  * This is intentionally minimal: it tracks a TX/RX buffer and uses SPI1
@@ -22,13 +23,13 @@ static u8 g_rxIdx = 0;
 void SPI_CS_Enable(void)
 {
     /* Pull PA4 low (BSRR upper half to reset) */
-    GPIOA->BSRR = (1u << (4 + 16));
+    Gpio_WritePin(GPIO_A, 4, 0);
 }
 
 void SPI_CS_Disable(void)
 {
     /* Pull PA4 high (BSRR lower half to set) */
-    GPIOA->BSRR = (1u << 4);
+    Gpio_WritePin(GPIO_A, 4, 1);
 }
 
 void SPI_MasterInit(SPI_Handle_t *h)

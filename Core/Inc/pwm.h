@@ -15,7 +15,9 @@
 #define PWM_CHANNEL_2   2U
 #define PWM_CHANNEL_3   3U
 #define PWM_CHANNEL_4   4U
-
+#define PWM_DUTY_STOP      0u    /* 0% Duty Cycle */
+#define PWM_DUTY_SLOW      20u   /* 20% Duty Cycle - for approaching floors */
+#define PWM_DUTY_FULL      99u   /* 100% Duty Cycle - for mid-travel speed */
 /**
  * @brief  Initialise a timer channel for PWM output.
  *         Configures PSC, ARR, and sets the channel to PWM Mode 1.

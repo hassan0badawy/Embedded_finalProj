@@ -1,6 +1,6 @@
-#include "gpio.h"
-#include "stm32f401ve.h"
-#include "dispatcher.h"
+#include "../Inc/gpio.h"
+#include "../Inc/stm32f401ve.h"
+#include "../Inc/dispatcher.h"
 
 /* Hallway Buttons wiring (handled by EXTI in Elevator.c):
  * PB6, PB7, PB8, PB9, PB10, PB12 — inputs with pull-up

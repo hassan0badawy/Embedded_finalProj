@@ -1,5 +1,5 @@
-#include "shared.h"
-#include "ipc.h"
+#include "../Inc/shared.h"
+#include "../Inc/ipc.h"
 
 /*
  * Provide a weak SystemState instance so both Master and Slave

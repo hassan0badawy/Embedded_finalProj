@@ -5,10 +5,10 @@
  *  Author    : AbdallahDarwish
  */
 
-#include "Timer.h"
-#include "Timer_Private.h"
-#include "Bit_Math.h"
-#include "Nvic.h"
+#include "../Inc/Timer.h"
+#include "../Inc/Timer_Private.h"
+#include "../Inc/Bit_Math.h"
+//#include "../Inc/Nvic.h"
 
 #define NUM_OF_TIMERS 4U
 

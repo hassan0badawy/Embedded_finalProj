@@ -6,9 +6,9 @@
  */
 
 
-#include "Std_Types.h"
-#include "Gpio.h"
-#include "Gpio_Private.h"
+#include "../Inc/Std_Types.h"
+#include "../Inc/Gpio.h"
+#include "../Inc/Gpio_Private.h"
 
 #define GPIO_REG(PORT_ID, REG_ID)          ((volatile uint32 *) ((PORT_ID) + (REG_ID)))
 

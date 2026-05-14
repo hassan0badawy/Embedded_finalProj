@@ -1,6 +1,6 @@
-#include "uart_dma.h"
-#include "shared.h"
-#include "Bit_Math.h"
+#include "../Inc/uart_dma.h"
+#include "../Inc/shared.h"
+#include "../Inc/Bit_Math.h"
 
 /* ─────────────────────────────────────────
  * GLOBAL BUFFERS & FLAGS

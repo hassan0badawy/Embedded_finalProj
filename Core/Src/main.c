@@ -31,14 +31,14 @@
  * ═════════════════════════════════════════════════════════════════════════════
  */
 
-#include "std_types.h"
-#include "Elevator.h"
-#include "uart_dma.h"
-#include "pwm.h"
-#include "ipc.h"
-#include "spi.h"
-#include "Bit_Math.h"
-#include "dispatcher.h"
+#include "../Inc/std_types.h"
+#include "../Inc/Elevator.h"
+#include "../Inc/uart_dma.h"
+#include "../Inc/pwm.h"
+#include "../Inc/ipc.h"
+#include "../Inc/spi.h"
+#include "../Inc/Bit_Math.h"
+#include "../Inc/dispatcher.h"
 
 
 /* ─────────────────────────────────────────────────────────────────────────────

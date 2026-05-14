@@ -1,8 +1,8 @@
-#include "ipc.h"
-#include "Bit_Math.h"
-#include "shared.h" /* for SystemState */
-#include "stdint.h"
-#include "spi_it.h"
+#include "../Inc/ipc.h"
+#include "../Inc/Bit_Math.h"
+#include "../Inc/shared.h" /* for SystemState */
+#include "../Inc/std_types.h"
+#include "../Inc/spi_it.h"
 
 /* ─────────────────────────────────────────
  * GLOBAL INSTANCES

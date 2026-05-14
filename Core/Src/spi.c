@@ -1,7 +1,10 @@
-#include "stm32f401xe.h"
-#include "Gpio.h"
-#include "Spi.h"
-#include "shared.h"
+#include "stm32f401ve.h"
+#include "../Inc/Gpio.h"
+#include "../Inc/spi_it.h"
+#include "../Inc/ipc.h"
+#include "../Inc/Bit_Math.h"
+
+#include "../Inc/shared.h"
 
 void Spi1_Init(uint8 MasterSlave, uint8 ClkPol, uint8 ClkPhase) {
     /* 1. SPI Pins on Port B (SCK: B3, MISO: B4, MOSI: B5) */

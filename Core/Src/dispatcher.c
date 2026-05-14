@@ -1,5 +1,7 @@
-#include "dispatcher.h"
-#include "ipc.h"
+#include "../Inc/shared.h"
+#include "../Inc/elevator.h"
+#include "../Inc/dispatcher.h"
+#include "../Inc/ipc.h"
 
 /* ─────────────────────────────────────────
  * INTERNAL DATA
