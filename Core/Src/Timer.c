@@ -28,6 +28,12 @@ void TIM2_IRQHandler(void)
         if ((tick_ms % 50u) == 0u) {
             GSS.ipc_tick_flag = 1u;
         }
+        
+        /* 500ms Telemetry and Door Tick trigger */
+        if ((tick_ms % 500u) == 0u) {
+            GSS.telem_flag = 1u;
+            GSS.telem_tick = 1u;
+        }
     }
 }
 

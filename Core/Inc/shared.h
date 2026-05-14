@@ -58,10 +58,6 @@ typedef struct {
  * ───────────────────────────────────────────────────────────────────────── */
 #define NUM_FLOORS          4u
 
-/* Hallway call queue — indexed [floor][0=UP,1=DOWN] */
-#define DIR_UP              0u
-#define DIR_DOWN            1u
-
 typedef struct {
     /* ── Master Elevator (Elevator A) ── */
     volatile u8  position;              /* Current floor 0-3            */
@@ -74,8 +70,7 @@ typedef struct {
     volatile u8  door_ticks;            /* Counts down from DOOR_TICKS  */
 
     /* ── Requests ── */
-    volatile u8  cabin_request[NUM_FLOORS];    /* cabin buttons F1-F4   */
-    volatile u8  hall_request[NUM_FLOORS][2];  /* hall[floor][UP/DOWN]  */
+    volatile u8  floor_request[NUM_FLOORS];    /* Unified floor requests (cabin + assigned hall) */
 
     /* ── IPC / Slave State ── */
     volatile u8  comm_fault;            /* 1 = IPC timeout              */
@@ -89,7 +84,8 @@ typedef struct {
 
     /* ── Timing Flags (set by ISRs, cleared by main loop) ── */
     volatile u8  ipc_tick_flag;         /* Set by TIM2 IRQ  (50ms)     */
-    volatile u8  telem_flag;            /* Set by TIM6 IRQ  (500ms)    */
+    volatile u8  telem_flag;            /* Set by Timer     (500ms)    */
+    volatile u8  telem_tick;            /* Set by Timer     (500ms)    */
 
     /* ── IPC Packets ── */
     SPI_Packet_t tx_packet;             /* Packet being sent to Slave   */

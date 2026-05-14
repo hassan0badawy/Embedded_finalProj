@@ -5,6 +5,7 @@
 #include "../Inc/Pwm.h"
 #include "../Inc/Timer.h"
 #include "../Inc/gpio.h"
+#include "../Inc/uart_dma.h"
 #include <stdarg.h>
 
 /* ─────────────────────────────────────────
@@ -20,8 +21,6 @@ volatile GlobalSharedState_t GSS;
  * 16MHz / (PSC+1=16) = 1MHz tick
  * 1MHz  / (ARR+1=100) = 10kHz PWM period
  * ───────────────────────────────────────── */
-#define ELV_PWM_TIMER      TIMER1   /* TIM1 CH1 on PA8 — avoids PA0 cabin button conflict */
-#define ELV_PWM_CH         1
 #define ELV_PWM_PSC        15u
 #define ELV_PWM_ARR        99u
 
@@ -30,7 +29,7 @@ volatile GlobalSharedState_t GSS;
  * ───────────────────────────────────────── */
 void PWM_SetDuty(u8 duty_percent)
 {
-    Pwm_SetDutyPercent(ELV_PWM_TIMER, ELV_PWM_CH, duty_percent);
+    Pwm_SetDuty(duty_percent);
 }
 
 /* ─────────────────────────────────────────
@@ -139,30 +138,6 @@ void EXTI_Init(void)
 }
 
 /* ─────────────────────────────────────────
- * TIM6_Init()
- * 500ms basic timer for telemetry tick.
- * TIM6 @ APB1 16MHz:
- *   PSC=15999 → 1kHz, ARR=499 → 500ms
- * ───────────────────────────────────────── */
-void TIM6_Init(void)
-{
-    RCC->APB1ENR |= RCC_APB1ENR_TIM6EN;
-
-    TIM6->CR1  = 0u;
-    TIM6->PSC  = TIM6_PSC_VALUE;
-    TIM6->ARR  = TIM6_ARR_VALUE;
-    TIM6->CNT  = 0u;
-    TIM6->DIER = (1u << 0);   /* UIE: Update Interrupt Enable */
-    TIM6->EGR  = (1u << 0);   /* UG:  Force load PSC/ARR */
-    TIM6->SR   = 0u;
-
-    NVIC_SET_PRIORITY(TIM6_IRQn, 4);  /* Lowest priority */
-    NVIC_ENABLE_IRQ(TIM6_IRQn);
-
-    TIM6->CR1 |= (1u << 0);   /* CEN: Counter Enable */
-}
-
-/* ─────────────────────────────────────────
  * Elevator_Init()
  * ───────────────────────────────────────── */
 void Elevator_Init(void)
@@ -183,7 +158,7 @@ void Elevator_Init(void)
     GSS.target    = 0u;
     GSS.direction = 0u;
     GSS.speed     = 0u;
-    GSS.fsm_state = (u8)ELV_IDLE;
+    GSS.fsm_state = (u8)STATE_IDLE;
     GSS.emergency = 0u;
     GSS.door_open = 0u;
     GSS.comm_fault = 0u;
@@ -204,13 +179,12 @@ void Elevator_Init(void)
     Gpio_SetAF(GPIO_A, 8, GPIO_AF1);   /* AF1 = TIM1_CH1 on PA8 */
 
     /* Initialise peripherals */
-    Pwm_Init(ELV_PWM_TIMER, ELV_PWM_CH, ELV_PWM_PSC, ELV_PWM_ARR);
-    Pwm_Start(ELV_PWM_TIMER, ELV_PWM_CH);
+    Pwm_Init();
     PWM_SetDuty(PWM_DUTY_STOP);
 
     UART_DMA_Init();
+    Timer_Init();
     EXTI_Init();
-    TIM6_Init();
 }
 
 /* ─────────────────────────────────────────
@@ -229,7 +203,7 @@ void Elevator_Update(void)
     {
         PWM_SetDuty(PWM_DUTY_STOP);
         primask = Enter_Critical();
-        GSS.fsm_state   = (u8)ELV_EMERGENCY;
+        GSS.fsm_state   = (u8)STATE_EMERGENCY;
         GSS.speed       = PWM_DUTY_STOP;
         GSS.direction   = 0u;
         GSS.door_open   = 0u;
@@ -240,10 +214,10 @@ void Elevator_Update(void)
         return;
     }
 
-    switch ((ElevatorState_t)GSS.fsm_state)
+    switch ((FSM_State_t)GSS.fsm_state)
     {
         /* ── IDLE ── */
-        case ELV_IDLE:
+        case STATE_IDLE:
         {
             PWM_SetDuty(PWM_DUTY_STOP);
             primask = Enter_Critical();
@@ -262,7 +236,7 @@ void Elevator_Update(void)
             {
                 GSS.target    = up_target;
                 GSS.direction = 1u;
-                GSS.fsm_state = (u8)ELV_MOVING_UP;
+                GSS.fsm_state = (u8)STATE_UP;
                 GSS.speed     = PWM_DUTY_FULL;
                 speed_snap    = PWM_DUTY_FULL;
             }
@@ -270,7 +244,7 @@ void Elevator_Update(void)
             {
                 GSS.target    = dn_target;
                 GSS.direction = 2u;
-                GSS.fsm_state = (u8)ELV_MOVING_DOWN;
+                GSS.fsm_state = (u8)STATE_DOWN;
                 GSS.speed     = PWM_DUTY_FULL;
                 speed_snap    = PWM_DUTY_FULL;
             }
@@ -280,7 +254,7 @@ void Elevator_Update(void)
         }
 
         /* ── MOVING UP ── */
-        case ELV_MOVING_UP:
+        case STATE_UP:
         {
             /* Ramp down 1 floor before target */
             if ((GSS.target > GSS.position) && (GSS.target - GSS.position) <= 1)
@@ -307,7 +281,7 @@ void Elevator_Update(void)
                 GSS.speed                       = PWM_DUTY_STOP;
                 GSS.floor_request[GSS.position] = 0u;
                 GSS.door_open                   = 1u;
-                GSS.fsm_state                   = (u8)ELV_DOORS_OPEN;
+                GSS.fsm_state                   = (u8)STATE_DOOR_OPEN;
                 door_tick_count                 = 0u;
                 Exit_Critical(primask);
                 PWM_SetDuty(PWM_DUTY_STOP);
@@ -316,7 +290,7 @@ void Elevator_Update(void)
         }
 
         /* ── MOVING DOWN ── */
-        case ELV_MOVING_DOWN:
+        case STATE_DOWN:
         {
             /* Ramp down 1 floor before target */
             if ((GSS.position > GSS.target) && (GSS.position - GSS.target) <= 1)
@@ -343,7 +317,7 @@ void Elevator_Update(void)
                 GSS.speed                       = PWM_DUTY_STOP;
                 GSS.floor_request[GSS.position] = 0u;
                 GSS.door_open                   = 1u;
-                GSS.fsm_state                   = (u8)ELV_DOORS_OPEN;
+                GSS.fsm_state                   = (u8)STATE_DOOR_OPEN;
                 door_tick_count                 = 0u;
                 Exit_Critical(primask);
                 PWM_SetDuty(PWM_DUTY_STOP);
@@ -352,7 +326,7 @@ void Elevator_Update(void)
         }
 
         /* ── DOORS OPEN ── */
-        case ELV_DOORS_OPEN:
+        case STATE_DOOR_OPEN:
         {
             PWM_SetDuty(PWM_DUTY_STOP);
 
@@ -369,7 +343,7 @@ void Elevator_Update(void)
             {
                 primask = Enter_Critical();
                 GSS.door_open   = 0u;
-                GSS.fsm_state   = (u8)ELV_IDLE;
+                GSS.fsm_state   = (u8)STATE_IDLE;
                 GSS.direction   = 0u;
                 door_tick_count = 0u;
                 Exit_Critical(primask);
@@ -378,7 +352,7 @@ void Elevator_Update(void)
         }
 
         /* ── EMERGENCY (persistent until reset) ── */
-        case ELV_EMERGENCY:
+        case STATE_EMERGENCY:
         {
             PWM_SetDuty(PWM_DUTY_STOP);
             break;
@@ -386,7 +360,7 @@ void Elevator_Update(void)
 
         default:
             primask = Enter_Critical();
-            GSS.fsm_state = (u8)ELV_IDLE;
+            GSS.fsm_state = (u8)STATE_IDLE;
             Exit_Critical(primask);
             PWM_SetDuty(PWM_DUTY_STOP);
             break;
@@ -502,20 +476,28 @@ void EXTI15_10_IRQHandler(void)
     }
 }
 
-/* ─────────────────────────────────────────
- * TIM6_DAC_IRQHandler()
- * Fires every 500ms. Sets telem_flag and
- * telem_tick for the main loop and door timer.
- * ───────────────────────────────────────── */
-void TIM6_DAC_IRQHandler(void)
-{
-    if (READ_BIT(TIM6->SR, 0))
-    {
-        TIM6->SR = 0u;   /* Clear UIF */
+/* End of EXTI Callbacks */
 
-        u32 pm = Enter_Critical();
-        GSS.telem_flag = 1u;   /* Signal System_Logger() to run */
-        GSS.telem_tick = 1u;   /* Signal door counter increment */
-        Exit_Critical(pm);
+/* ─────────────────────────────────────────
+ * System_Logger()
+ * Formats telemetry and sends via DMA.
+ * ───────────────────────────────────────── */
+#include <stdio.h>
+void System_Logger(void)
+{
+    u32 pm = Enter_Critical();
+    u8 fl  = GSS.position;
+    u8 st  = GSS.fsm_state;
+    u8 sp  = GSS.speed;
+    u8 dir = GSS.direction;
+    u8 em  = GSS.emergency;
+    u8 cf  = GSS.comm_fault;
+    GSS.telem_flag = 0u;
+    Exit_Critical(pm);
+
+    extern volatile u8 UART_TxBuf[];
+    int len = snprintf((char*)UART_TxBuf, 64, "ELV|FL:%u|ST:%u|SP:%u|DIR:%u|EM:%u|CF:%u\r\n", fl, st, sp, dir, em, cf);
+    if (len > 0) {
+        UART_DMA_Transmit((u8)len);
     }
 }

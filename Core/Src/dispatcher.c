@@ -137,7 +137,7 @@ void Dispatcher_Update(void) {
             }
         } else if (HallwayQueue[i].assigned_to == ELV_B) {
             /* Slave elevator: check if it reached the floor and doors are open */
-            u8 slave_door_open = (GSS.slave_flags & IPC_FLAG_DOOR_OPEN) ? 1u : 0u;
+            u8 slave_door_open = (GSS.slave_flags & FLAG_DOOR_OPEN) ? 1u : 0u;
             if (GSS.slave_position == f && slave_door_open) {
                 HallwayQueue[i].is_active = 0;
                 HallwayQueue[i].assigned_to = ELV_NONE;
