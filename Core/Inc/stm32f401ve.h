@@ -202,26 +202,13 @@ typedef struct {
 #define IRQ_EXTI4           10  /* EXTI line 4              */
 #define IRQ_EXTI9_5         23  /* EXTI lines 5-9           */
 
-/* ─────────────────────────────────────────
- * NVIC HELPER MACROS
- * ───────────────────────────────────────── */
-#define NVIC_ENABLE_IRQ(irq)        (NVIC->ISER[(irq) >> 5] = (1UL << ((irq) & 0x1F)))
-#define NVIC_DISABLE_IRQ(irq)       (NVIC->ICER[(irq) >> 5] = (1UL << ((irq) & 0x1F)))
-#define NVIC_SET_PRIORITY(irq, pri) (NVIC->IP[irq] = (u8)((pri) << 4))
-
-/* Aliases for case-insensitive/mixed-case usage */
-#define Nvic_EnableIrq(irq)         NVIC_ENABLE_IRQ(irq)
-#define Nvic_DisableIrq(irq)        NVIC_DISABLE_IRQ(irq)
-#define Nvic_SetPriority(irq, pri)  NVIC_SET_PRIORITY(irq, pri)
+/* NVIC helpers are now in nvic.h — include it for NVIC_ENABLE_IRQ etc. */
+#include "nvic.h"
 
 /* ─────────────────────────────────────────
  * CRITICAL SECTION MACROS
  * ───────────────────────────────────────── */
 #define ENTER_CRITICAL()    __asm volatile ("CPSID I" ::: "memory")
 #define EXIT_CRITICAL()     __asm volatile ("CPSIE I" ::: "memory")
-
-/* Aliases for case-insensitive/mixed-case usage */
-#define Enter_Critical()    ({ u32 _pm = __get_PRIMASK(); __disable_irq(); _pm; })
-#define Exit_Critical(pm)   __set_PRIMASK(pm)
 
 #endif /* STM32F401VE_H */

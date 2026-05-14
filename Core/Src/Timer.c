@@ -2,6 +2,7 @@
 #include "Timer_Private.h"
 #include "../INC/Bit_Math.h"
 #include "../INC/RCC.h"
+#include "../INC/nvic.h"
 
 #define TIM_SR_UIF    (1u << 0)
 #define TIM_DIER_UIE  (1u << 0)
