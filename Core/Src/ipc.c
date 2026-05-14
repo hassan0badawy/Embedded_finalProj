@@ -1,46 +1,21 @@
-#include "../Inc/ipc.h"
-#include "../Inc/Bit_Math.h"
-#include "../Inc/shared.h"      /* GlobalSharedState_t GSS — single unified struct */
-#include "../Inc/std_types.h"
-#include "../Inc/spi_it.h"
-#include "../Inc/Elevator.h"   /* Enter_Critical / Exit_Critical */
+/**
+ * ipc.c
+ * IPC core logic: encoding/decoding packets and running the 50ms sync.
+ */
+#include "ipc.h"
+#include "stm32f401ve.h"
+#include "Timer.h"
 
-/* ─────────────────────────────────────────
- * GLOBAL IPC HANDLE INSTANCE
- * ───────────────────────────────────────── */
-IPC_Handle_t IPC_Handle;
+static volatile u8 tx_raw[IPC_PACKET_SIZE];
+static volatile u8 rx_raw[IPC_PACKET_SIZE];
+static u8 is_master_node = 0;
 
-/* ─────────────────────────────────────────
- * IPC_ComputeChecksum()
- * XOR bytes 0 through 6 → result is byte 7.
- * Detects any single-bit and any odd-number
- * of bit errors. Fast, no division needed.
- * ───────────────────────────────────────── */
-u8 IPC_ComputeChecksum(volatile u8 *pBuf)
+static void IPC_EncodeFrame(SPI_Packet_t *pFrame, volatile u8 *pBuf)
 {
-    u8 checksum = 0u;
-    u8 i;
-    for (i = 0u; i < (IPC_PACKET_SIZE - 1u); i++)
-    {
-        checksum ^= pBuf[i];
-    }
-    return checksum;
-}
-
-/* ─────────────────────────────────────────
- * IPC_EncodeFrame()
- * Packs IPC_Frame_t → raw 8-byte buffer.
- * Forces header=0xA5, computes checksum.
- * Entire write done inside critical section
- * to prevent ISR/DMA partial-read corruption.
- * ───────────────────────────────────────── */
-void IPC_EncodeFrame(IPC_Frame_t *pFrame, volatile u8 *pBuf)
-{
-    pFrame->header   = IPC_HEADER;
-    pFrame->reserved = 0x00u;
-
-    u32 _pm = Enter_Critical();
-
+    u8 csum = 0;
+    
+    pFrame->header = IPC_HEADER;
+    
     pBuf[0] = pFrame->header;
     pBuf[1] = pFrame->current_floor;
     pBuf[2] = pFrame->fsm_state;
@@ -48,19 +23,16 @@ void IPC_EncodeFrame(IPC_Frame_t *pFrame, volatile u8 *pBuf)
     pBuf[4] = pFrame->motor_speed;
     pBuf[5] = pFrame->flags;
     pBuf[6] = pFrame->reserved;
-    pBuf[7] = IPC_ComputeChecksum(pBuf);
-
-    pFrame->checksum = pBuf[7];
-
-    Exit_Critical(_pm);
+    
+    for (u8 i = 0; i < 7u; i++) {
+        csum ^= pBuf[i];
+    }
+    
+    pFrame->checksum = csum;
+    pBuf[7] = csum;
 }
 
-/* ─────────────────────────────────────────
- * IPC_DecodeFrame()
- * Unpacks validated raw bytes → IPC_Frame_t.
- * Only call AFTER IPC_CheckConsistency() == 1.
- * ───────────────────────────────────────── */
-void IPC_DecodeFrame(volatile u8 *pBuf, IPC_Frame_t *pFrame)
+static void IPC_DecodeFrame(volatile u8 *pBuf, SPI_Packet_t *pFrame)
 {
     pFrame->header        = pBuf[0];
     pFrame->current_floor = pBuf[1];
@@ -72,237 +44,111 @@ void IPC_DecodeFrame(volatile u8 *pBuf, IPC_Frame_t *pFrame)
     pFrame->checksum      = pBuf[7];
 }
 
-/* ─────────────────────────────────────────
- * IPC_Init()
- * Call once in main() before the main loop.
- * isMaster: 1 = Master, 0 = Slave
- * ───────────────────────────────────────── */
 void IPC_Init(u8 isMaster)
 {
-    u8 i;
-
-    for (i = 0u; i < IPC_PACKET_SIZE; i++)
-    {
-        IPC_Handle.TxRawBuf[i] = 0x00u;
-        IPC_Handle.RxRawBuf[i] = 0x00u;
-    }
-
-    IPC_Handle.CommFault       = 0u;
-    IPC_Handle.LastValidRxTick = 0u;
-    IPC_Handle.SysTickMs       = 0u;
-
-    IPC_Handle.TxFrame.header        = IPC_HEADER;
-    IPC_Handle.TxFrame.current_floor = 0u;
-    IPC_Handle.TxFrame.fsm_state     = (u8)ELV_IDLE;
-    IPC_Handle.TxFrame.target_floor  = 0u;
-    IPC_Handle.TxFrame.motor_speed   = 0u;
-    IPC_Handle.TxFrame.flags         = 0u;
-    IPC_Handle.TxFrame.reserved      = 0x00u;
-    IPC_Handle.TxFrame.checksum      = 0u;
-
-    SPI1_Handle.Instance = SPI1;
-
-    if (isMaster)
-    {
-        SPI_MasterInit(&SPI1_Handle);
-    }
-    else
-    {
-        SPI_SlaveInit(&SPI1_Handle);
-
-        /* Slave MUST preload DR before Master drives CS low.
-         * Build a default "IDLE at floor 0" frame and
-         * load byte 0 into DR immediately.               */
-        IPC_EncodeFrame(&IPC_Handle.TxFrame, IPC_Handle.TxRawBuf);
-        SPI_SlavePreload(&SPI1_Handle, IPC_Handle.TxRawBuf);
+    is_master_node = isMaster;
+    
+    if (isMaster) {
+        SPI1_Init_Master();
+    } else {
+        SPI1_Init_Slave();
+        /* Preload Slave with empty packet initially */
+        SPI_Packet_t empty = {0};
+        empty.header = IPC_HEADER;
+        IPC_EncodeFrame(&empty, tx_raw);
+        SPI_SlavePreload(&SPI1_Handle, tx_raw);
     }
 }
 
-/* ─────────────────────────────────────────
- * IPC_TransmitFrame()
- * Master: encode → CS low → start IT transfer.
- * Slave:  encode → preload DR for next Master clk.
- * ───────────────────────────────────────── */
-void IPC_TransmitFrame(IPC_Frame_t *pFrame)
+void IPC_TransmitFrame(SPI_Packet_t *pFrame)
 {
-    IPC_EncodeFrame(pFrame, IPC_Handle.TxRawBuf);
-
-    if (READ_BIT(SPI1->CR1, SPI_CR1_MSTR))
-    {
-        /* ── MASTER PATH ── */
-        if (SPI1_Handle.State != SPI_STATE_READY) return;
-
-        SPI_CS_Enable();
-        SPI_TransmitReceive_IT(&SPI1_Handle,
-                                IPC_Handle.TxRawBuf,
-                                IPC_Handle.RxRawBuf,
-                                IPC_PACKET_SIZE);
-        /* CS released by ISR after last byte */
-    }
-    else
-    {
-        /* ── SLAVE PATH ── */
-        /* Re-preload DR with fresh byte 0; ISR handles remaining 7 */
-        SPI_SlavePreload(&SPI1_Handle, IPC_Handle.TxRawBuf);
-
-        SPI1_Handle.pRxBuffer = IPC_Handle.RxRawBuf;
-        SPI1_Handle.RxCount   = IPC_PACKET_SIZE;
+    IPC_EncodeFrame(pFrame, tx_raw);
+    
+    if (is_master_node) {
+        SPI_MasterTransfer_IT(&SPI1_Handle, tx_raw, rx_raw, IPC_PACKET_SIZE);
+    } else {
+        /* Slave updates its preload buffer for the NEXT transfer */
+        SPI_SlavePreload(&SPI1_Handle, tx_raw);
     }
 }
 
-/* ─────────────────────────────────────────
- * IPC_CheckConsistency()
- * Validates and decodes the last received
- * raw packet.
- *
- * Returns 1 → valid; RxFrame populated.
- * Returns 0 → corrupt or comm fault.
- *
- * FIX: Entire RxRawBuf read + decode wrapped
- * in a critical section so the SPI ISR cannot
- * overwrite the buffer while we are reading it.
- * ───────────────────────────────────────── */
 u8 IPC_CheckConsistency(void)
 {
-    u8 snap[IPC_PACKET_SIZE];
-    u8 i;
-    u8 computed_checksum;
-
-    /* ── FIX: snapshot RxRawBuf atomically ──
-     * The SPI ISR can write to RxRawBuf at any time.
-     * Copy all 8 bytes inside a critical section so we
-     * never read a mix of bytes from two different frames. */
-    {
-        u32 pm = Enter_Critical();
-        for (i = 0u; i < IPC_PACKET_SIZE; i++)
-        {
-            snap[i] = IPC_Handle.RxRawBuf[i];
-        }
-        Exit_Critical(pm);
+    u8 csum = 0;
+    
+    if (rx_raw[0] != IPC_HEADER) {
+        return 0;
     }
-
-    /* Check 1: Header byte must be 0xA5 */
-    if (snap[0] != IPC_HEADER)
-    {
-        IPC_Handle.CommFault = 1u;
-        return 0u;
+    
+    for (u8 i = 0; i < 7u; i++) {
+        csum ^= rx_raw[i];
     }
-
-    /* Check 2: Recompute XOR checksum */
-    computed_checksum = 0u;
-    for (i = 0u; i < (IPC_PACKET_SIZE - 1u); i++)
-    {
-        computed_checksum ^= snap[i];
+    
+    if (csum != rx_raw[7]) {
+        return 0;
     }
-    if (computed_checksum != snap[IPC_PACKET_SIZE - 1u])
-    {
-        IPC_Handle.CommFault = 1u;
-        return 0u;
-    }
-
-    /* Check 3: Field range validation */
-    if (snap[1] > 3u)                        /* current_floor: 0–3 */
-    {
-        IPC_Handle.CommFault = 1u;
-        return 0u;
-    }
-    if (snap[2] > (u8)ELV_EMERGENCY)         /* fsm_state: 0–4 */
-    {
-        IPC_Handle.CommFault = 1u;
-        return 0u;
-    }
-    if (snap[4] != 0u && snap[4] != 20u && snap[4] != 99u)  /* motor_speed */
-    {
-        IPC_Handle.CommFault = 1u;
-        return 0u;
-    }
-
-    /* ── All checks passed: decode into RxFrame ── */
-    IPC_Handle.RxFrame.header        = snap[0];
-    IPC_Handle.RxFrame.current_floor = snap[1];
-    IPC_Handle.RxFrame.fsm_state     = snap[2];
-    IPC_Handle.RxFrame.target_floor  = snap[3];
-    IPC_Handle.RxFrame.motor_speed   = snap[4];
-    IPC_Handle.RxFrame.flags         = snap[5];
-    IPC_Handle.RxFrame.reserved      = snap[6];
-    IPC_Handle.RxFrame.checksum      = snap[7];
-
-    IPC_Handle.CommFault       = 0u;
-    IPC_Handle.LastValidRxTick = IPC_Handle.SysTickMs;
-
-    return 1u;
+    
+    IPC_DecodeFrame(rx_raw, (SPI_Packet_t *)&GSS.rx_packet);
+    GSS.last_valid_rx_tick = Timer_GetMs();
+    GSS.comm_fault = 0;
+    
+    return 1;
 }
 
-/* ─────────────────────────────────────────
- * IPC_Update()
- * Call every 50ms from SysTick_Handler.
- *
- * Drives the full IPC cycle:
- *   1. Increment SysTickMs counter
- *   2. Detect comm fault via timeout
- *   3. If transfer complete: validate + decode
- *   4. On Master: copy Slave state into GSS
- *   5. On Slave:  invoke IPC_OnMasterFrameReceived
- *   6. Trigger next transfer
- *
- * FIX: Slave state is now written to GSS.slave_*
- * fields (unified struct) instead of the old
- * SystemState.slave_state (which was a separate
- * disconnected struct causing data never to sync).
- * ───────────────────────────────────────── */
 void IPC_Update(void)
 {
-    IPC_Handle.SysTickMs += 50u;
-
-    /* ── Comm fault detection (150ms = 3 missed cycles) ── */
-    if ((IPC_Handle.SysTickMs - IPC_Handle.LastValidRxTick) >= IPC_TIMEOUT_MS)
-    {
-        IPC_Handle.CommFault = 1u;
-        IPC_Handle.TxFrame.flags |= IPC_FLAG_COMM_FAULT;
-
-        /* Propagate to GSS so Dispatcher sees the fault */
-        u32 pm = Enter_Critical();
-        GSS.comm_fault = 1u;
-        Exit_Critical(pm);
+    /* If Master, check previous transfer result */
+    if (is_master_node && SPI1_Handle.RxComplete) {
+        SPI1_Handle.RxComplete = 0;
+        IPC_CheckConsistency();
     }
-
-    /* ── Process completed SPI transfer ── */
-    if (SPI1_Handle.RxComplete)
-    {
-        SPI1_Handle.RxComplete = 0u;
-
-        if (IPC_CheckConsistency())  /* Internally atomic — see above */
-        {
-            if (READ_BIT(SPI1->CR1, SPI_CR1_MSTR))
-            {
-                /* ── MASTER: copy Slave's state into GSS.slave_* fields ──
-                 *
-                 * FIX (Critical): The old code wrote to SystemState.slave_state.*
-                 * which was a SEPARATE struct from GSS. Dispatcher reads GSS.
-                 * This meant Dispatcher NEVER saw the Slave's actual state.
-                 * Now we write directly into the unified GSS.slave_* fields
-                 * so Dispatcher.CalculateScore() uses real Slave data.
-                 */
-                u32 pm = Enter_Critical();
-                GSS.slave_position  = IPC_Handle.RxFrame.current_floor;
-                GSS.slave_fsm_state = IPC_Handle.RxFrame.fsm_state;
-                GSS.slave_target    = IPC_Handle.RxFrame.target_floor;
-                GSS.slave_speed     = IPC_Handle.RxFrame.motor_speed;
-                GSS.slave_flags     = IPC_Handle.RxFrame.flags;
-                GSS.comm_fault      = 0u;  /* Valid frame received → link OK */
-                /* Also store last packet for reference */
-                GSS.last_rx_packet  = *(SPI_Packet_t*)(void*)&IPC_Handle.RxFrame;
-                GSS.last_valid_rx_tick = IPC_Handle.SysTickMs;
-                Exit_Critical(pm);
-            }
-            else
-            {
-                /* ── SLAVE: pass Master's frame to Elevator FSM ── */
-                IPC_OnMasterFrameReceived(&IPC_Handle.RxFrame);
+    
+    /* If Slave, Check consistency of received data */
+    if (!is_master_node && SPI1_Handle.RxComplete) {
+        SPI1_Handle.RxComplete = 0;
+        IPC_CheckConsistency();
+    }
+    
+    /* Check for comm fault */
+    if ((Timer_GetMs() - GSS.last_valid_rx_tick) > IPC_TIMEOUT_MS) {
+        GSS.comm_fault = 1;
+    }
+    
+    /* Prepare next frame to send */
+    u32 pm = Enter_Critical();
+    GSS.tx_packet.current_floor = GSS.position;
+    GSS.tx_packet.fsm_state     = GSS.fsm_state;
+    GSS.tx_packet.target_floor  = GSS.target;
+    GSS.tx_packet.motor_speed   = GSS.speed;
+    
+    /* Master sends assigned target via reserved byte */
+    GSS.tx_packet.reserved      = is_master_node ? GSS.slave_assigned_target : 0x00u;
+    
+    GSS.tx_packet.flags = 0;
+    if (GSS.door_open) GSS.tx_packet.flags |= FLAG_DOOR_OPEN;
+    if (GSS.emergency) GSS.tx_packet.flags |= FLAG_EMERGENCY;
+    if (GSS.comm_fault) GSS.tx_packet.flags |= IPC_FLAG_COMM_FAULT;
+    Exit_Critical(pm);
+    
+    IPC_TransmitFrame((SPI_Packet_t *)&GSS.tx_packet);
+    
+    /* Update slave state in GSS if valid data */
+    if (!GSS.comm_fault) {
+        pm = Enter_Critical();
+        GSS.slave_position  = GSS.rx_packet.current_floor;
+        GSS.slave_fsm_state = GSS.rx_packet.fsm_state;
+        GSS.slave_target    = GSS.rx_packet.target_floor;
+        GSS.slave_speed     = GSS.rx_packet.motor_speed;
+        GSS.slave_flags     = GSS.rx_packet.flags;
+        
+        if (!is_master_node) {
+            /* Slave reads the target assigned by Master */
+            u8 assigned_floor = GSS.rx_packet.reserved;
+            if (assigned_floor < NUM_FLOORS) {
+                GSS.floor_request[assigned_floor] = 1u;
             }
         }
+        
+        Exit_Critical(pm);
     }
-
-    /* ── Trigger next 50ms transfer ── */
-    IPC_TransmitFrame(&IPC_Handle.TxFrame);
 }

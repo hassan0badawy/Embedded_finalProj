@@ -1,13 +1,28 @@
-#include "../Inc/stm32f401ve.h"
-#include "../Inc/Gpio.h"
-#include "../Inc/spi_it.h"
-#include "../Inc/ipc.h"
-#include "../Inc/Bit_Math.h"
+/**
+ * Spi.c
+ * SPI1 hardware initialization for the IPC link.
+ *
+ * Pins (AF5):
+ *   PB3 = SCK, PB4 = MISO, PB5 = MOSI, PA4 = CS (manual software NSS)
+ *
+ * SPI Clock math (PCLK2 = 16MHz):
+ *   BR[2:0] = 010 → Baud = PCLK2/8 = 2MHz (safe for Proteus)
+ *
+ * Mode: Full-Duplex, 8-bit, CPOL=0, CPHA=0 (Mode 0)
+ * SSM=1, SSI=1 (software slave management — no hardware NSS)
+ */
+#include "Spi.h"
+#include "stm32f401ve.h"
+#include "RCC.h"
+#include "Gpio.h"
+#include "spi_it.h"
+#include "Bit_Math.h"
 
-#include "../Inc/shared.h"
+SPI_HandleTypeDef SPI1_Handle;
 
-void Spi1_Init(uint8 MasterSlave, uint8 ClkPol, uint8 ClkPhase) {
-    /* 1. SPI Pins on Port B (SCK: B3, MISO: B4, MOSI: B5) */
+static void spi_gpio_init(void)
+{
+    /* PB3=SCK, PB4=MISO, PB5=MOSI — all AF5 */
     Gpio_Init(GPIO_B, 3, GPIO_AF, GPIO_PUSH_PULL);
     Gpio_Init(GPIO_B, 4, GPIO_AF, GPIO_PUSH_PULL);
     Gpio_Init(GPIO_B, 5, GPIO_AF, GPIO_PUSH_PULL);
@@ -15,43 +30,67 @@ void Spi1_Init(uint8 MasterSlave, uint8 ClkPol, uint8 ClkPhase) {
     Gpio_SetAF(GPIO_B, 4, GPIO_AF5);
     Gpio_SetAF(GPIO_B, 5, GPIO_AF5);
 
-    /* 2. PC13 as Manual Chip Select (Avoids B12 and A4 conflicts) */
-    Gpio_Init(IPC_CS_PORT, IPC_CS_PIN, GPIO_OUTPUT, GPIO_PUSH_PULL);
-    Spi1_CS_Release(); // High = Deselected
+    /* PA4 = CS (output, default high = deselected) */
+    Gpio_Init(GPIO_A, 4, GPIO_OUTPUT, GPIO_PUSH_PULL);
+    SPI1_CS_Release();
+}
 
-    /* 3. SPI Hardware Configuration */
-    SPI1->CR1 |= (1 << SPI_CR1_SSM) | (1 << SPI_CR1_SSI);
+static void spi_hw_config(u8 is_master)
+{
+    /* Enable SPI1 clock */
+    RCC_EnableClock(RCC_SPI1);
 
-    SPI1->CR1 &= ~(1 << SPI_CR1_MSTR);
-    SPI1->CR1 |= (MasterSlave << SPI_CR1_MSTR);
+    /* Reset CR1 */
+    SPI1->CR1 = 0;
 
-    SPI1->CR1 &= ~(1 << SPI_CR1_CPOL);
-    SPI1->CR1 |= (ClkPol << SPI_CR1_CPOL);
-    SPI1->CR1 &= ~(1 << SPI_CR1_CPHA);
-    SPI1->CR1 |= (ClkPhase << SPI_CR1_CPHA);
+    /* Software NSS management (SSM=1, SSI=1) */
+    SPI1->CR1 |= (1u << SPI_CR1_SSM) | (1u << SPI_CR1_SSI);
 
-    // Baud rate 4MHz
-    SPI1->CR1 &= ~(0x7 << SPI_CR1_BR0);
-    SPI1->CR1 |= (0x1 << SPI_CR1_BR0);
+    /* Mode 0: CPOL=0, CPHA=0 */
 
-    /* 4. Interrupts & NVIC (Required for 30% IPC Reliability) */
-    SPI1->CR2 |= (1 << SPI_CR2_RXNEIE);
-    NVIC_SET_PRIORITY(IRQ_SPI1, 1); // High Priority
+    /* Baud rate: PCLK2/8 = 2MHz (BR[2:0]=010) */
+    SPI1->CR1 |= (0x2u << SPI_CR1_BR0);
+
+    /* Master/Slave selection */
+    if (is_master) {
+        SPI1->CR1 |= (1u << SPI_CR1_MSTR);
+    }
+
+    /* Enable RXNE interrupt */
+    SPI1->CR2 |= (1u << SPI_CR2_RXNEIE);
+
+    /* Enable SPI1 in NVIC, priority 1 */
+    NVIC_SET_PRIORITY(IRQ_SPI1, 1u);
     NVIC_ENABLE_IRQ(IRQ_SPI1);
 
-    SPI1->CR1 |= (1 << SPI_CR1_SPE);
+    /* Enable SPI peripheral */
+    SPI1->CR1 |= (1u << SPI_CR1_SPE);
 }
 
-void Spi1_CS_Select(void) {
-    Gpio_WritePin(IPC_CS_PORT, IPC_CS_PIN, 0);
+void SPI1_Init_Master(void)
+{
+    spi_gpio_init();
+    spi_hw_config(1u);
+
+    SPI1_Handle.State      = SPI_STATE_READY;
+    SPI1_Handle.RxComplete = 0u;
 }
 
-void Spi1_CS_Release(void) {
-    Gpio_WritePin(IPC_CS_PORT, IPC_CS_PIN, 1);
+void SPI1_Init_Slave(void)
+{
+    spi_gpio_init();
+    spi_hw_config(0u);
+
+    SPI1_Handle.State      = SPI_STATE_READY;
+    SPI1_Handle.RxComplete = 0u;
 }
 
-/* ─────────────────────────────────────────
- * SPI_SlavePreload and IRQHandler are now
- * implemented in spi_it.c to support the
- * interrupt-driven IPC architecture.
- * ───────────────────────────────────────── */
+void SPI1_CS_Assert(void)
+{
+    Gpio_WritePin(GPIO_A, SPI_CS_PIN, 0u);
+}
+
+void SPI1_CS_Release(void)
+{
+    Gpio_WritePin(GPIO_A, SPI_CS_PIN, 1u);
+}

@@ -1,65 +1,43 @@
+/**
+ * spi_it.h
+ * Interrupt-driven SPI1 handle type and API.
+ * Single source of truth for SPI_HandleTypeDef.
+ */
 #ifndef SPI_IT_H
 #define SPI_IT_H
 
 #include "std_types.h"
 #include "stm32f401ve.h"
+#include "shared.h"
 
 #define SPI_STATE_READY 0u
 #define SPI_STATE_BUSY  1u
 
-/* ─────────────────────────────────────────
- * SPI_Handle_t
- * ─────────────────────────────────────────
- * Holds all state for one interrupt-driven
- * SPI transfer. Both Master and Slave use
- * this struct via the global SPI1_Handle.
- *
- * FIX: Added pTxBuffer, TxCount, RxBuffer
- * fields required by SPI_SlavePreload() in
- * spi.c to set up the remaining 7 bytes
- * after the first byte is preloaded into DR.
- * ───────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────────────────
+ * SPI Handle
+ * Tracks the state of one non-blocking SPI transfer.
+ * ───────────────────────────────────────────────────────────────────────── */
 typedef struct {
-    SPI_RegDef_t    *Instance;
-
-    /* RX path */
-    volatile u8     *pRxBuffer;         /* Pointer to RX destination buffer  */
-    u8               RxCount;           /* Total bytes expected to receive    */
-    volatile u8      RxComplete;        /* 1 = all bytes received (set by ISR)*/
-
-    /* TX path (used by Slave preload and Master IT transfer) */
-    volatile u8     *pTxBuffer;         /* Pointer to TX source buffer        */
-    u8               TxCount;           /* Remaining bytes to transmit        */
-
-    /* Raw RX storage for Slave (8-byte internal buffer) */
-    volatile u8      RxBuffer[8];       /* ISR fills this during Slave RX     */
-
-    u8               State;             /* SPI_STATE_READY or SPI_STATE_BUSY  */
+    volatile u8  *pTxBuf;       /* Pointer to TX data                   */
+    volatile u8  *pRxBuf;       /* Pointer to RX destination            */
+    u8            Len;          /* Total bytes in transfer              */
+    u8            TxIdx;        /* Next TX byte index                   */
+    u8            RxIdx;        /* Next RX byte index                   */
+    volatile u8   RxComplete;   /* 1 = all bytes received               */
+    volatile u8   State;        /* SPI_STATE_READY / SPI_STATE_BUSY     */
+    volatile u8   RxBuffer[IPC_PACKET_SIZE]; /* Raw bytes from last RX  */
 } SPI_HandleTypeDef;
 
 extern SPI_HandleTypeDef SPI1_Handle;
 
-/* ─────────────────────────────────────────
- * API
- * ───────────────────────────────────────── */
-void SPI_MasterInit(SPI_HandleTypeDef *h);
-void SPI_SlaveInit(SPI_HandleTypeDef *h);
-void SPI_TransmitReceive_IT(SPI_HandleTypeDef *h, volatile u8 *pTx, volatile u8 *pRx, u8 len);
+/* API */
+void SPI_MasterTransfer_IT(SPI_HandleTypeDef *h,
+                            volatile u8 *pTx,
+                            volatile u8 *pRx,
+                            u8 len);
+void SPI_SlavePreload(SPI_HandleTypeDef *h, volatile u8 *pTx);
 
-/*
- * SPI_SlavePreload()
- * ──────────────────
- * SLAVE ONLY. Preloads the first byte of pTxBuffer
- * into SPI1->DR immediately, and stores the remaining
- * 7 bytes in pHandle so the ISR can clock them out
- * byte-by-byte as the Master drives SCK.
- *
- * Must be called BEFORE Master pulls CS low.
- */
-void SPI_SlavePreload(SPI_HandleTypeDef *h, volatile u8 *pTxBuffer);
-
-/* Chip-select control */
-void SPI_CS_Enable(void);
-void SPI_CS_Disable(void);
+/* IRQ Handler (defined in spi_it.c) */
+void SPI1_IRQHandler(void);
 
 #endif /* SPI_IT_H */

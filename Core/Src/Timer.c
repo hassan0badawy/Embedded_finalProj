@@ -1,45 +1,60 @@
+/**
+ * Timer.c
+ * TIM2 configuration for 1ms system tick and 50ms IPC sync.
+ *
+ * Hardware Math:
+ *   Clock: APB1 = 16 MHz
+ *   Target Period: 1 ms
+ *   PSC = 15   → Timer tick = 16,000,000 / 16 = 1,000,000 Hz (1us)
+ *   ARR = 999  → Period = 1000 us = 1 ms ✓
+ */
 #include "Timer.h"
-#include "Timer_Private.h"
-#include "../INC/Bit_Math.h"
-#include "../INC/RCC.h"
 #include "stm32f401ve.h"
-
-#define TIM_SR_UIF    (1u << 0)
-#define TIM_DIER_UIE  (1u << 0)
+#include "RCC.h"
+#include "shared.h"
+#include "nvic.h"
 
 static volatile uint32_t tick_ms = 0;
 
 void TIM2_IRQHandler(void)
 {
-    if (TIM2->SR & TIM_SR_UIF) {
-        TIM2->SR &= ~TIM_SR_UIF;
+    if (TIM2->SR & (1u << TIM_SR_UIF)) {
+        /* Clear update interrupt flag */
+        TIM2->SR &= ~(1u << TIM_SR_UIF);
+        
         tick_ms++;
+        
+        /* 50ms IPC Sync trigger */
+        if ((tick_ms % 50u) == 0u) {
+            GSS.ipc_tick_flag = 1u;
+        }
     }
 }
 
 void Timer_Init(void)
 {
-    /* TIM2 clock enable is handled in main.c via Rcc_Enable(RCC_TIM2) */
+    /* Enable TIM2 clock */
     RCC_EnableClock(RCC_TIM2);
     
-    /* Timer Clock = 8MHz (16MHz/4 * 2) */
-    /* PSC = 16-1 -> Timer runs at 500kHz (8MHz/16) */
-    TIM2->PSC = 15U;
+    /* Configure for 1ms interrupts */
+    TIM2->PSC = 15u;
+    TIM2->ARR = 999u;
     
-    /* ARR = 499 (for exactly 1ms at 8MHz clock with PSC=16) */
-    /* 500,000 / 500 = 1,000 Hz */
-    TIM2->ARR = 499;
+    /* Force update to load shadow registers */
+    TIM2->EGR |= (1u << TIM_EGR_UG);
     
-    /* Force update to load PSC and ARR into shadow registers */
-    TIM2->EGR |= 0x01; 
-    /* Clear the UIF flag that the EGR just set so we don't fire an IRQ immediately */
-    TIM2->SR &= ~TIM_SR_UIF;
-
-    TIM2->DIER |= TIM_DIER_UIE;
-    TIM2->CR1  |= TIM_CR1_CEN;
-
-    /* Enable TIM2 IRQ in NVIC (IRQ 28) */
-    NVIC_ENABLE_IRQ(28);
+    /* Clear flag before enabling interrupt */
+    TIM2->SR &= ~(1u << TIM_SR_UIF);
+    
+    /* Enable update interrupt */
+    TIM2->DIER |= (1u << TIM_DIER_UIE);
+    
+    /* Enable TIM2 IRQ in NVIC (Priority 3) */
+    NVIC_SET_PRIORITY(IRQ_TIM2, 3u);
+    NVIC_ENABLE_IRQ(IRQ_TIM2);
+    
+    /* Start timer */
+    TIM2->CR1 |= (1u << TIM_CR1_CEN);
 }
 
 void delay_ms(uint32_t ms)
@@ -47,17 +62,18 @@ void delay_ms(uint32_t ms)
     uint32_t start = tick_ms;
     while ((tick_ms - start) < ms)
     {
-        /* Wait For Interrupt: Tells Proteus the CPU is idle.
-           This significantly speeds up simulation by skipping cycles. */
+        /* Wait For Interrupt: saves power / speeds up Proteus simulation */
         __asm volatile ("wfi");
     }
 }
 
 void delay_us(uint32_t us)
 {
-    /* At 16MHz, roughly 4 cycles per loop */
-    volatile uint32_t count = us * 4; 
-    while (count--);
+    /* Simple loop delay for microsecond resolution at 16MHz */
+    volatile uint32_t count = us * 4u; 
+    while (count--) {
+        __asm volatile ("nop");
+    }
 }
 
 uint32_t Timer_GetMs(void)

@@ -1,96 +1,85 @@
 /**
  * Pwm.c
+ * PWM driver using TIM1 Channel 1 (PA8, AF1).
  *
- *  Created on: 4/12/2026
- *  Author    : AbdallahDarwish
+ * Hardware math (16MHz HSI, APB2 = 16MHz, TIM1 input clock = 16MHz):
+ *   Target frequency: 10 kHz
+ *   PSC = 0   → Timer clock = 16MHz / 1 = 16MHz
+ *   ARR = 1599 → Frequency = 16,000,000 / (0+1) / (1599+1) = 10,000 Hz ✓
+ *
+ * Duty cycles:
+ *   Stop:  CCR = 0    (0%)
+ *   Slow:  CCR = 320  (20%)
+ *   Full:  CCR = 1599 (100%)
  */
+#include "Pwm.h"
+#include "stm32f401ve.h"
+#include "RCC.h"
+#include "Gpio.h"
+#include "Bit_Math.h"
 
-#include "../Inc/Pwm.h"
-#include "../Inc/Timer_Private.h"   /* TimerType struct + base addresses */
-#include "../Inc/Bit_Math.h"
-#include "../Inc/Timer.h"
+#define PWM_PSC         0u
+#define PWM_ARR         1599u
+#define PWM_DUTY_STOP   0u
+#define PWM_DUTY_SLOW   320u
+#define PWM_DUTY_FULL   1599u
 
-static uint32 Pwm_BaseAddresses[5] = {TIM1_BASE_ADDR, TIM2_BASE_ADDR, TIM3_BASE_ADDR, TIM4_BASE_ADDR, TIM5_BASE_ADDR};
+void Pwm_Init(void)
+{
+    /* 1. Enable TIM1 clock on APB2 */
+    RCC_EnableClock(RCC_TIM1);
 
-#define CCR_REG(TIMER, CHANNEL)  *((volatile uint32 *) (&(TIMER->CCR1) + (CHANNEL - 1)))
+    /* 2. Configure PA8 as TIM1_CH1 (AF1, Push-Pull) */
+    Gpio_Init(GPIO_A, 8, GPIO_AF, GPIO_PUSH_PULL);
+    Gpio_SetAF(GPIO_A, 8, GPIO_AF1);
 
+    /* 3. Time-base: PSC=0, ARR=1599 → 10kHz */
+    TIM1->CR1  = 0;
+    TIM1->PSC  = PWM_PSC;
+    TIM1->ARR  = PWM_ARR;
+    TIM1->RCR  = 0;
+    TIM1->CNT  = 0;
 
-void Pwm_Init(uint8 TimerId, uint8 Channel, uint16 Prescaler, uint16 AutoReload) {
-    TimerType *timer = (TimerType *)Pwm_BaseAddresses[TimerId - TIMER1];
-
-    /*Time-base*/
-    timer->CR1 = 0;
-    timer->PSC = Prescaler;
-    timer->ARR = AutoReload;
-    timer->CNT = 0;
-
-    /* Channel: PWM Mode 1 + output-compare preload */
-    /*
-     * OCxM[2:0] = 110   → PWM mode 1
-     * OCxPE     = 1     → preload enable
-     * Byte value        = 0x68
-     *
-     * Channels 1,2 → CCMR1      Channels 3,4 → CCMR2
-     * Channel 1,3  → bits 0-7   Channel 2,4 → bits 8-15
+    /* 4. OC1 → PWM Mode 1 + preload enable on CH1
+     *    CCMR1 bits[6:4] = OC1M = 110 (PWM1)
+     *    CCMR1 bit[3]    = OC1PE = 1  (preload)
      */
-    if (Channel <= 2) {
-        uint8 shift = (Channel - 1) * 8;
-        timer->CCMR1 &= ~((uint32) 0xFF << shift);
-        timer->CCMR1 |= ((uint32) CCMR_OC_PWM1_PRELOAD << shift);
+    TIM1->CCMR1 = TIM_CCMR_OC1M_PWM1 | TIM_CCMR_OC1PE;
+
+    /* 5. Enable CH1 output (CC1E) */
+    SET_BIT(TIM1->CCER, TIM_CCER_CC1E);
+
+    /* 6. Set initial duty = 0 */
+    TIM1->CCR1 = 0u;
+
+    /* 7. Auto-reload preload + force update to load shadow registers */
+    SET_BIT(TIM1->CR1, TIM_CR1_ARPE);
+    SET_BIT(TIM1->EGR, TIM_EGR_UG);
+    TIM1->SR = 0;
+
+    /* 8. TIM1 is an Advanced Timer — must set MOE (Main Output Enable) */
+    TIM1->BDTR |= (1u << TIM_BDTR_MOE);
+
+    /* 9. Start counter */
+    SET_BIT(TIM1->CR1, TIM_CR1_CEN);
+}
+
+void Pwm_SetDuty(u8 duty_percent)
+{
+    u32 ccr;
+
+    if (duty_percent == 0u) {
+        ccr = PWM_DUTY_STOP;
+    } else if (duty_percent >= 100u) {
+        ccr = PWM_DUTY_FULL;
     } else {
-        uint8 shift = (Channel - 3) * 8;
-        timer->CCMR2 &= ~((uint32) 0xFF << shift);
-        timer->CCMR2 |= ((uint32) CCMR_OC_PWM1_PRELOAD << shift);
+        ccr = ((u32)duty_percent * PWM_ARR) / 100u;
     }
 
-    /* Enable channel output in CCER (CCxE bit)*/
-    SET_BIT(timer->CCER, (Channel - 1) * 4);
-
-    CCR_REG(timer, Channel) = 0;
-
-    /* Auto-reload preload + force update to load shadows ── */
-    SET_BIT(timer->CR1, CR1_ARPE);
-    SET_BIT(timer->EGR, EGR_UG);
-    
-    /* Advanced Timer (TIM1) specific configuration for Proteus & HW */
-    if (TimerId == TIMER1) {
-        timer->BDTR |= (1u << 15); /* Set MOE (Main Output Enable) */
-    }
-
-    timer->SR = 0;
+    TIM1->CCR1 = ccr;
 }
 
-/**
- *  Fixed-point duty-cycle conversion (no float!)
- *  CCR = (DutyPercent * ARR) / 100
- */
-void Pwm_SetDutyPercent(uint8 TimerId, uint8 Channel, uint8 DutyPercent) {
-    TimerType *timer  = (TimerType *)Pwm_BaseAddresses[TimerId - TIMER1];
-
-    if (DutyPercent > 100) {
-        DutyPercent = 100;
-    }
-
-    uint32 arr = timer->ARR;
-    uint32 ccr = ((uint32) DutyPercent * arr) / 100UL;
-
-    CCR_REG(timer, Channel) = ccr;
-}
-
-void Pwm_Start(uint8 TimerId, uint8 Channel) {
-    TimerType *tim = (TimerType *)Pwm_BaseAddresses[TimerId - TIMER1];
-
-    /* Make sure channel output is enabled */
-    SET_BIT(tim->CCER, (Channel - 1) * 4);
-    /* Start the counter */
-    SET_BIT(tim->CR1, CR1_CEN);
-}
-
-void Pwm_Stop(uint8 TimerId, uint8 Channel) {
-    TimerType *tim = ( TimerType *)Pwm_BaseAddresses[TimerId - TIMER1];
-
-    /* Disable channel output */
-    CLEAR_BIT(tim->CCER, (Channel - 1) * 4);
-
-    CLEAR_BIT(tim->CR1, CR1_CEN);
+void Pwm_Stop(void)
+{
+    TIM1->CCR1 = 0u;
 }

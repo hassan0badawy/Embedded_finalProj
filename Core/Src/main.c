@@ -254,27 +254,8 @@ int main(void)
         /* ──────────────────────────────────────────────────────────────────
          * COMM FAULT DETECTION (150ms timeout)
          * ──────────────────────────────────────────────────────────────────
-         * If SPI hasn't received a valid frame in 150ms,
-         * declare comm fault and Master takes all calls (fallback).
-         * When comm is restored, clear fault flag.
+         * Handled by IPC_Update() in ipc.c which manages GSS.comm_fault.
          */
-        {
-            u32 time_since_last_valid = IPC_Handle.SysTickMs - IPC_Handle.LastValidRxTick;
-            
-            if (time_since_last_valid > IPC_TIMEOUT_MS) {
-                /* Comm fault detected */
-                u32 pm = Enter_Critical();
-                IPC_Handle.CommFault = 1;
-                GSS.comm_fault = 1;  /* Propagate to Dispatcher */
-                Exit_Critical(pm);
-            } else {
-                /* Link is OK */
-                u32 pm = Enter_Critical();
-                IPC_Handle.CommFault = 0;
-                GSS.comm_fault = 0;
-                Exit_Critical(pm);
-            }
-        }
 
         /* ──────────────────────────────────────────────────────────────────
          * STEP 2: Telemetry Transmission (500ms cadence via TIM6)

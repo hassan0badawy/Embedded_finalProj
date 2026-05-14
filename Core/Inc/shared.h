@@ -1,123 +1,105 @@
+/**
+ * shared.h
+ * Application-level shared types for the Dual-Elevator system.
+ * Only elevator logic lives here — NO dead code from other projects.
+ */
 #ifndef SHARED_H
 #define SHARED_H
 
 #include "std_types.h"
 
-/* ── Hardware Specific Definitions (RCC) ── */
-#define RCC_BASE_ADDR      0x40023800
-
-typedef struct {
-    volatile u32 CR;
-    volatile u32 PLLCFGR;
-    volatile u32 CFGR;
-    volatile u32 CIR;
-    volatile u32 AHB1RSTR;
-    volatile u32 AHB2RSTR;
-    volatile u32 AHB3RSTR;
-    u32 Reserved0;
-    volatile u32 APB1RSTR;
-    volatile u32 APB2RSTR;
-    u32 Reserved1[2];
-    volatile u32 AHB1ENR;
-    volatile u32 AHB2ENR;
-    volatile u32 AHB3ENR;
-    u32 Reserved2;
-    volatile u32 APB1ENR;
-    volatile u32 APB2ENR;
-} RccType;
-
-#define RCC                ((RccType *)RCC_BASE_ADDR)
-#define RCC_AHB1ENR        (RCC->AHB1ENR)  /* Compatibility macro */
-#define RCC_AHB1ENR_GPIOAEN (1u << 0)
-#define RCC_AHB1ENR_GPIOBEN (1u << 1)
-#define RCC_AHB1ENR_GPIOCEN (1u << 2)
-#define RCC_AHB1ENR_GPIODEN (1u << 3)
-
+/* ─────────────────────────────────────────────────────────────────────────
+ * FSM STATES
+ * Values MUST match the ElevatorState_t used in the SPI IPC packet (Byte 2).
+ * ───────────────────────────────────────────────────────────────────────── */
 typedef enum {
-    LOCKED   = 0,
-    UNLOCKED = 1,
-    ALARM    = 2
-} SystemState_t;
-
-typedef enum {
-    SEQ_IDLE     = 0,
-    SEQ_CORRECT  = 1,
-    SEQ_WRONG    = 2,
-    SEQ_COMPLETE = 3
-} SequenceState_t;
-
-typedef struct {
-    u8              has_input;  /* 1 if a key was pressed this cycle     */
-    char            key;        /* '0'-'9', '*', '#', or NO_KEY          */
-    SequenceState_t seq_state;  /* result of last sequence evaluation    */
-    u8              lock_cmd;   /* 1 when '#' is pressed (lock request)  */
-} InputEvent_t;
-
-/* ── Global Elevator Shared State ── */
-
-/* 
- * FSM States (matches IPC ElevatorState_t values from ipc.h)
- * IMPORTANT: These must remain in sync with ElevatorState_t
- * used in IPC communication (Byte 2 of SPI packet)
- * 
- * FSM_State_t is used internally by Dispatcher and Elevator
- * but the values must match ElevatorState_t for IPC compatibility
- */
-typedef enum {
-    STATE_IDLE      = 0,      /* Idle */
-    STATE_UP        = 1,      /* Moving UP (matches ELV_MOVING_UP) */
-    STATE_DOWN      = 2,      /* Moving DOWN (matches ELV_MOVING_DOWN) */
-    STATE_DOOR_OPEN = 3,      /* Doors OPEN (matches ELV_DOORS_OPEN) */
-    STATE_EMERGENCY = 4       /* Emergency (matches ELV_EMERGENCY) */
+    STATE_IDLE       = 0,
+    STATE_UP         = 1,
+    STATE_DOWN       = 2,
+    STATE_DOOR_OPEN  = 3,
+    STATE_EMERGENCY  = 4
 } FSM_State_t;
 
-/* 
- * SPI Packet Definition (8-Byte Frame)
- */
+/* ─────────────────────────────────────────────────────────────────────────
+ * SPI IPC PACKET — 8-byte fixed-length frame
+ *
+ * Byte 0: Header    = 0xA5
+ * Byte 1: floor     = current floor (0-3)
+ * Byte 2: state     = FSM_State_t (0-4)
+ * Byte 3: target    = target floor (0-3)
+ * Byte 4: speed     = 0 / 20 / 100 (PWM duty %)
+ * Byte 5: flags     = bit0=door_open, bit1=emergency
+ * Byte 6: reserved  = 0x00
+ * Byte 7: checksum  = XOR of bytes 0..6
+ * ───────────────────────────────────────────────────────────────────────── */
+#define IPC_HEADER          0xA5u
+#define IPC_PACKET_SIZE     8u
+
 typedef struct {
-    u8 header;          /* Byte 0: 0xA5 */
-    u8 current_floor;   /* Byte 1: where elevator is now (0..3) */
-    u8 fsm_state;       /* Byte 2: ElevatorState_t (0..4) */
-    u8 target_floor;    /* Byte 3: where elevator is going (0..3) */
-    u8 motor_speed;     /* Byte 4: 0, 20, 100 (maps to PWM duty) */
-    u8 flags;           /* Byte 5: bit-packed status (door, emg, etc.) */
-    u8 reserved;        /* Byte 6: reserved (used for task payload) */
-    u8 checksum;        /* Byte 7: XOR sum of bytes 0..6 */
+    u8 header;          /* Byte 0 */
+    u8 current_floor;   /* Byte 1 */
+    u8 fsm_state;       /* Byte 2 */
+    u8 target_floor;    /* Byte 3 */
+    u8 motor_speed;     /* Byte 4 */
+    u8 flags;           /* Byte 5 */
+    u8 reserved;        /* Byte 6 */
+    u8 checksum;        /* Byte 7 */
 } SPI_Packet_t;
 
-/* ─────────────────────────────────────────
- * UNIFIED GLOBAL SHARED STATE
- * Single struct used by ALL modules: Elevator.c, Dispatcher.c, IPC.c, uart_dma.c
- * ───────────────────────────────────────── */
-typedef struct __attribute__((packed)) {
-    /* ─ Master Elevator Local State ─ */
-    volatile u8  position;          /* Current floor (0–3) */
-    volatile u8  target;            /* Target floor  (0–3) */
-    volatile u8  direction;         /* 0=none, 1=up, 2=down */
-    volatile u8  speed;             /* PWM duty: 0, 20, or 100 */
-    volatile u8  fsm_state;         /* FSM_State_t value */
-    volatile u8  emergency;         /* 1 = emergency stop active */
-    volatile u8  door_open;         /* 1 = doors currently open */
-    volatile u8  comm_fault;        /* 1 = IPC link lost (timeout) */
-    volatile u8  telem_flag;        /* 1 = TIM6 fired, send telemetry */
-    volatile u8  telem_tick;        /* 1 = TIM6 500ms tick */
-    volatile u8  floor_request[4];  /* Pending cabin floor requests */
-    
-    /* ─ Slave Elevator State (from last SPI RX) ─ */
-    volatile u8  slave_position;    /* Slave's current floor */
-    volatile u8  slave_fsm_state;   /* Slave's FSM state */
-    volatile u8  slave_target;      /* Slave's target floor */
-    volatile u8  slave_speed;       /* Slave's PWM speed */
-    volatile u8  slave_flags;       /* Slave's status flags */
-    
-    /* ─ IPC Management ─ */
-    SPI_Packet_t last_rx_packet;    /* Last valid SPI packet received */
-    volatile u32 last_valid_rx_tick;/* Tick of last good RX (for timeout) */
+/* flags byte bitmask */
+#define FLAG_DOOR_OPEN      (1u << 0)
+#define FLAG_EMERGENCY      (1u << 1)
+
+/* ─────────────────────────────────────────────────────────────────────────
+ * GLOBAL SHARED STATE
+ * Single struct accessed by ALL modules (Elevator, Dispatcher, IPC, Logger).
+ * All fields are volatile because they are written by ISRs and read by main.
+ * Access with Enter_Critical() / Exit_Critical() for multi-field updates.
+ * ───────────────────────────────────────────────────────────────────────── */
+#define NUM_FLOORS          4u
+
+/* Hallway call queue — indexed [floor][0=UP,1=DOWN] */
+#define DIR_UP              0u
+#define DIR_DOWN            1u
+
+typedef struct {
+    /* ── Master Elevator (Elevator A) ── */
+    volatile u8  position;              /* Current floor 0-3            */
+    volatile u8  target;                /* Target floor  0-3            */
+    volatile u8  direction;             /* 0=none 1=up 2=down           */
+    volatile u8  speed;                 /* PWM duty: 0, 20, or 100      */
+    volatile u8  fsm_state;             /* FSM_State_t value            */
+    volatile u8  emergency;             /* 1 = emergency stop active    */
+    volatile u8  door_open;             /* 1 = doors currently open     */
+    volatile u8  door_ticks;            /* Counts down from DOOR_TICKS  */
+
+    /* ── Requests ── */
+    volatile u8  cabin_request[NUM_FLOORS];    /* cabin buttons F1-F4   */
+    volatile u8  hall_request[NUM_FLOORS][2];  /* hall[floor][UP/DOWN]  */
+
+    /* ── IPC / Slave State ── */
+    volatile u8  comm_fault;            /* 1 = IPC timeout              */
+    volatile u8  slave_position;        /* Slave's current floor        */
+    volatile u8  slave_fsm_state;       /* Slave's FSM state            */
+    volatile u8  slave_target;          /* Slave's target floor         */
+    volatile u8  slave_assigned_target; /* Target assigned to slave by Master */
+    volatile u8  slave_speed;           /* Slave's PWM speed            */
+    volatile u8  slave_flags;           /* Slave's status flags         */
+    volatile u32 last_valid_rx_tick;    /* Tick of last good SPI RX     */
+
+    /* ── Timing Flags (set by ISRs, cleared by main loop) ── */
+    volatile u8  ipc_tick_flag;         /* Set by TIM2 IRQ  (50ms)     */
+    volatile u8  telem_flag;            /* Set by TIM6 IRQ  (500ms)    */
+
+    /* ── IPC Packets ── */
+    SPI_Packet_t tx_packet;             /* Packet being sent to Slave   */
+    SPI_Packet_t rx_packet;             /* Last received from Slave     */
 } GlobalSharedState_t;
 
-/* ─────────────────────────────────────────
- * GLOBAL INSTANCE (defined in Elevator.c)
- * ───────────────────────────────────────── */
+/* Defined once in Elevator.c, declared here for all modules */
 extern volatile GlobalSharedState_t GSS;
+
+/* Global tick counter incremented by TIM2 every 50ms */
+extern volatile u32 g_ipc_tick;
 
 #endif /* SHARED_H */

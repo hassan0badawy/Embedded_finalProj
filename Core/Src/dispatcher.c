@@ -52,13 +52,13 @@ void Dispatcher_Init(void) {
         HallwayQueue[i].is_active = 0;
         HallwayQueue[i].assigned_to = ELV_NONE;
         
-        /* Initialize floor (1-4) and direction for the 6 fixed buttons */
-        if (i == CALL_U1) { HallwayQueue[i].floor = 1; HallwayQueue[i].dir = DIR_UP;   }
-        if (i == CALL_D2) { HallwayQueue[i].floor = 2; HallwayQueue[i].dir = DIR_DOWN; }
-        if (i == CALL_U2) { HallwayQueue[i].floor = 2; HallwayQueue[i].dir = DIR_UP;   }
-        if (i == CALL_D3) { HallwayQueue[i].floor = 3; HallwayQueue[i].dir = DIR_DOWN; }
-        if (i == CALL_U3) { HallwayQueue[i].floor = 3; HallwayQueue[i].dir = DIR_UP;   }
-        if (i == CALL_D4) { HallwayQueue[i].floor = 4; HallwayQueue[i].dir = DIR_DOWN; }
+        /* Initialize floor (0-3) and direction for the 6 fixed buttons */
+        if (i == CALL_U1) { HallwayQueue[i].floor = 0; HallwayQueue[i].dir = DIR_UP;   }
+        if (i == CALL_D2) { HallwayQueue[i].floor = 1; HallwayQueue[i].dir = DIR_DOWN; }
+        if (i == CALL_U2) { HallwayQueue[i].floor = 1; HallwayQueue[i].dir = DIR_UP;   }
+        if (i == CALL_D3) { HallwayQueue[i].floor = 2; HallwayQueue[i].dir = DIR_DOWN; }
+        if (i == CALL_U3) { HallwayQueue[i].floor = 2; HallwayQueue[i].dir = DIR_UP;   }
+        if (i == CALL_D4) { HallwayQueue[i].floor = 3; HallwayQueue[i].dir = DIR_DOWN; }
     }
 }
 
@@ -123,7 +123,7 @@ void Dispatcher_Update(void) {
             if (assigned == ELV_B) {
                 /* Place the assigned target into GSS for IPC layer to forward to Slave
                  * during the next 50ms IPC cycle via SPI packet */
-                GSS.last_rx_packet.target_floor = (u8)HallwayQueue[i].floor;
+                GSS.slave_assigned_target = (u8)HallwayQueue[i].floor;
             }
         }
         

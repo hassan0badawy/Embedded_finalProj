@@ -237,13 +237,6 @@ void Elevator_Update(void)
         u8 i;
         for (i = 0u; i < NUM_FLOORS; i++) { GSS.floor_request[i] = 0u; }
         Exit_Critical(primask);
-
-        /* Update IPC TX frame */
-        primask = Enter_Critical();
-        IPC_Handle.TxFrame.fsm_state   = (u8)ELV_EMERGENCY;
-        IPC_Handle.TxFrame.motor_speed = 0u;
-        IPC_Handle.TxFrame.flags      |= IPC_FLAG_EMERGENCY;
-        Exit_Critical(primask);
         return;
     }
 
@@ -398,24 +391,6 @@ void Elevator_Update(void)
             PWM_SetDuty(PWM_DUTY_STOP);
             break;
     }
-
-    /* ── Update IPC TX Frame with current state ──
-     *
-     * FIX: reserved field was set from SystemState.master_state.reserved
-     * (a disconnected struct). Changed to 0x00u (per IPC spec: always 0).
-     */
-    primask = Enter_Critical();
-    IPC_Handle.TxFrame.current_floor = GSS.position;
-    IPC_Handle.TxFrame.fsm_state     = GSS.fsm_state;
-    IPC_Handle.TxFrame.target_floor  = GSS.target;
-    IPC_Handle.TxFrame.motor_speed   = GSS.speed;
-    IPC_Handle.TxFrame.reserved      = 0x00u;   /* FIX: always 0, not from dead SystemState */
-    IPC_Handle.TxFrame.flags         = 0u;
-    if (GSS.emergency)       { IPC_Handle.TxFrame.flags |= IPC_FLAG_EMERGENCY; }
-    if (GSS.door_open)       { IPC_Handle.TxFrame.flags |= IPC_FLAG_DOOR_OPEN; }
-    if (GSS.direction == 1u) { IPC_Handle.TxFrame.flags |= IPC_FLAG_MOVING_UP; }
-    if (GSS.direction == 2u) { IPC_Handle.TxFrame.flags |= IPC_FLAG_MOVING_DN; }
-    Exit_Critical(primask);
 }
 
 /* ─────────────────────────────────────────
@@ -451,28 +426,28 @@ void EXTI_Callback(u8 exti_line)
             Exit_Critical(pm);
             break;
 
-        case 6:   /* PB6 — Hallway Button U1 (floor 1, UP) */
+        case 6:   /* PB6 — Hallway Button U1 (floor 0, UP) */
+            Dispatcher_RegisterCall(0u, DIR_UP);
+            break;
+
+        case 7:   /* PB7 — Hallway Button D2 (floor 1, DOWN) */
+            Dispatcher_RegisterCall(1u, DIR_DOWN);
+            break;
+
+        case 8:   /* PB8 — Hallway Button U2 (floor 1, UP) */
             Dispatcher_RegisterCall(1u, DIR_UP);
             break;
 
-        case 7:   /* PB7 — Hallway Button D2 (floor 2, DOWN) */
+        case 9:   /* PB9 — Hallway Button D3 (floor 2, DOWN) */
             Dispatcher_RegisterCall(2u, DIR_DOWN);
             break;
 
-        case 8:   /* PB8 — Hallway Button U2 (floor 2, UP) */
+        case 10:  /* PB10 — Hallway Button U3 (floor 2, UP) */
             Dispatcher_RegisterCall(2u, DIR_UP);
             break;
 
-        case 9:   /* PB9 — Hallway Button D3 (floor 3, DOWN) */
+        case 12:  /* PB12 — Hallway Button D4 (floor 3, DOWN) */
             Dispatcher_RegisterCall(3u, DIR_DOWN);
-            break;
-
-        case 10:  /* PB10 — Hallway Button U3 (floor 3, UP) */
-            Dispatcher_RegisterCall(3u, DIR_UP);
-            break;
-
-        case 12:  /* PB12 — Hallway Button D4 (floor 4, DOWN) */
-            Dispatcher_RegisterCall(4u, DIR_DOWN);
             break;
 
         default:
