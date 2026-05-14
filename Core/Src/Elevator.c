@@ -1,5 +1,6 @@
 #include "Elevator.h"
 #include "shared.h"
+#include "dispatcher.h"
 #include "Bit_Math.h"
 #include <stdarg.h>     /* va_list for ELV_Sprintf */
 
@@ -568,6 +569,10 @@ void Elevator_Update(void)
     IPC_Handle.TxFrame.target_floor  = GSS.target;
     IPC_Handle.TxFrame.motor_speed   = GSS.speed;
 
+    /* If Dispatcher placed a reserved target for the Slave, forward it
+     * in the reserved byte so the Slave receives its assigned floor. */
+    IPC_Handle.TxFrame.reserved      = SystemState.master_state.reserved;
+
     /* Rebuild flags byte */
     IPC_Handle.TxFrame.flags = 0u;
     if (GSS.emergency)   { IPC_Handle.TxFrame.flags |= IPC_FLAG_EMERGENCY; }
@@ -723,36 +728,38 @@ void EXTI_Callback(u8 exti_line)
          */
         case 6u:
         {
-            GSS.floor_request[0u] = 1u;  /* Hall call → F1 */
+            /* PB6 -> Hall call U1 */
+            Dispatcher_RegisterCall(1u, DIR_UP);
             break;
         }
         case 7u:
         {
-            GSS.floor_request[1u] = 1u;  /* Hall call → F2 */
+            /* PB7 -> Hall call D2 */
+            Dispatcher_RegisterCall(2u, DIR_DOWN);
             break;
         }
         case 8u:
         {
-            GSS.floor_request[2u] = 1u;  /* Hall call → F3 */
+            /* PB8 -> Hall call U2 */
+            Dispatcher_RegisterCall(2u, DIR_UP);
             break;
         }
         case 9u:
         {
-            GSS.floor_request[3u] = 1u;  /* Hall call → F4 */
+            /* PB9 -> Hall call D3 */
+            Dispatcher_RegisterCall(3u, DIR_DOWN);
             break;
         }
 
-        /* ── LINES 10, 12: Hallway Buttons (PB10, PB12) ──
-         * Additional hall call buttons (e.g. top/bottom landings).
-         */
+        /* PB10 -> Hall call U3, PB12 -> Hall call D4 */
         case 10u:
         {
-            GSS.floor_request[3u] = 1u;  /* Hall call → F4 top */
+            Dispatcher_RegisterCall(3u, DIR_UP);
             break;
         }
         case 12u:
         {
-            GSS.floor_request[0u] = 1u;  /* Hall call → F1 bottom */
+            Dispatcher_RegisterCall(4u, DIR_DOWN);
             break;
         }
 
@@ -937,4 +944,33 @@ void TIM6_DAC_IRQHandler(void)
          * Uncomment if SysTick is not configured:
          * IPC_Update(); */
     }
+}
+
+/* Called by IPC layer on Slave when a Master's frame arrives.
+ * Apply commands to local GSS (non-destructive):
+ *  - Reserved byte (1..4) = assigned target for Slave
+ *  - Emergency flag forces immediate stop
+ */
+void IPC_OnMasterFrameReceived(const IPC_Frame_t *pFrame)
+{
+    u32 primask = Enter_Critical();
+
+    /* Emergency from Master: latch and stop motor */
+    if (pFrame->flags & IPC_FLAG_EMERGENCY)
+    {
+        GSS.emergency = 1u;
+        PWM_SetDuty(PWM_DUTY_STOP);
+    }
+
+    /* If Master assigned a target for this Slave, reserved contains 1..4 */
+    if (pFrame->reserved != 0u)
+    {
+        u8 floor1to4 = pFrame->reserved;
+        if (floor1to4 >= 1u && floor1to4 <= 4u)
+        {
+            GSS.target = (u8)(floor1to4 - 1u); /* convert to 0..3 */
+        }
+    }
+
+    Exit_Critical(primask);
 }

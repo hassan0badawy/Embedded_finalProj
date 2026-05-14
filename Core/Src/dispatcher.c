@@ -1,4 +1,5 @@
 #include "dispatcher.h"
+#include "ipc.h"
 
 /* ─────────────────────────────────────────
  * INTERNAL DATA
@@ -78,10 +79,30 @@ u8 Dispatcher_AssignTask(u8 call_floor, CallDirection_t call_dir) {
 
     /* 2. Get Current States */
     u8 elvA_floor = SystemState.master_state.current_floor;
-    FSM_State_t elvA_state = (FSM_State_t)SystemState.master_state.state;
+    /* Map IPC fsm_state to internal FSM_State_t (treat DOORS_OPEN as IDLE)
+     * Master/Slave send fsm values as in ipc.h (0..4). Convert to
+     * Dispatcher FSM_State_t which uses: STATE_IDLE=0, STATE_UP=1,
+     * STATE_DOWN=2, STATE_EMERGENCY=3. */
+    FSM_State_t elvA_state;
+    switch (SystemState.master_state.fsm_state)
+    {
+        case 1: elvA_state = STATE_UP; break;      /* MOVING_UP */
+        case 2: elvA_state = STATE_DOWN; break;    /* MOVING_DOWN */
+        case 3: elvA_state = STATE_IDLE; break;    /* DOORS_OPEN -> treat as IDLE */
+        case 4: elvA_state = STATE_EMERGENCY; break;
+        default: elvA_state = STATE_IDLE; break;
+    }
 
     u8 elvB_floor = SystemState.slave_state.current_floor;
-    FSM_State_t elvB_state = (FSM_State_t)SystemState.slave_state.state;
+    FSM_State_t elvB_state;
+    switch (SystemState.slave_state.fsm_state)
+    {
+        case 1: elvB_state = STATE_UP; break;
+        case 2: elvB_state = STATE_DOWN; break;
+        case 3: elvB_state = STATE_IDLE; break;
+        case 4: elvB_state = STATE_EMERGENCY; break;
+        default: elvB_state = STATE_IDLE; break;
+    }
 
     /* 3. Calculate Scores (Lower is better) */
     s8 scoreA = CalculateScore(elvA_floor, elvA_state, call_floor, call_dir);
@@ -103,19 +124,25 @@ void Dispatcher_Update(void) {
             
             /* Master handles updating its own targets or sending Slave's target via SPI */
             if (assigned == ELV_B) {
-                SystemState.master_state.target_floor = HallwayQueue[i].floor;
+                /* Place the assigned target into master_state.reserved
+                 * so the Elevator/IPC layer will forward it to the Slave
+                 * inside the next 50ms IPC cycle. */
+                SystemState.master_state.reserved = (u8)HallwayQueue[i].floor;
             }
         }
         
         /* Check if call is completed (elevator reached floor and doors open) */
         u8 f = HallwayQueue[i].floor;
         if (HallwayQueue[i].assigned_to == ELV_A) {
-            if (SystemState.master_state.current_floor == f && SystemState.master_state.door_status == 1) {
+            /* Door open detected via flags bit */
+            u8 master_door = (SystemState.master_state.flags & IPC_FLAG_DOOR_OPEN) ? 1u : 0u;
+            if (SystemState.master_state.current_floor == f && master_door == 1) {
                 HallwayQueue[i].is_active = 0;
                 HallwayQueue[i].assigned_to = ELV_NONE;
             }
         } else if (HallwayQueue[i].assigned_to == ELV_B) {
-            if (SystemState.slave_state.current_floor == f && SystemState.slave_state.door_status == 1) {
+            u8 slave_door = (SystemState.slave_state.flags & IPC_FLAG_DOOR_OPEN) ? 1u : 0u;
+            if (SystemState.slave_state.current_floor == f && slave_door == 1) {
                 HallwayQueue[i].is_active = 0;
                 HallwayQueue[i].assigned_to = ELV_NONE;
             }

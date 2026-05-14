@@ -71,13 +71,13 @@ typedef enum {
  */
 typedef struct {
     u8 header;          /* Byte 0: 0xA5 */
-    u8 state;           /* Byte 1: FSM_State_t (0-3) */
-    u8 current_floor;   /* Byte 2: 1, 2, 3, or 4 */
-    u8 target_floor;    /* Byte 3: 1, 2, 3, or 4 */
-    u8 door_status;     /* Byte 4: 0: Closed, 1: Open */
-    u8 internal_reqs;   /* Byte 5: Bitmask (Bit 0-3) */
-    u8 reserved;        /* Byte 6: Reserved */
-    u8 checksum;        /* Byte 7: XOR sum of 0-6 */
+    u8 current_floor;   /* Byte 1: where elevator is now (0..3) */
+    u8 fsm_state;       /* Byte 2: ElevatorState_t (0..4) */
+    u8 target_floor;    /* Byte 3: where elevator is going (0..3) */
+    u8 motor_speed;     /* Byte 4: 0, 20, 100 (maps to PWM duty) */
+    u8 flags;           /* Byte 5: bit-packed status (door, emg, etc.) */
+    u8 reserved;        /* Byte 6: reserved (used for task payload) */
+    u8 checksum;        /* Byte 7: XOR sum of bytes 0..6 */
 } SPI_Packet_t;
 
 /* 
@@ -87,7 +87,7 @@ typedef struct {
 typedef struct {
     SPI_Packet_t master_state; /* Elevator A */
     SPI_Packet_t slave_state;  /* Elevator B */
-    volatile u8 comm_fault;    /* 1 if SPI fails (>200ms) */
+    volatile u8 comm_fault;    /* 1 if SPI fails (timeout) */
 } GlobalSharedState_t;
 
 extern GlobalSharedState_t SystemState;

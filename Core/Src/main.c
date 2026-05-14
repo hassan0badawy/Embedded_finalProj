@@ -273,7 +273,7 @@ int main(void)
          * own 50ms timer logic (e.g., using TIM6 counter or a free timer).
          *
          * Uncomment if SysTick is disabled:
-         *     if (IPC_50ms_tick)  // Your 50ms flag
+              if (IPC_50ms_tick)  // Your 50ms flag
          *     {
          *         IPC_Update();
          *         IPC_50ms_tick = 0;
@@ -322,12 +322,10 @@ int main(void)
  *   {
  *       // Simple 50ms ticker: call IPC_Update() each SysTick
  *   }
-
+*/
 void SysTick_Handler(void)
 {
     IPC_Update();
 }
- *
- * ─────────────────────────────────────────────────────────────────────────────
- */
+
 

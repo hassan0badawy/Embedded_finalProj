@@ -1,5 +1,7 @@
 #include "ipc.h"
 #include "Bit_Math.h"
+#include "shared.h" /* for SystemState */
+#include "stdint.h"
 
 /* ─────────────────────────────────────────
  * GLOBAL INSTANCES
@@ -290,7 +292,28 @@ void IPC_Update(void)
         SPI1_Handle.RxComplete = 0u;
 
         /* Validate received packet */
-        IPC_CheckConsistency();
+        if (IPC_CheckConsistency())
+        {
+            /* On master: copy received slave status into SystemState.slave_state */
+            if (READ_BIT(SPI1->CR1, SPI_CR1_MSTR))
+            {
+                SystemState.slave_state.header       = IPC_Handle.RxFrame.header;
+                SystemState.slave_state.current_floor= IPC_Handle.RxFrame.current_floor;
+                SystemState.slave_state.fsm_state    = IPC_Handle.RxFrame.fsm_state;
+                SystemState.slave_state.target_floor = IPC_Handle.RxFrame.target_floor;
+                SystemState.slave_state.motor_speed  = IPC_Handle.RxFrame.motor_speed;
+                SystemState.slave_state.flags        = IPC_Handle.RxFrame.flags;
+                SystemState.slave_state.reserved     = IPC_Handle.RxFrame.reserved;
+                SystemState.slave_state.checksum     = IPC_Handle.RxFrame.checksum;
+            }
+            else
+            {
+                /* On slave: hand received master frame to a callback
+                 * implemented in Elevator.c (IPC_OnMasterFrameReceived)
+                 * to apply the master's command into local GSS. */
+                IPC_OnMasterFrameReceived(&IPC_Handle.RxFrame);
+            }
+        }
     }
 
     /* ── On Master: start next 50ms transfer ── */

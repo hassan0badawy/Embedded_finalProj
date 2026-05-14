@@ -156,4 +156,9 @@ u8 IPC_ComputeChecksum(volatile u8 *pBuf);
 /* Call every 50ms from SysTick to drive the IPC exchange */
 void IPC_Update(void);
 
+/* Optional callback: implemented by Slave firmware to apply
+ * Master's frame to local GSS. Weak implementation is provided
+ * in `system_state.c` so it's optional. */
+void IPC_OnMasterFrameReceived(const IPC_Frame_t *pFrame);
+
 #endif /* IPC_H */
