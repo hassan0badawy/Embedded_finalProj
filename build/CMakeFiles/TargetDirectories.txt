@@ -1,0 +1,4 @@
+D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Master.elf.dir
+D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/Embedded_finalProj_Slave.elf.dir
+D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/edit_cache.dir
+D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/rebuild_cache.dir

@@ -1,8 +1,7 @@
 #include "Timer.h"
 #include "Timer_Private.h"
-#include "../Bit_Math.h"
-#include "../NVIC.h"
-#include "../RCC/RCC.h"
+#include "../INC/Bit_Math.h"
+#include "../INC/RCC.h"
 
 #define TIM_SR_UIF    (1u << 0)
 #define TIM_DIER_UIE  (1u << 0)

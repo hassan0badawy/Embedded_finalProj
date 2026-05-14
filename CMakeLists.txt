@@ -1,7 +1,11 @@
-cmake_minimum_required(VERSION 3.20)
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
-# Project Name
+cmake_minimum_required(VERSION 3.20)
+set(CMAKE_TOOLCHAIN_FILE "${CMAKE_SOURCE_DIR}/cmake/arm-none-eabi.cmake")
 project(Embedded_finalProj C ASM)
+
 
 # Toolchain check
 if(NOT CMAKE_TOOLCHAIN_FILE)

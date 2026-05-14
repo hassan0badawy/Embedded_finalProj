@@ -1,0 +1,3082 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeNinjaFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Program used to build from build.ninja files."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ninja-build"
+      - "ninja"
+      - "samu"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/ninja-build.com"
+      - "C:/arm-gnu-toolchain/bin/ninja-build.exe"
+      - "C:/arm-gnu-toolchain/bin/ninja-build"
+      - "C:/arm-gnu-toolchain/bin/ninja.com"
+      - "C:/arm-gnu-toolchain/bin/ninja.exe"
+      - "C:/arm-gnu-toolchain/bin/ninja"
+      - "C:/arm-gnu-toolchain/bin/samu.com"
+      - "C:/arm-gnu-toolchain/bin/samu.exe"
+      - "C:/arm-gnu-toolchain/bin/samu"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/ninja-build.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/ninja-build.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/ninja-build"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/ninja.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/ninja.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/ninja"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/samu.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/samu.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/samu"
+      - "C:/Windows/System32/ninja-build.com"
+      - "C:/Windows/System32/ninja-build.exe"
+      - "C:/Windows/System32/ninja-build"
+      - "C:/Windows/System32/ninja.com"
+      - "C:/Windows/System32/ninja.exe"
+      - "C:/Windows/System32/ninja"
+      - "C:/Windows/System32/samu.com"
+      - "C:/Windows/System32/samu.exe"
+      - "C:/Windows/System32/samu"
+      - "C:/Windows/ninja-build.com"
+      - "C:/Windows/ninja-build.exe"
+      - "C:/Windows/ninja-build"
+      - "C:/Windows/ninja.com"
+      - "C:/Windows/ninja.exe"
+      - "C:/Windows/ninja"
+      - "C:/Windows/samu.com"
+      - "C:/Windows/samu.exe"
+      - "C:/Windows/samu"
+      - "C:/Windows/System32/wbem/ninja-build.com"
+      - "C:/Windows/System32/wbem/ninja-build.exe"
+      - "C:/Windows/System32/wbem/ninja-build"
+      - "C:/Windows/System32/wbem/ninja.com"
+      - "C:/Windows/System32/wbem/ninja.exe"
+      - "C:/Windows/System32/wbem/ninja"
+      - "C:/Windows/System32/wbem/samu.com"
+      - "C:/Windows/System32/wbem/samu.exe"
+      - "C:/Windows/System32/wbem/samu"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ninja-build.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ninja-build.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ninja-build"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ninja.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ninja.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ninja"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/samu.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/samu.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/samu"
+      - "C:/Windows/System32/OpenSSH/ninja-build.com"
+      - "C:/Windows/System32/OpenSSH/ninja-build.exe"
+      - "C:/Windows/System32/OpenSSH/ninja-build"
+      - "C:/Windows/System32/OpenSSH/ninja.com"
+      - "C:/Windows/System32/OpenSSH/ninja.exe"
+      - "C:/Windows/System32/OpenSSH/ninja"
+      - "C:/Windows/System32/OpenSSH/samu.com"
+      - "C:/Windows/System32/OpenSSH/samu.exe"
+      - "C:/Windows/System32/OpenSSH/samu"
+      - "C:/Program Files/nodejs/ninja-build.com"
+      - "C:/Program Files/nodejs/ninja-build.exe"
+      - "C:/Program Files/nodejs/ninja-build"
+      - "C:/Program Files/nodejs/ninja.com"
+      - "C:/Program Files/nodejs/ninja.exe"
+      - "C:/Program Files/nodejs/ninja"
+      - "C:/Program Files/nodejs/samu.com"
+      - "C:/Program Files/nodejs/samu.exe"
+      - "C:/Program Files/nodejs/samu"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/ninja-build.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/ninja-build.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/ninja-build"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/ninja.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/ninja.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/ninja"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/samu.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/samu.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/samu"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/ninja-build.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/ninja-build.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/ninja-build"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/ninja.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/ninja.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/ninja"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/samu.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/samu.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/samu"
+      - "C:/Users/farah/AppData/Roaming/npm/ninja-build.com"
+      - "C:/Users/farah/AppData/Roaming/npm/ninja-build.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/ninja-build"
+      - "C:/Users/farah/AppData/Roaming/npm/ninja.com"
+      - "C:/Users/farah/AppData/Roaming/npm/ninja.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/ninja"
+      - "C:/Users/farah/AppData/Roaming/npm/samu.com"
+      - "C:/Users/farah/AppData/Roaming/npm/samu.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/samu"
+      - "C:/mingw64/bin/ninja-build.com"
+      - "C:/mingw64/bin/ninja-build.exe"
+      - "C:/mingw64/bin/ninja-build"
+      - "C:/mingw64/bin/ninja.com"
+      - "C:/mingw64/bin/ninja.exe"
+      - "C:/mingw64/bin/ninja"
+      - "C:/mingw64/bin/samu.com"
+      - "C:/mingw64/bin/samu.exe"
+      - "C:/mingw64/bin/samu"
+      - "C:/Program Files (x86)/GnuWin32/bin/ninja-build.com"
+      - "C:/Program Files (x86)/GnuWin32/bin/ninja-build.exe"
+      - "C:/Program Files (x86)/GnuWin32/bin/ninja-build"
+      - "C:/Program Files (x86)/GnuWin32/bin/ninja.com"
+      - "C:/Program Files (x86)/GnuWin32/bin/ninja.exe"
+      - "C:/Program Files (x86)/GnuWin32/bin/ninja"
+      - "C:/Program Files (x86)/GnuWin32/bin/samu.com"
+      - "C:/Program Files (x86)/GnuWin32/bin/samu.exe"
+      - "C:/Program Files (x86)/GnuWin32/bin/samu"
+      - "C:/Windows/System32/ninga/ninja-build.com"
+      - "C:/Windows/System32/ninga/ninja-build.exe"
+      - "C:/Windows/System32/ninga/ninja-build"
+      - "C:/Windows/System32/ninga/ninja.com"
+    found: "C:/Windows/System32/ninga/ninja.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x28): undefined reference to `_exit'
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-closer.o): in function `_close_r':
+      closer.c:(.text._close_r+0x18): undefined reference to `_close'
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      lseekr.c:(.text._lseek_r+0x24): undefined reference to `_lseek'
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-readr.o): in function `_read_r':
+      readr.c:(.text._read_r+0x24): undefined reference to `_read'
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-writer.o): in function `_write_r':
+      writer.c:(.text._write_r+0x24): undefined reference to `_write'
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      sbrkr.c:(.text._sbrk_r+0x18): undefined reference to `_sbrk'
+      collect2.exe: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/4.3.2/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-ar"
+      - "ar"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-ar.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-ar.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-ranlib"
+      - "ranlib"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-ranlib.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-ranlib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-strip"
+      - "strip"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-strip.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-strip.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-ld"
+      - "ld"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-ld.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-ld.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-nm"
+      - "nm"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-nm.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-nm.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-objdump"
+      - "objdump"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-objdump.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-objdump.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-objcopy"
+      - "objcopy"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-objcopy.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-objcopy.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-readelf"
+      - "readelf"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-readelf.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-readelf.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-dlltool"
+      - "dlltool"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-dlltool.com"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-dlltool.exe"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-dlltool"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-dlltool.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-dlltool.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-dlltool"
+      - "C:/Windows/System32/arm-none-eabi-dlltool.com"
+      - "C:/Windows/System32/arm-none-eabi-dlltool.exe"
+      - "C:/Windows/System32/arm-none-eabi-dlltool"
+      - "C:/Windows/arm-none-eabi-dlltool.com"
+      - "C:/Windows/arm-none-eabi-dlltool.exe"
+      - "C:/Windows/arm-none-eabi-dlltool"
+      - "C:/Windows/System32/wbem/arm-none-eabi-dlltool.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-dlltool.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-dlltool"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-dlltool.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-dlltool.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-dlltool"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-dlltool.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-dlltool.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-dlltool"
+      - "C:/Program Files/nodejs/arm-none-eabi-dlltool.com"
+      - "C:/Program Files/nodejs/arm-none-eabi-dlltool.exe"
+      - "C:/Program Files/nodejs/arm-none-eabi-dlltool"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-dlltool.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-dlltool.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-dlltool"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-dlltool.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-dlltool.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-dlltool"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-dlltool.com"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-dlltool.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-dlltool"
+      - "C:/mingw64/bin/arm-none-eabi-dlltool.com"
+      - "C:/mingw64/bin/arm-none-eabi-dlltool.exe"
+      - "C:/mingw64/bin/arm-none-eabi-dlltool"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-dlltool.com"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-dlltool.exe"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-dlltool"
+      - "C:/Windows/System32/ninga/arm-none-eabi-dlltool.com"
+      - "C:/Windows/System32/ninga/arm-none-eabi-dlltool.exe"
+      - "C:/Windows/System32/ninga/arm-none-eabi-dlltool"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-dlltool.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-dlltool.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-dlltool"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-dlltool.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-dlltool.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-dlltool"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-dlltool.com"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-dlltool.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-dlltool"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-dlltool.com"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-dlltool.exe"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-dlltool"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-dlltool.com"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-dlltool.exe"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-dlltool"
+      - "C:/arm-gnu-toolchain/bin/dlltool.com"
+      - "C:/arm-gnu-toolchain/bin/dlltool.exe"
+      - "C:/arm-gnu-toolchain/bin/dlltool"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/dlltool.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/dlltool.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/dlltool"
+      - "C:/Windows/System32/dlltool.com"
+      - "C:/Windows/System32/dlltool.exe"
+      - "C:/Windows/System32/dlltool"
+      - "C:/Windows/dlltool.com"
+      - "C:/Windows/dlltool.exe"
+      - "C:/Windows/dlltool"
+      - "C:/Windows/System32/wbem/dlltool.com"
+      - "C:/Windows/System32/wbem/dlltool.exe"
+      - "C:/Windows/System32/wbem/dlltool"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/dlltool.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/dlltool.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/dlltool"
+      - "C:/Windows/System32/OpenSSH/dlltool.com"
+      - "C:/Windows/System32/OpenSSH/dlltool.exe"
+      - "C:/Windows/System32/OpenSSH/dlltool"
+      - "C:/Program Files/nodejs/dlltool.com"
+      - "C:/Program Files/nodejs/dlltool.exe"
+      - "C:/Program Files/nodejs/dlltool"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/dlltool.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/dlltool.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/dlltool"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/dlltool.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/dlltool.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/dlltool"
+      - "C:/Users/farah/AppData/Roaming/npm/dlltool.com"
+      - "C:/Users/farah/AppData/Roaming/npm/dlltool.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/dlltool"
+      - "C:/mingw64/bin/dlltool.com"
+    found: "C:/mingw64/bin/dlltool.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-addr2line"
+      - "addr2line"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-addr2line.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-addr2line.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-tapi"
+      - "tapi"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-tapi.com"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-tapi.exe"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-tapi"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-tapi.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-tapi.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-tapi"
+      - "C:/Windows/System32/arm-none-eabi-tapi.com"
+      - "C:/Windows/System32/arm-none-eabi-tapi.exe"
+      - "C:/Windows/System32/arm-none-eabi-tapi"
+      - "C:/Windows/arm-none-eabi-tapi.com"
+      - "C:/Windows/arm-none-eabi-tapi.exe"
+      - "C:/Windows/arm-none-eabi-tapi"
+      - "C:/Windows/System32/wbem/arm-none-eabi-tapi.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-tapi.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-tapi"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-tapi.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-tapi.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-tapi"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-tapi.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-tapi.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-tapi"
+      - "C:/Program Files/nodejs/arm-none-eabi-tapi.com"
+      - "C:/Program Files/nodejs/arm-none-eabi-tapi.exe"
+      - "C:/Program Files/nodejs/arm-none-eabi-tapi"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-tapi.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-tapi.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-tapi"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-tapi.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-tapi.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-tapi"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-tapi.com"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-tapi.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-tapi"
+      - "C:/mingw64/bin/arm-none-eabi-tapi.com"
+      - "C:/mingw64/bin/arm-none-eabi-tapi.exe"
+      - "C:/mingw64/bin/arm-none-eabi-tapi"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-tapi.com"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-tapi.exe"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-tapi"
+      - "C:/Windows/System32/ninga/arm-none-eabi-tapi.com"
+      - "C:/Windows/System32/ninga/arm-none-eabi-tapi.exe"
+      - "C:/Windows/System32/ninga/arm-none-eabi-tapi"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-tapi.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-tapi.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-tapi"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-tapi.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-tapi.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-tapi"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-tapi.com"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-tapi.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-tapi"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-tapi.com"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-tapi.exe"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-tapi"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-tapi.com"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-tapi.exe"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-tapi"
+      - "C:/arm-gnu-toolchain/bin/tapi.com"
+      - "C:/arm-gnu-toolchain/bin/tapi.exe"
+      - "C:/arm-gnu-toolchain/bin/tapi"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/tapi.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/tapi.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/tapi"
+      - "C:/Windows/System32/tapi.com"
+      - "C:/Windows/System32/tapi.exe"
+      - "C:/Windows/System32/tapi"
+      - "C:/Windows/tapi.com"
+      - "C:/Windows/tapi.exe"
+      - "C:/Windows/tapi"
+      - "C:/Windows/System32/wbem/tapi.com"
+      - "C:/Windows/System32/wbem/tapi.exe"
+      - "C:/Windows/System32/wbem/tapi"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi"
+      - "C:/Windows/System32/OpenSSH/tapi.com"
+      - "C:/Windows/System32/OpenSSH/tapi.exe"
+      - "C:/Windows/System32/OpenSSH/tapi"
+      - "C:/Program Files/nodejs/tapi.com"
+      - "C:/Program Files/nodejs/tapi.exe"
+      - "C:/Program Files/nodejs/tapi"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/tapi.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/tapi.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/tapi"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/tapi.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/tapi.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/tapi"
+      - "C:/Users/farah/AppData/Roaming/npm/tapi.com"
+      - "C:/Users/farah/AppData/Roaming/npm/tapi.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/tapi"
+      - "C:/mingw64/bin/tapi.com"
+      - "C:/mingw64/bin/tapi.exe"
+      - "C:/mingw64/bin/tapi"
+      - "C:/Program Files (x86)/GnuWin32/bin/tapi.com"
+      - "C:/Program Files (x86)/GnuWin32/bin/tapi.exe"
+      - "C:/Program Files (x86)/GnuWin32/bin/tapi"
+      - "C:/Windows/System32/ninga/tapi.com"
+      - "C:/Windows/System32/ninga/tapi.exe"
+      - "C:/Windows/System32/ninga/tapi"
+      - "C:/Program Files/CMake/bin/tapi.com"
+      - "C:/Program Files/CMake/bin/tapi.exe"
+      - "C:/Program Files/CMake/bin/tapi"
+      - "C:/Program Files/Git/cmd/tapi.com"
+      - "C:/Program Files/Git/cmd/tapi.exe"
+      - "C:/Program Files/Git/cmd/tapi"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/tapi.com"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/tapi.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/tapi"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/tapi.com"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/tapi.exe"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/tapi"
+      - "C:/Users/farah/.lmstudio/bin/tapi.com"
+      - "C:/Users/farah/.lmstudio/bin/tapi.exe"
+      - "C:/Users/farah/.lmstudio/bin/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ar-14.3"
+      - "arm-none-eabi-gcc-ar-14"
+      - "arm-none-eabi-gcc-ar14"
+      - "arm-none-eabi-gcc-ar"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ar-14.3"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar-14.com"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ar-14"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ar-14"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ar-14"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ar-14.com"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ar-14"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-14"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar14.com"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar14.exe"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar14"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ar14.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ar14"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar14.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar14"
+      - "C:/Windows/arm-none-eabi-gcc-ar14.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar14"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar14.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar14"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar14.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar14"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar14.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar14"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ar14.com"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ar14"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar14.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar14"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar14.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar14"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ar14.com"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ar14"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ar14.com"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ar14.exe"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ar14"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ar14.com"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ar14"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ar14.com"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ar14"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar14.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar14"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar14.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar14"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ar14.com"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ar14"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ar14.com"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ar14"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ar14.com"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ar14"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ranlib-14.3"
+      - "arm-none-eabi-gcc-ranlib-14"
+      - "arm-none-eabi-gcc-ranlib14"
+      - "arm-none-eabi-gcc-ranlib"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ranlib-14"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ranlib14"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib14"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib14"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib14"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib14"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib14"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ranlib14"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib14"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ranlib14"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ranlib14"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib14"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:61 (_cmake_find_compiler)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_ASM_COMPILER"
+    description: "ASM compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:1296 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:170 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc.exe (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 14.3.1 20250623
+      Copyright (C) 2024 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_ASM_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ar-"
+      - "arm-none-eabi-gcc-ar-"
+      - "arm-none-eabi-gcc-ar"
+      - "arm-none-eabi-gcc-ar"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ar-"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ar-"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ar-"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ar-"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ar-"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ar-"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ar.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_ASM_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ranlib-"
+      - "arm-none-eabi-gcc-ranlib-"
+      - "arm-none-eabi-gcc-ranlib"
+      - "arm-none-eabi-gcc-ranlib"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ranlib-"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files/nodejs/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-gcc-ranlib-"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/mingw64/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/ninga/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU.cmake:167 (enable_language)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU-C.cmake:2 (__windows_compiler_gnu)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake:48 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_RC_COMPILER"
+    description: "RC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-windres"
+      - "windres"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files (x86)/Embedded_finalProj/bin/"
+      - "C:/Program Files (x86)/Embedded_finalProj/sbin/"
+      - "C:/Program Files (x86)/Embedded_finalProj/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-windres.com"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-windres.exe"
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-windres"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-windres.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-windres.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-windres"
+      - "C:/Windows/System32/arm-none-eabi-windres.com"
+      - "C:/Windows/System32/arm-none-eabi-windres.exe"
+      - "C:/Windows/System32/arm-none-eabi-windres"
+      - "C:/Windows/arm-none-eabi-windres.com"
+      - "C:/Windows/arm-none-eabi-windres.exe"
+      - "C:/Windows/arm-none-eabi-windres"
+      - "C:/Windows/System32/wbem/arm-none-eabi-windres.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-windres.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-windres"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-windres.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-windres.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-windres"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-windres.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-windres.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-windres"
+      - "C:/Program Files/nodejs/arm-none-eabi-windres.com"
+      - "C:/Program Files/nodejs/arm-none-eabi-windres.exe"
+      - "C:/Program Files/nodejs/arm-none-eabi-windres"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-windres.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-windres.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-windres"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-windres.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-windres.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-windres"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-windres.com"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-windres.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-windres"
+      - "C:/mingw64/bin/arm-none-eabi-windres.com"
+      - "C:/mingw64/bin/arm-none-eabi-windres.exe"
+      - "C:/mingw64/bin/arm-none-eabi-windres"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-windres.com"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-windres.exe"
+      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-windres"
+      - "C:/Windows/System32/ninga/arm-none-eabi-windres.com"
+      - "C:/Windows/System32/ninga/arm-none-eabi-windres.exe"
+      - "C:/Windows/System32/ninga/arm-none-eabi-windres"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-windres.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-windres.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-windres"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-windres.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-windres.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-windres"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-windres.com"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-windres.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-windres"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-windres.com"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-windres.exe"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-windres"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-windres.com"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-windres.exe"
+      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-windres"
+      - "C:/Program Files/bin/arm-none-eabi-windres.com"
+      - "C:/Program Files/bin/arm-none-eabi-windres.exe"
+      - "C:/Program Files/bin/arm-none-eabi-windres"
+      - "C:/Program Files/sbin/arm-none-eabi-windres.com"
+      - "C:/Program Files/sbin/arm-none-eabi-windres.exe"
+      - "C:/Program Files/sbin/arm-none-eabi-windres"
+      - "C:/Program Files/arm-none-eabi-windres.com"
+      - "C:/Program Files/arm-none-eabi-windres.exe"
+      - "C:/Program Files/arm-none-eabi-windres"
+      - "C:/Program Files (x86)/bin/arm-none-eabi-windres.com"
+      - "C:/Program Files (x86)/bin/arm-none-eabi-windres.exe"
+      - "C:/Program Files (x86)/bin/arm-none-eabi-windres"
+      - "C:/Program Files (x86)/sbin/arm-none-eabi-windres.com"
+      - "C:/Program Files (x86)/sbin/arm-none-eabi-windres.exe"
+      - "C:/Program Files (x86)/sbin/arm-none-eabi-windres"
+      - "C:/Program Files (x86)/arm-none-eabi-windres.com"
+      - "C:/Program Files (x86)/arm-none-eabi-windres.exe"
+      - "C:/Program Files (x86)/arm-none-eabi-windres"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-windres.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-windres.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-windres"
+      - "C:/Program Files/CMake/sbin/arm-none-eabi-windres.com"
+      - "C:/Program Files/CMake/sbin/arm-none-eabi-windres.exe"
+      - "C:/Program Files/CMake/sbin/arm-none-eabi-windres"
+      - "C:/Program Files/CMake/arm-none-eabi-windres.com"
+      - "C:/Program Files/CMake/arm-none-eabi-windres.exe"
+      - "C:/Program Files/CMake/arm-none-eabi-windres"
+      - "C:/Program Files (x86)/Embedded_finalProj/bin/arm-none-eabi-windres.com"
+      - "C:/Program Files (x86)/Embedded_finalProj/bin/arm-none-eabi-windres.exe"
+      - "C:/Program Files (x86)/Embedded_finalProj/bin/arm-none-eabi-windres"
+      - "C:/Program Files (x86)/Embedded_finalProj/sbin/arm-none-eabi-windres.com"
+      - "C:/Program Files (x86)/Embedded_finalProj/sbin/arm-none-eabi-windres.exe"
+      - "C:/Program Files (x86)/Embedded_finalProj/sbin/arm-none-eabi-windres"
+      - "C:/Program Files (x86)/Embedded_finalProj/arm-none-eabi-windres.com"
+      - "C:/Program Files (x86)/Embedded_finalProj/arm-none-eabi-windres.exe"
+      - "C:/Program Files (x86)/Embedded_finalProj/arm-none-eabi-windres"
+      - "C:/arm-gnu-toolchain/bin/windres.com"
+      - "C:/arm-gnu-toolchain/bin/windres.exe"
+      - "C:/arm-gnu-toolchain/bin/windres"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/windres.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/windres.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/windres"
+      - "C:/Windows/System32/windres.com"
+      - "C:/Windows/System32/windres.exe"
+      - "C:/Windows/System32/windres"
+      - "C:/Windows/windres.com"
+      - "C:/Windows/windres.exe"
+      - "C:/Windows/windres"
+      - "C:/Windows/System32/wbem/windres.com"
+      - "C:/Windows/System32/wbem/windres.exe"
+      - "C:/Windows/System32/wbem/windres"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/windres.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/windres.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/windres"
+      - "C:/Windows/System32/OpenSSH/windres.com"
+      - "C:/Windows/System32/OpenSSH/windres.exe"
+      - "C:/Windows/System32/OpenSSH/windres"
+      - "C:/Program Files/nodejs/windres.com"
+      - "C:/Program Files/nodejs/windres.exe"
+      - "C:/Program Files/nodejs/windres"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/windres.com"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/windres.exe"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/windres"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/windres.com"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/windres.exe"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/windres"
+      - "C:/Users/farah/AppData/Roaming/npm/windres.com"
+      - "C:/Users/farah/AppData/Roaming/npm/windres.exe"
+      - "C:/Users/farah/AppData/Roaming/npm/windres"
+      - "C:/mingw64/bin/windres.com"
+    found: "C:/mingw64/bin/windres.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Embedded_finalProj"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/Embedded_finalProj"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-k64ixy"
+      binary: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-k64ixy"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-k64ixy'
+        
+        Run Build Command(s): C:/Windows/System32/ninga/ninja.exe -v cmTC_950d4
+        [1/2] C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c"
+        Using built-in specs.
+        COLLECT_GCC=C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe
+        Target: arm-none-eabi
+        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=i686-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)'
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_950d4.dir/'
+         C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot C:/arm-gnu-toolchain/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_950d4.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\farah\\AppData\\Local\\Temp\\ccUnxYgZ.s
+        GNU C17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
+        	compiled by GNU C version 10-win32 20220113, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"
+        ignoring nonexistent directory "C:/arm-gnu-toolchain/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"
+        ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"
+        ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"
+        ignoring duplicate directory "C:/arm-gnu-toolchain/bin/../arm-none-eabi/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/include
+         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed
+         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
+        End of search list.
+        Compiler executable checksum: b7d3e61a3c100ce920bcfa732511112e
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_950d4.dir/'
+         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj C:\\Users\\farah\\AppData\\Local\\Temp\\ccUnxYgZ.s
+        GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
+        COMPILER_PATH=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../libexec/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../lib/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;C:/arm-gnu-toolchain/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe  -v -Wl,-v CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj -o cmTC_950d4.exe -Wl,--out-implib,libcmTC_950d4.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        FAILED: [code=1] cmTC_950d4.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe  -v -Wl,-v CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj -o cmTC_950d4.exe -Wl,--out-implib,libcmTC_950d4.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        Using built-in specs.
+        COLLECT_GCC=C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe
+        COLLECT_LTO_WRAPPER=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe
+        Target: arm-none-eabi
+        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=i686-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)'
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
+        COMPILER_PATH=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../libexec/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../lib/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;C:/arm-gnu-toolchain/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_950d4.exe' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_950d4.'
+         C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/collect2.exe -plugin C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/liblto_plugin.dll -plugin-opt=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\farah\\AppData\\Local\\Temp\\ccEZHSmd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=C:/arm-gnu-toolchain/bin/../arm-none-eabi -X -o cmTC_950d4.exe C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crti.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtbegin.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/crt0.o -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1 -LC:/arm-gnu-toolchain/bin/../lib/gcc -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib -LC:/arm-gnu-toolchain/bin/../arm-none-eabi/lib -v CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_950d4.dll.a --major-image-version 0 --minor-image-version 0 --start-group -lgcc -lc --end-group C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtend.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtn.o
+        collect2 version 14.3.1 20250623
+        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe -plugin C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/liblto_plugin.dll -plugin-opt=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\farah\\AppData\\Local\\Temp\\ccEZHSmd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=C:/arm-gnu-toolchain/bin/../arm-none-eabi -X -o cmTC_950d4.exe C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crti.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtbegin.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/crt0.o -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1 -LC:/arm-gnu-toolchain/bin/../lib/gcc -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib -LC:/arm-gnu-toolchain/bin/../arm-none-eabi/lib -v CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_950d4.dll.a --major-image-version 0 --minor-image-version 0 --start-group -lgcc -lc --end-group C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtend.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtn.o
+        GNU ld (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
+        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+        collect2.exe: error: ld returned 1 exit status
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Check for working C compiler: C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe"
+    directories:
+      source: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-i8xkgb"
+      binary: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-i8xkgb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-i8xkgb'
+        
+        Run Build Command(s): C:/Windows/System32/ninga/ninja.exe -v cmTC_bfc27
+        [1/2] C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe    -o CMakeFiles/cmTC_bfc27.dir/testCCompiler.c.obj -c "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-i8xkgb/testCCompiler.c"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe   CMakeFiles/cmTC_bfc27.dir/testCCompiler.c.obj -o cmTC_bfc27.exe -Wl,--out-implib,libcmTC_bfc27.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        FAILED: [code=1] cmTC_bfc27.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe   CMakeFiles/cmTC_bfc27.dir/testCCompiler.c.obj -o cmTC_bfc27.exe -Wl,--out-implib,libcmTC_bfc27.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+        collect2.exe: error: ld returned 1 exit status
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Embedded_finalProj"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x28): undefined reference to `_exit'
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-closer.o): in function `_close_r':
+      closer.c:(.text._close_r+0x18): undefined reference to `_close'
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      lseekr.c:(.text._lseek_r+0x24): undefined reference to `_lseek'
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-readr.o): in function `_read_r':
+      readr.c:(.text._read_r+0x24): undefined reference to `_read'
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-writer.o): in function `_write_r':
+      writer.c:(.text._write_r+0x24): undefined reference to `_write'
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      sbrkr.c:(.text._sbrk_r+0x18): undefined reference to `_sbrk'
+      collect2.exe: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Embedded_finalProj"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/4.3.2/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:1296 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:170 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc.exe (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 14.3.1 20250623
+      Copyright (C) 2024 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-kvbyo2"
+      binary: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-kvbyo2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-kvbyo2'
+        
+        Run Build Command(s): C:/Windows/System32/ninga/ninja.exe -v cmTC_f642f
+        [1/2] C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c"
+        Using built-in specs.
+        COLLECT_GCC=C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe
+        Target: arm-none-eabi
+        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=i686-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)'
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_f642f.dir/'
+         C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot C:/arm-gnu-toolchain/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f642f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\farah\\AppData\\Local\\Temp\\cccOkAd3.s
+        GNU C17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
+        	compiled by GNU C version 10-win32 20220113, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"
+        ignoring nonexistent directory "C:/arm-gnu-toolchain/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"
+        ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"
+        ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"
+        ignoring duplicate directory "C:/arm-gnu-toolchain/bin/../arm-none-eabi/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/include
+         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed
+         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
+        End of search list.
+        Compiler executable checksum: b7d3e61a3c100ce920bcfa732511112e
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_f642f.dir/'
+         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj C:\\Users\\farah\\AppData\\Local\\Temp\\cccOkAd3.s
+        GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
+        COMPILER_PATH=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../libexec/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../lib/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;C:/arm-gnu-toolchain/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe  -v -Wl,-v CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj -o cmTC_f642f.exe -Wl,--out-implib,libcmTC_f642f.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        FAILED: [code=1] cmTC_f642f.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe  -v -Wl,-v CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj -o cmTC_f642f.exe -Wl,--out-implib,libcmTC_f642f.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        Using built-in specs.
+        COLLECT_GCC=C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe
+        COLLECT_LTO_WRAPPER=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe
+        Target: arm-none-eabi
+        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=i686-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)'
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
+        COMPILER_PATH=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../libexec/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../lib/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;C:/arm-gnu-toolchain/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f642f.exe' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_f642f.'
+         C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/collect2.exe -plugin C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/liblto_plugin.dll -plugin-opt=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\farah\\AppData\\Local\\Temp\\cc22RPpf.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=C:/arm-gnu-toolchain/bin/../arm-none-eabi -X -o cmTC_f642f.exe C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crti.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtbegin.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/crt0.o -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1 -LC:/arm-gnu-toolchain/bin/../lib/gcc -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib -LC:/arm-gnu-toolchain/bin/../arm-none-eabi/lib -v CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_f642f.dll.a --major-image-version 0 --minor-image-version 0 --start-group -lgcc -lc --end-group C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtend.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtn.o
+        collect2 version 14.3.1 20250623
+        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe -plugin C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/liblto_plugin.dll -plugin-opt=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\farah\\AppData\\Local\\Temp\\cc22RPpf.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=C:/arm-gnu-toolchain/bin/../arm-none-eabi -X -o cmTC_f642f.exe C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crti.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtbegin.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/crt0.o -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1 -LC:/arm-gnu-toolchain/bin/../lib/gcc -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib -LC:/arm-gnu-toolchain/bin/../arm-none-eabi/lib -v CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_f642f.dll.a --major-image-version 0 --minor-image-version 0 --start-group -lgcc -lc --end-group C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtend.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtn.o
+        GNU ld (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
+        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+        collect2.exe: error: ld returned 1 exit status
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Check for working C compiler: C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe"
+    directories:
+      source: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-j3vxjx"
+      binary: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-j3vxjx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-j3vxjx'
+        
+        Run Build Command(s): C:/Windows/System32/ninga/ninja.exe -v cmTC_9482e
+        [1/2] C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe    -o CMakeFiles/cmTC_9482e.dir/testCCompiler.c.obj -c "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-j3vxjx/testCCompiler.c"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe   CMakeFiles/cmTC_9482e.dir/testCCompiler.c.obj -o cmTC_9482e.exe -Wl,--out-implib,libcmTC_9482e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        FAILED: [code=1] cmTC_9482e.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe   CMakeFiles/cmTC_9482e.dir/testCCompiler.c.obj -o cmTC_9482e.exe -Wl,--out-implib,libcmTC_9482e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+        collect2.exe: error: ld returned 1 exit status
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Embedded_finalProj"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x28): undefined reference to `_exit'
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-closer.o): in function `_close_r':
+      closer.c:(.text._close_r+0x18): undefined reference to `_close'
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      lseekr.c:(.text._lseek_r+0x24): undefined reference to `_lseek'
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-readr.o): in function `_read_r':
+      readr.c:(.text._read_r+0x24): undefined reference to `_read'
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-writer.o): in function `_write_r':
+      writer.c:(.text._write_r+0x24): undefined reference to `_write'
+      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      sbrkr.c:(.text._sbrk_r+0x18): undefined reference to `_sbrk'
+      collect2.exe: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Embedded_finalProj"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/4.3.2/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:1296 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:170 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc.exe (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 14.3.1 20250623
+      Copyright (C) 2024 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-4azr19"
+      binary: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-4azr19"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-4azr19'
+        
+        Run Build Command(s): C:/Windows/System32/ninga/ninja.exe -v cmTC_cc351
+        [1/2] C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c"
+        Using built-in specs.
+        COLLECT_GCC=C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe
+        Target: arm-none-eabi
+        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=i686-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)'
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_cc351.dir/'
+         C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot C:/arm-gnu-toolchain/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_cc351.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\farah\\AppData\\Local\\Temp\\ccWlq8fQ.s
+        GNU C17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
+        	compiled by GNU C version 10-win32 20220113, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"
+        ignoring nonexistent directory "C:/arm-gnu-toolchain/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"
+        ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"
+        ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"
+        ignoring duplicate directory "C:/arm-gnu-toolchain/bin/../arm-none-eabi/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/include
+         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed
+         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
+        End of search list.
+        Compiler executable checksum: b7d3e61a3c100ce920bcfa732511112e
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_cc351.dir/'
+         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.obj C:\\Users\\farah\\AppData\\Local\\Temp\\ccWlq8fQ.s
+        GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
+        COMPILER_PATH=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../libexec/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../lib/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;C:/arm-gnu-toolchain/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe  -v -Wl,-v CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.obj -o cmTC_cc351.exe -Wl,--out-implib,libcmTC_cc351.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        FAILED: [code=1] cmTC_cc351.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe  -v -Wl,-v CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.obj -o cmTC_cc351.exe -Wl,--out-implib,libcmTC_cc351.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        Using built-in specs.
+        COLLECT_GCC=C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe
+        COLLECT_LTO_WRAPPER=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe
+        Target: arm-none-eabi
+        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=i686-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)'
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
+        COMPILER_PATH=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../libexec/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../lib/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;C:/arm-gnu-toolchain/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cc351.exe' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_cc351.'
+         C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/collect2.exe -plugin C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/liblto_plugin.dll -plugin-opt=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\farah\\AppData\\Local\\Temp\\ccanRBLV.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=C:/arm-gnu-toolchain/bin/../arm-none-eabi -X -o cmTC_cc351.exe C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crti.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtbegin.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/crt0.o -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1 -LC:/arm-gnu-toolchain/bin/../lib/gcc -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib -LC:/arm-gnu-toolchain/bin/../arm-none-eabi/lib -v CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_cc351.dll.a --major-image-version 0 --minor-image-version 0 --start-group -lgcc -lc --end-group C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtend.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtn.o
+        collect2 version 14.3.1 20250623
+        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe -plugin C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/liblto_plugin.dll -plugin-opt=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\farah\\AppData\\Local\\Temp\\ccanRBLV.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=C:/arm-gnu-toolchain/bin/../arm-none-eabi -X -o cmTC_cc351.exe C:/arm-gnu-toolchain/bin/../lib/gcc/arm-no

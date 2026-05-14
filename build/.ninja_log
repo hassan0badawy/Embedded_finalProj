@@ -1,0 +1,10 @@
+# ninja log v7
+32	300	8004534462068589	CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/hallway_buttons.c.obj	b4cefc52d3301760
+50	303	8004534462249881	CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/spi.c.obj	64106e7b84bc1e9e
+28	304	8004534462020191	CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/dispatcher.c.obj	681535410b39551
+9	305	8004534461833104	CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/Gpio.c.obj	8cd4a11908dc8764
+42	306	8004534462154374	CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/main.c.obj	f1b930a2b198f0e4
+37	311	8004534462116848	CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/ipc.c.obj	1b60b04ef0e699f9
+47	312	8004534462209859	CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/pwm.c.obj	4e297c234dd65a7a
+16	314	8004534461909266	CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/RCC.c.obj	af5af6ac16cf84de
+3	321	8004534461770590	CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/Elevator.c.obj	5f074454b5eba092
