@@ -4,6 +4,7 @@
 #include "../Inc/Bit_Math.h"
 #include "../Inc/Pwm.h"
 #include "../Inc/Timer.h"
+#include "../Inc/gpio.h"
 #include <stdarg.h>
 
 /* ─────────────────────────────────────────
@@ -19,7 +20,7 @@ volatile GlobalSharedState_t GSS;
  * 16MHz / (PSC+1=16) = 1MHz tick
  * 1MHz  / (ARR+1=100) = 10kHz PWM period
  * ───────────────────────────────────────── */
-#define ELV_PWM_TIMER      TIMER2
+#define ELV_PWM_TIMER      TIMER1   /* TIM1 CH1 on PA8 — avoids PA0 cabin button conflict */
 #define ELV_PWM_CH         1
 #define ELV_PWM_PSC        15u
 #define ELV_PWM_ARR        99u
@@ -172,6 +173,9 @@ void Elevator_Init(void)
     /* Enable GPIO clocks */
     RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN | RCC_AHB1ENR_GPIOBEN |
                     RCC_AHB1ENR_GPIOCEN  | RCC_AHB1ENR_GPIODEN;
+                    
+    /* Enable TIM1 clock (APB2) */
+    RCC->APB2ENR |= (1u << 0);
 
     /* Clear GSS atomically */
     pm = Enter_Critical();
@@ -193,6 +197,11 @@ void Elevator_Init(void)
     GSS.slave_flags     = 0u;
     GSS.last_valid_rx_tick = 0u;
     Exit_Critical(pm);
+
+    /* Configure PA8 as TIM1 CH1 PWM output (AF1)
+     * PA8 is free — no conflict with PA0 cabin button. */
+    Gpio_Init(GPIO_A, 8, GPIO_AF, GPIO_PUSH_PULL);
+    Gpio_SetAF(GPIO_A, 8, GPIO_AF1);   /* AF1 = TIM1_CH1 on PA8 */
 
     /* Initialise peripherals */
     Pwm_Init(ELV_PWM_TIMER, ELV_PWM_CH, ELV_PWM_PSC, ELV_PWM_ARR);

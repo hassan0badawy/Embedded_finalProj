@@ -142,8 +142,42 @@ static void Poll_CabinButtons(void)
  *
  * ─────────────────────────────────────────────────────────────────────────────
  */
+/* ─────────────────────────────────────────────────────────────────────────────
+ * SystemInit()
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Initializes the RCC to use the HSI (16MHz) explicitly.
+ * Sets AHB and APB prescalers to 1 (16MHz everywhere).
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+void SystemInit(void)
+{
+    /* Set HSION bit */
+    RCC->CR |= (1U << 0);
+    
+    /* Wait till HSI is ready */
+    while ((RCC->CR & (1U << 1)) == 0) {}
+
+    /* Reset CFGR register */
+    RCC->CFGR = 0x00000000;
+
+    /* Reset HSEON, CSSON and PLLON bits */
+    RCC->CR &= ~(0x010D0000U);
+
+    /* Reset PLLCFGR register */
+    RCC->PLLCFGR = 0x24003010;
+
+    /* Reset HSEBYP bit */
+    RCC->CR &= ~(0x00040000U);
+
+    /* Disable all interrupts */
+    RCC->CIR = 0x00000000;
+}
+
 int main(void)
 {
+    /* Initialize the system clock explicitly */
+    SystemInit();
+
     /* ── INITIALIZATION PHASE ── */
 
     /*

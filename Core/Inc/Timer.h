@@ -1,39 +1,15 @@
-/**
- * Timer.h
- *
- *  Created on: 4/12/2026
- *  Author    : AbdallahDarwish
- */
-
 #ifndef TIMER_H
 #define TIMER_H
 
-#include "Std_Types.h"
+#include "std_types.h"
+#include "Timer_Private.h"
 
-/* Timer IDs (General-purpose timers) */
-#define TIMER2    2U
-#define TIMER3    3U
-#define TIMER4    4U
-#define TIMER5    5U
+/* Core Functions */
+void Timer_Init(void);
+void delay_ms(uint32_t ms);
+void delay_us(uint32_t us);
 
-#define CH1  1U
-#define CH2  2U
-#define CH3  3U
-#define CH4  4U
+/* System Time Helper */
+uint32_t Timer_GetMs(void);
 
-typedef void (*TimerCallback)(void);
-
-void Timer_Init(uint8 TimerId, uint16 Prescaler, uint16 AutoReload);
-
-void Timer_Start(uint8 TimerId);
-
-void Timer_Stop(uint8 TimerId);
-
-void Timer_DelayMs(uint8 TimerId, uint32 DelayMs);
-
-void Timer_DelayMsAsync(uint8 TimerId, uint32 DelayMs, TimerCallback Callback);
-
-void Timer_OcToggleInit(uint8 TimerId, uint8 Channel,
-                        uint16 Prescaler, uint16 Period);
-
-#endif /* TIMER_H */
+#endif

@@ -10,13 +10,13 @@
 #include "../Inc/Bit_Math.h"
 #include "../Inc/Timer.h"
 
-static uint32 Pwm_BaseAddresses[4] = {TIM2_BASE_ADDR, TIM3_BASE_ADDR, TIM4_BASE_ADDR,TIM5_BASE_ADDR};
+static uint32 Pwm_BaseAddresses[5] = {TIM1_BASE_ADDR, TIM2_BASE_ADDR, TIM3_BASE_ADDR, TIM4_BASE_ADDR, TIM5_BASE_ADDR};
 
 #define CCR_REG(TIMER, CHANNEL)  *((volatile uint32 *) (&(TIMER->CCR1) + (CHANNEL - 1)))
 
 
 void Pwm_Init(uint8 TimerId, uint8 Channel, uint16 Prescaler, uint16 AutoReload) {
-    TimerType *timer = (TimerType *)Pwm_BaseAddresses[TimerId - TIMER2];
+    TimerType *timer = (TimerType *)Pwm_BaseAddresses[TimerId - TIMER1];
 
     /*Time-base*/
     timer->CR1 = 0;
@@ -51,6 +51,12 @@ void Pwm_Init(uint8 TimerId, uint8 Channel, uint16 Prescaler, uint16 AutoReload)
     /* Auto-reload preload + force update to load shadows ── */
     SET_BIT(timer->CR1, CR1_ARPE);
     SET_BIT(timer->EGR, EGR_UG);
+    
+    /* Advanced Timer (TIM1) specific configuration for Proteus & HW */
+    if (TimerId == TIMER1) {
+        timer->BDTR |= (1u << 15); /* Set MOE (Main Output Enable) */
+    }
+
     timer->SR = 0;
 }
 
@@ -59,7 +65,7 @@ void Pwm_Init(uint8 TimerId, uint8 Channel, uint16 Prescaler, uint16 AutoReload)
  *  CCR = (DutyPercent * ARR) / 100
  */
 void Pwm_SetDutyPercent(uint8 TimerId, uint8 Channel, uint8 DutyPercent) {
-    TimerType *timer  = (TimerType *)Pwm_BaseAddresses[TimerId - TIMER2];
+    TimerType *timer  = (TimerType *)Pwm_BaseAddresses[TimerId - TIMER1];
 
     if (DutyPercent > 100) {
         DutyPercent = 100;
@@ -72,7 +78,7 @@ void Pwm_SetDutyPercent(uint8 TimerId, uint8 Channel, uint8 DutyPercent) {
 }
 
 void Pwm_Start(uint8 TimerId, uint8 Channel) {
-    TimerType *tim = (TimerType *)Pwm_BaseAddresses[TimerId - TIMER2];
+    TimerType *tim = (TimerType *)Pwm_BaseAddresses[TimerId - TIMER1];
 
     /* Make sure channel output is enabled */
     SET_BIT(tim->CCER, (Channel - 1) * 4);
@@ -81,7 +87,7 @@ void Pwm_Start(uint8 TimerId, uint8 Channel) {
 }
 
 void Pwm_Stop(uint8 TimerId, uint8 Channel) {
-    TimerType *tim = ( TimerType *)Pwm_BaseAddresses[TimerId - TIMER2];
+    TimerType *tim = ( TimerType *)Pwm_BaseAddresses[TimerId - TIMER1];
 
     /* Disable channel output */
     CLEAR_BIT(tim->CCER, (Channel - 1) * 4);

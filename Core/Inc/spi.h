@@ -10,12 +10,13 @@
 #define SPI_MASTER  1u
 
 /* PC13 is now the Chip Select to avoid PB12 & PA4 conflicts */
-#define IPC_CS_PORT  GPIO_C
-#define IPC_CS_PIN   13
+#define IPC_CS_PORT  GPIO_A
+#define IPC_CS_PIN   4
 
 void Spi1_Init(uint8 MasterSlave, uint8 ClkPol, uint8 ClkPhase);
 uint8 Spi1_TransmitReceiveByte(uint8 TxData, uint8* RxData);
 void Spi1_CS_Select(void);
 void Spi1_CS_Release(void);
+void SPI_SlavePreload(SPI_Handle_t *pHandle, volatile u8 *pBuf);
 
-#endif
+#endif /* SPI_H_ */
