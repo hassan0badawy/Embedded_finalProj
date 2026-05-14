@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\embedded final proj\Embedded_finalProj\Core\Src\Elevator.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\embedded final proj\Embedded_finalProj\Core\Src\Gpio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\embedded final proj\Embedded_finalProj\Core\Src\RCC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\embedded final proj\Embedded_finalProj\Core\Src\Timer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\embedded final proj\Embedded_finalProj\Core\Src\dispatcher.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\embedded final proj\Embedded_finalProj\Core\Src\hallway_buttons.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\embedded final proj\Embedded_finalProj\Core\Src\ipc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\embedded final proj\Embedded_finalProj\Core\Src\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\embedded final proj\Embedded_finalProj\Core\Src\pwm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\embedded final proj\Embedded_finalProj\Core\Src\spi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\embedded final proj\Embedded_finalProj\Core\Src\spi_it.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\embedded final proj\Embedded_finalProj\Core\Src\syscalls.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\embedded final proj\Embedded_finalProj\Core\Src\system_state.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\embedded final proj\Embedded_finalProj\Core\Src\uart_dma.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\embedded final proj\Embedded_finalProj\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\embedded final proj\Embedded_finalProj\startup\STM32F4xx\STM32F401xE.s" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7E9335EB-2FEE-37D5-90E9-70227571DB50}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

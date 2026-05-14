@@ -41,12 +41,12 @@ void SPI_MasterInit(SPI_HandleTypeDef *h)
     h->RxComplete = 0;
 
     /* Mark SPI as master in CR1 so ipc.c can detect role */
-    SET_BIT(SPI1->CR1, (1UL << SPI_CR1_MSTR));
+    SET_BIT(SPI1->CR1, SPI_CR1_MSTR);
 
     /* Enable SPI1 IRQ in NVIC and clear interrupt enables in CR2 */
     NVIC_ENABLE_IRQ(IRQ_SPI1);
-    CLR_BIT(SPI1->CR2, (1UL << SPI_CR2_RXNEIE));
-    CLR_BIT(SPI1->CR2, (1UL << SPI_CR2_TXEIE));
+    CLEAR_BIT(SPI1->CR2, SPI_CR2_RXNEIE);
+    CLEAR_BIT(SPI1->CR2, SPI_CR2_TXEIE);
 }
 
 void SPI_SlaveInit(SPI_HandleTypeDef *h)
@@ -58,16 +58,17 @@ void SPI_SlaveInit(SPI_HandleTypeDef *h)
     h->RxComplete = 0;
 
     /* Clear master bit to indicate slave role */
-    CLR_BIT(SPI1->CR1, (1UL << SPI_CR1_MSTR));
+    CLEAR_BIT(SPI1->CR1, SPI_CR1_MSTR);
 
     /* Ensure interrupts are disabled until transfer starts */
     NVIC_ENABLE_IRQ(IRQ_SPI1);
-    CLR_BIT(SPI1->CR2, (1UL << SPI_CR2_RXNEIE));
-    CLR_BIT(SPI1->CR2, (1UL << SPI_CR2_TXEIE));
+    CLEAR_BIT(SPI1->CR2, SPI_CR2_RXNEIE);
+    CLEAR_BIT(SPI1->CR2, SPI_CR2_TXEIE);
 }
 
 void SPI_SlavePreload(SPI_HandleTypeDef *h, volatile u8 *pTxBuffer)
 {
+    (void)h;
     /* Preload first byte into DR so Master will read it when clocked */
     u8 first = pTxBuffer[0];
     /* Wait until TXE then write */
@@ -94,8 +95,8 @@ void SPI_TransmitReceive_IT(SPI_HandleTypeDef *h, volatile u8 *pTx, volatile u8 
     h->State = SPI_STATE_BUSY;
 
     /* Enable RXNE and TXE interrupts */
-    SET_BIT(SPI1->CR2, (1UL << SPI_CR2_RXNEIE));
-    SET_BIT(SPI1->CR2, (1UL << SPI_CR2_TXEIE));
+    SET_BIT(SPI1->CR2, SPI_CR2_RXNEIE);
+    SET_BIT(SPI1->CR2, SPI_CR2_TXEIE);
 
     /* Kickstart transfer: if TXE, write first byte */
     if (READ_BIT(SPI1->SR, SPI_SR_TXE))
@@ -124,8 +125,8 @@ void SPI1_IRQHandler(void)
         if (g_rxIdx >= g_rxLen)
         {
             /* Disable interrupts */
-            CLR_BIT(SPI1->CR2, (1UL << SPI_CR2_RXNEIE));
-            CLR_BIT(SPI1->CR2, (1UL << SPI_CR2_TXEIE));
+            CLEAR_BIT(SPI1->CR2, SPI_CR2_RXNEIE);
+            CLEAR_BIT(SPI1->CR2, SPI_CR2_TXEIE);
 
             /* Mark handle complete */
             SPI1_Handle.RxComplete = 1u;
@@ -149,7 +150,7 @@ void SPI1_IRQHandler(void)
         else
         {
             /* Nothing left to send — disable TXE interrupt */
-            CLR_BIT(SPI1->CR2, (1UL << SPI_CR2_TXEIE));
+            CLEAR_BIT(SPI1->CR2, SPI_CR2_TXEIE);
         }
     }
 }

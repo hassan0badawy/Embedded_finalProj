@@ -2,13 +2,10 @@
 #include "Timer_Private.h"
 #include "../INC/Bit_Math.h"
 #include "../INC/RCC.h"
-#include "../INC/nvic.h"
+#include "stm32f401ve.h"
 
 #define TIM_SR_UIF    (1u << 0)
 #define TIM_DIER_UIE  (1u << 0)
-#define TIM_CR1_CEN   (1u << 0)
-
-#define TIM2          ((TimerType *)TIM2_BASE_ADDR)
 
 static volatile uint32_t tick_ms = 0;
 

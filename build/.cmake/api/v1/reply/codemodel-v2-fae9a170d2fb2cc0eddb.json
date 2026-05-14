@@ -42,14 +42,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Embedded_finalProj_Master.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Embedded_finalProj_Master.elf-Debug-7d873866ea5d4917c3ce.json",
+					"jsonFile" : "target-Embedded_finalProj_Master.elf-Debug-671515f737d996c0e5e6.json",
 					"name" : "Embedded_finalProj_Master.elf",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "Embedded_finalProj_Slave.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Embedded_finalProj_Slave.elf-Debug-36e45fa2b08e219c8ceb.json",
+					"jsonFile" : "target-Embedded_finalProj_Slave.elf-Debug-ae15ab9a03b65cd3cc49.json",
 					"name" : "Embedded_finalProj_Slave.elf",
 					"projectIndex" : 0
 				}

@@ -9,14 +9,12 @@
 			"path" : "build/CMakeFiles/4.3.2/CMakeSystem.cmake"
 		},
 		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake"
+			"path" : "cmake/arm-none-eabi.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-Initialize.cmake"
+			"path" : "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake"
 		},
 		{
 			"isGenerated" : true,
@@ -44,12 +42,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake"
+			"path" : "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Generic.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -79,31 +72,22 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU-C.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU.cmake"
-		},
-		{
-			"isGenerated" : true,
-			"path" : "build/CMakeFiles/4.3.2/CMakeRCCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeRCInformation.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-windres.cmake"
+			"path" : "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Generic.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -123,12 +107,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU-ASM.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU.cmake"
+			"path" : "C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeASMLinkerInformation.cmake"
 		}
 	],
 	"kind" : "cmakeFiles",

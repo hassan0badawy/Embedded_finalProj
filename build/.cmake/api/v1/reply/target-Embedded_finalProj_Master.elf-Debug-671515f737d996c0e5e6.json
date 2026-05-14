@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Embedded_finalProj_Slave.elf.exe"
-		},
-		{
-			"path" : "Embedded_finalProj_Slave.elf.pdb"
+			"path" : "Embedded_finalProj_Master.elf"
 		}
 	],
 	"backtrace" : 1,
@@ -49,7 +46,7 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 89,
+				"line" : 88,
 				"parent" : 0
 			},
 			{
@@ -124,7 +121,7 @@
 			[
 				{
 					"backtrace" : 4,
-					"define" : "IS_MASTER=0"
+					"define" : "IS_MASTER=1"
 				}
 			],
 			"includes" : 
@@ -216,7 +213,7 @@
 			[
 				{
 					"backtrace" : 4,
-					"define" : "IS_MASTER=0"
+					"define" : "IS_MASTER=1"
 				}
 			],
 			"includes" : 
@@ -237,7 +234,7 @@
 			]
 		}
 	],
-	"id" : "Embedded_finalProj_Slave.elf::@6890427a1f51a3e7e1df",
+	"id" : "Embedded_finalProj_Master.elf::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -278,7 +275,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-Wl,-Map=Embedded_finalProj_Slave.map",
+				"fragment" : "-Wl,-Map=Embedded_finalProj_Master.map",
 				"role" : "flags"
 			},
 			{
@@ -300,16 +297,12 @@
 				"backtrace" : 2,
 				"fragment" : "\"D:/embedded final proj/Embedded_finalProj/linker\"",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "C"
 	},
-	"name" : "Embedded_finalProj_Slave.elf",
-	"nameOnDisk" : "Embedded_finalProj_Slave.elf.exe",
+	"name" : "Embedded_finalProj_Master.elf",
+	"nameOnDisk" : "Embedded_finalProj_Master.elf",
 	"paths" : 
 	{
 		"build" : ".",

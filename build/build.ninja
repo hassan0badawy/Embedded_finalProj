@@ -57,6 +57,8 @@ build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/Elevator.c.obj: C_CO
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Master.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Master.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/Gpio.c.obj: C_COMPILER__Embedded_finalProj_Master.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/Gpio.c || cmake_object_order_depends_target_Embedded_finalProj_Master.elf
@@ -67,6 +69,8 @@ build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/Gpio.c.obj: C_COMPIL
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Master.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Master.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/RCC.c.obj: C_COMPILER__Embedded_finalProj_Master.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/RCC.c || cmake_object_order_depends_target_Embedded_finalProj_Master.elf
@@ -77,6 +81,8 @@ build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/RCC.c.obj: C_COMPILE
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Master.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Master.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/Timer.c.obj: C_COMPILER__Embedded_finalProj_Master.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/Timer.c || cmake_object_order_depends_target_Embedded_finalProj_Master.elf
@@ -87,6 +93,8 @@ build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/Timer.c.obj: C_COMPI
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Master.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Master.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/dispatcher.c.obj: C_COMPILER__Embedded_finalProj_Master.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/dispatcher.c || cmake_object_order_depends_target_Embedded_finalProj_Master.elf
@@ -97,6 +105,8 @@ build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/dispatcher.c.obj: C_
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Master.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Master.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/hallway_buttons.c.obj: C_COMPILER__Embedded_finalProj_Master.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/hallway_buttons.c || cmake_object_order_depends_target_Embedded_finalProj_Master.elf
@@ -107,6 +117,8 @@ build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/hallway_buttons.c.ob
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Master.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Master.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/ipc.c.obj: C_COMPILER__Embedded_finalProj_Master.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/ipc.c || cmake_object_order_depends_target_Embedded_finalProj_Master.elf
@@ -117,6 +129,8 @@ build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/ipc.c.obj: C_COMPILE
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Master.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Master.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/main.c.obj: C_COMPILER__Embedded_finalProj_Master.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/main.c || cmake_object_order_depends_target_Embedded_finalProj_Master.elf
@@ -127,6 +141,8 @@ build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/main.c.obj: C_COMPIL
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Master.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Master.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/pwm.c.obj: C_COMPILER__Embedded_finalProj_Master.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/pwm.c || cmake_object_order_depends_target_Embedded_finalProj_Master.elf
@@ -137,6 +153,8 @@ build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/pwm.c.obj: C_COMPILE
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Master.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Master.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/spi.c.obj: C_COMPILER__Embedded_finalProj_Master.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/spi.c || cmake_object_order_depends_target_Embedded_finalProj_Master.elf
@@ -147,6 +165,8 @@ build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/spi.c.obj: C_COMPILE
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Master.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Master.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/spi_it.c.obj: C_COMPILER__Embedded_finalProj_Master.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/spi_it.c || cmake_object_order_depends_target_Embedded_finalProj_Master.elf
@@ -157,6 +177,8 @@ build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/spi_it.c.obj: C_COMP
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Master.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Master.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/syscalls.c.obj: C_COMPILER__Embedded_finalProj_Master.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/syscalls.c || cmake_object_order_depends_target_Embedded_finalProj_Master.elf
@@ -167,6 +189,8 @@ build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/syscalls.c.obj: C_CO
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Master.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Master.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/system_state.c.obj: C_COMPILER__Embedded_finalProj_Master.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/system_state.c || cmake_object_order_depends_target_Embedded_finalProj_Master.elf
@@ -177,6 +201,8 @@ build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/system_state.c.obj: 
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Master.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Master.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/uart_dma.c.obj: C_COMPILER__Embedded_finalProj_Master.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/uart_dma.c || cmake_object_order_depends_target_Embedded_finalProj_Master.elf
@@ -187,6 +213,8 @@ build CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/uart_dma.c.obj: C_CO
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Master.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Master.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Master.elf.dir/startup/STM32F4xx/STM32F401xE.s.obj: ASM_COMPILER__Embedded_finalProj_Master.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/startup/STM32F4xx/STM32F401xE.s || cmake_object_order_depends_target_Embedded_finalProj_Master.elf
@@ -197,6 +225,8 @@ build CMakeFiles/Embedded_finalProj_Master.elf.dir/startup/STM32F4xx/STM32F401xE
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir\startup\STM32F4xx
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Master.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Master.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
 
 
@@ -205,19 +235,18 @@ build CMakeFiles/Embedded_finalProj_Master.elf.dir/startup/STM32F4xx/STM32F401xE
 
 
 #############################################
-# Link the executable Embedded_finalProj_Master.elf.exe
+# Link the executable Embedded_finalProj_Master.elf
 
-build Embedded_finalProj_Master.elf.exe: C_EXECUTABLE_LINKER__Embedded_finalProj_Master.2eelf_Debug CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/Elevator.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/Gpio.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/RCC.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/Timer.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/dispatcher.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/hallway_buttons.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/ipc.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/main.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/pwm.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/spi.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/spi_it.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/syscalls.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/system_state.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/uart_dma.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/startup/STM32F4xx/STM32F401xE.s.obj
+build Embedded_finalProj_Master.elf: C_EXECUTABLE_LINKER__Embedded_finalProj_Master.2eelf_Debug CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/Elevator.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/Gpio.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/RCC.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/Timer.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/dispatcher.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/hallway_buttons.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/ipc.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/main.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/pwm.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/spi.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/spi_it.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/syscalls.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/system_state.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/Core/Src/uart_dma.c.obj CMakeFiles/Embedded_finalProj_Master.elf.dir/startup/STM32F4xx/STM32F401xE.s.obj
   CONFIG = Debug
   FLAGS = -g
   LINK_FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -specs=nano.specs -Wl,--gc-sections -Wl,-Map=Embedded_finalProj_Master.map -T "D:/embedded final proj/Embedded_finalProj/linker/STM32F4xx/STM32F401xE.ld" -L "D:/embedded final proj/Embedded_finalProj/linker"
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
   POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\embedded final proj\Embedded_finalProj\build" && C:\arm-gnu-toolchain\bin\arm-none-eabi-objcopy.exe -O ihex Embedded_finalProj_Master.elf Embedded_finalProj_Master.hex && C:\arm-gnu-toolchain\bin\arm-none-eabi-objcopy.exe -O binary Embedded_finalProj_Master.elf Embedded_finalProj_Master.bin"
   PRE_LINK = cd .
-  TARGET_FILE = Embedded_finalProj_Master.elf.exe
-  TARGET_IMPLIB = libEmbedded_finalProj_Master.elf.dll.a
-  TARGET_PDB = Embedded_finalProj_Master.elf.exe.dbg
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Master.elf.dir\
+  TARGET_FILE = Embedded_finalProj_Master.elf
+  TARGET_PDB = Embedded_finalProj_Master.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Master.elf.dir
 
 # =============================================================================
@@ -237,6 +266,8 @@ build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/Elevator.c.obj: C_COM
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Slave.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Slave.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/Gpio.c.obj: C_COMPILER__Embedded_finalProj_Slave.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/Gpio.c || cmake_object_order_depends_target_Embedded_finalProj_Slave.elf
@@ -247,6 +278,8 @@ build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/Gpio.c.obj: C_COMPILE
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Slave.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Slave.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/RCC.c.obj: C_COMPILER__Embedded_finalProj_Slave.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/RCC.c || cmake_object_order_depends_target_Embedded_finalProj_Slave.elf
@@ -257,6 +290,8 @@ build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/RCC.c.obj: C_COMPILER
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Slave.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Slave.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/Timer.c.obj: C_COMPILER__Embedded_finalProj_Slave.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/Timer.c || cmake_object_order_depends_target_Embedded_finalProj_Slave.elf
@@ -267,6 +302,8 @@ build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/Timer.c.obj: C_COMPIL
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Slave.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Slave.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/dispatcher.c.obj: C_COMPILER__Embedded_finalProj_Slave.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/dispatcher.c || cmake_object_order_depends_target_Embedded_finalProj_Slave.elf
@@ -277,6 +314,8 @@ build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/dispatcher.c.obj: C_C
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Slave.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Slave.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/hallway_buttons.c.obj: C_COMPILER__Embedded_finalProj_Slave.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/hallway_buttons.c || cmake_object_order_depends_target_Embedded_finalProj_Slave.elf
@@ -287,6 +326,8 @@ build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/hallway_buttons.c.obj
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Slave.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Slave.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/ipc.c.obj: C_COMPILER__Embedded_finalProj_Slave.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/ipc.c || cmake_object_order_depends_target_Embedded_finalProj_Slave.elf
@@ -297,6 +338,8 @@ build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/ipc.c.obj: C_COMPILER
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Slave.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Slave.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/main.c.obj: C_COMPILER__Embedded_finalProj_Slave.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/main.c || cmake_object_order_depends_target_Embedded_finalProj_Slave.elf
@@ -307,6 +350,8 @@ build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/main.c.obj: C_COMPILE
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Slave.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Slave.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/pwm.c.obj: C_COMPILER__Embedded_finalProj_Slave.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/pwm.c || cmake_object_order_depends_target_Embedded_finalProj_Slave.elf
@@ -317,6 +362,8 @@ build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/pwm.c.obj: C_COMPILER
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Slave.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Slave.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/spi.c.obj: C_COMPILER__Embedded_finalProj_Slave.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/spi.c || cmake_object_order_depends_target_Embedded_finalProj_Slave.elf
@@ -327,6 +374,8 @@ build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/spi.c.obj: C_COMPILER
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Slave.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Slave.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/spi_it.c.obj: C_COMPILER__Embedded_finalProj_Slave.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/spi_it.c || cmake_object_order_depends_target_Embedded_finalProj_Slave.elf
@@ -337,6 +386,8 @@ build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/spi_it.c.obj: C_COMPI
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Slave.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Slave.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/syscalls.c.obj: C_COMPILER__Embedded_finalProj_Slave.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/syscalls.c || cmake_object_order_depends_target_Embedded_finalProj_Slave.elf
@@ -347,6 +398,8 @@ build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/syscalls.c.obj: C_COM
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Slave.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Slave.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/system_state.c.obj: C_COMPILER__Embedded_finalProj_Slave.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/system_state.c || cmake_object_order_depends_target_Embedded_finalProj_Slave.elf
@@ -357,6 +410,8 @@ build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/system_state.c.obj: C
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Slave.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Slave.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/uart_dma.c.obj: C_COMPILER__Embedded_finalProj_Slave.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/Core/Src/uart_dma.c || cmake_object_order_depends_target_Embedded_finalProj_Slave.elf
@@ -367,6 +422,8 @@ build CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/uart_dma.c.obj: C_COM
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Slave.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Slave.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
 
 build CMakeFiles/Embedded_finalProj_Slave.elf.dir/startup/STM32F4xx/STM32F401xE.s.obj: ASM_COMPILER__Embedded_finalProj_Slave.2eelf_unscanned_Debug D$:/embedded$ final$ proj/Embedded_finalProj/startup/STM32F4xx/STM32F401xE.s || cmake_object_order_depends_target_Embedded_finalProj_Slave.elf
@@ -377,6 +434,8 @@ build CMakeFiles/Embedded_finalProj_Slave.elf.dir/startup/STM32F4xx/STM32F401xE.
   INCLUDES = -I"D:/embedded final proj/Embedded_finalProj/Core/Inc" -I"D:/embedded final proj/Embedded_finalProj/startup"
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir\startup\STM32F4xx
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Slave.elf.dir\
+  TARGET_PDB = Embedded_finalProj_Slave.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
 
 
@@ -385,19 +444,18 @@ build CMakeFiles/Embedded_finalProj_Slave.elf.dir/startup/STM32F4xx/STM32F401xE.
 
 
 #############################################
-# Link the executable Embedded_finalProj_Slave.elf.exe
+# Link the executable Embedded_finalProj_Slave.elf
 
-build Embedded_finalProj_Slave.elf.exe: C_EXECUTABLE_LINKER__Embedded_finalProj_Slave.2eelf_Debug CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/Elevator.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/Gpio.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/RCC.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/Timer.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/dispatcher.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/hallway_buttons.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/ipc.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/main.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/pwm.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/spi.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/spi_it.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/syscalls.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/system_state.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/uart_dma.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/startup/STM32F4xx/STM32F401xE.s.obj
+build Embedded_finalProj_Slave.elf: C_EXECUTABLE_LINKER__Embedded_finalProj_Slave.2eelf_Debug CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/Elevator.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/Gpio.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/RCC.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/Timer.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/dispatcher.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/hallway_buttons.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/ipc.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/main.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/pwm.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/spi.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/spi_it.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/syscalls.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/system_state.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/Core/Src/uart_dma.c.obj CMakeFiles/Embedded_finalProj_Slave.elf.dir/startup/STM32F4xx/STM32F401xE.s.obj
   CONFIG = Debug
   FLAGS = -g
   LINK_FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -specs=nano.specs -Wl,--gc-sections -Wl,-Map=Embedded_finalProj_Slave.map -T "D:/embedded final proj/Embedded_finalProj/linker/STM32F4xx/STM32F401xE.ld" -L "D:/embedded final proj/Embedded_finalProj/linker"
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
   POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\embedded final proj\Embedded_finalProj\build" && C:\arm-gnu-toolchain\bin\arm-none-eabi-objcopy.exe -O ihex Embedded_finalProj_Slave.elf Embedded_finalProj_Slave.hex && C:\arm-gnu-toolchain\bin\arm-none-eabi-objcopy.exe -O binary Embedded_finalProj_Slave.elf Embedded_finalProj_Slave.bin"
   PRE_LINK = cd .
-  TARGET_FILE = Embedded_finalProj_Slave.elf.exe
-  TARGET_IMPLIB = libEmbedded_finalProj_Slave.elf.dll.a
-  TARGET_PDB = Embedded_finalProj_Slave.elf.exe.dbg
+  TARGET_COMPILE_PDB = CMakeFiles\Embedded_finalProj_Slave.elf.dir\
+  TARGET_FILE = Embedded_finalProj_Slave.elf
+  TARGET_PDB = Embedded_finalProj_Slave.elf.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\Embedded_finalProj_Slave.elf.dir
 
 
@@ -427,10 +485,6 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build Embedded_finalProj_Master.elf: phony Embedded_finalProj_Master.elf.exe
-
-build Embedded_finalProj_Slave.elf: phony Embedded_finalProj_Slave.elf.exe
-
 # =============================================================================
 # Folder targets.
 
@@ -439,7 +493,7 @@ build Embedded_finalProj_Slave.elf: phony Embedded_finalProj_Slave.elf.exe
 #############################################
 # Folder: D:/embedded final proj/Embedded_finalProj/build
 
-build all: phony Embedded_finalProj_Master.elf.exe Embedded_finalProj_Slave.elf.exe
+build all: phony Embedded_finalProj_Master.elf Embedded_finalProj_Slave.elf
 
 # =============================================================================
 # Built-in targets
@@ -448,14 +502,14 @@ build all: phony Embedded_finalProj_Master.elf.exe Embedded_finalProj_Slave.elf.
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja D$:/embedded$ final$ proj/Embedded_finalProj/build/cmake_install.cmake: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.3.2/CMakeASMCompiler.cmake CMakeFiles/4.3.2/CMakeCCompiler.cmake CMakeFiles/4.3.2/CMakeRCCompiler.cmake CMakeFiles/4.3.2/CMakeSystem.cmake D$:/embedded$ final$ proj/Embedded_finalProj/CMakeLists.txt
+build build.ninja D$:/embedded$ final$ proj/Embedded_finalProj/build/cmake_install.cmake: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeASMCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerSupport.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeTestASMCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Diab-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Renesas-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeASMLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeInspectASMLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeInspectCLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/4.3.2/CMakeASMCompiler.cmake CMakeFiles/4.3.2/CMakeCCompiler.cmake CMakeFiles/4.3.2/CMakeSystem.cmake D$:/embedded$ final$ proj/Embedded_finalProj/CMakeLists.txt D$:/embedded$ final$ proj/Embedded_finalProj/cmake/arm-none-eabi.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.3.2/CMakeASMCompiler.cmake CMakeFiles/4.3.2/CMakeCCompiler.cmake CMakeFiles/4.3.2/CMakeRCCompiler.cmake CMakeFiles/4.3.2/CMakeSystem.cmake D$:/embedded$ final$ proj/Embedded_finalProj/CMakeLists.txt: phony
+build C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeASMCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerSupport.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeTestASMCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Diab-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Renesas-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeASMLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeInspectASMLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeInspectCLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/4.3.2/CMakeASMCompiler.cmake CMakeFiles/4.3.2/CMakeCCompiler.cmake CMakeFiles/4.3.2/CMakeSystem.cmake D$:/embedded$ final$ proj/Embedded_finalProj/CMakeLists.txt D$:/embedded$ final$ proj/Embedded_finalProj/cmake/arm-none-eabi.cmake: phony
 
 
 #############################################

@@ -2,17 +2,290 @@
 ---
 events:
   -
+    kind: "find-v1"
+    backtrace:
+      - "cmake/arm-none-eabi.cmake:8 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:146 (include)"
+      - "CMakeLists.txt:7 (project)"
+    mode: "program"
+    variable: "C_COMPILER_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "cmake/arm-none-eabi.cmake:13 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:146 (include)"
+      - "CMakeLists.txt:7 (project)"
+    mode: "program"
+    variable: "CXX_COMPILER_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-g++"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-g++.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-g++.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "cmake/arm-none-eabi.cmake:14 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:146 (include)"
+      - "CMakeLists.txt:7 (project)"
+    mode: "program"
+    variable: "OBJCOPY_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-objcopy"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-objcopy.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-objcopy.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "cmake/arm-none-eabi.cmake:15 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:146 (include)"
+      - "CMakeLists.txt:7 (project)"
+    mode: "program"
+    variable: "SIZE_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-size"
+    candidate_directories:
+      - "C:/arm-gnu-toolchain/bin/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/farah/AppData/Roaming/npm/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/GnuWin32/bin/"
+      - "C:/Windows/System32/ninga/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/farah/.lmstudio/bin/"
+    searched_directories:
+      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-size.com"
+    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-size.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\arm-gnu-toolchain\\bin"
+        - "C:\\Program Files (x86)\\GnuWin32\\bin"
+        - "C:\\Windows\\System32\\ninga"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
+        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\farah\\.lmstudio\\bin"
+  -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:212 (message)"
-      - "CMakeLists.txt:4 (project)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:207 (message)"
+      - "CMakeLists.txt:7 (project)"
     message: |
-      The system is: Windows - 10.0.26200 - AMD64
+      The target system is: Generic -  - arm
+      The host system is: Windows - 10.0.26200 - AMD64
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeNinjaFindMake.cmake:5 (find_program)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     mode: "program"
     variable: "CMAKE_MAKE_PROGRAM"
     description: "Program used to build from build.ninja files."
@@ -205,7 +478,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -254,7 +527,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
       Compiler: C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe 
@@ -286,7 +559,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -335,7 +608,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler: C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe 
@@ -356,7 +629,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
@@ -425,7 +698,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     mode: "program"
     variable: "CMAKE_RANLIB"
     description: "Path to a program."
@@ -494,7 +767,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     mode: "program"
     variable: "CMAKE_STRIP"
     description: "Path to a program."
@@ -563,7 +836,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     mode: "program"
     variable: "CMAKE_LINKER"
     description: "Path to a program."
@@ -632,7 +905,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     mode: "program"
     variable: "CMAKE_NM"
     description: "Path to a program."
@@ -701,7 +974,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     mode: "program"
     variable: "CMAKE_OBJDUMP"
     description: "Path to a program."
@@ -770,76 +1043,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
-    mode: "program"
-    variable: "CMAKE_OBJCOPY"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "arm-none-eabi-objcopy"
-      - "objcopy"
-    candidate_directories:
-      - "C:/arm-gnu-toolchain/bin/"
-      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
-      - "C:/Windows/System32/"
-      - "C:/Windows/"
-      - "C:/Windows/System32/wbem/"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
-      - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/nodejs/"
-      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
-      - "C:/Users/farah/AppData/Roaming/npm/"
-      - "C:/mingw64/bin/"
-      - "C:/Program Files (x86)/GnuWin32/bin/"
-      - "C:/Windows/System32/ninga/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Program Files/Git/cmd/"
-      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
-      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
-      - "C:/Users/farah/.lmstudio/bin/"
-    searched_directories:
-      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-objcopy.com"
-    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-objcopy.exe"
-    search_context:
-      ENV{PATH}:
-        - "C:\\arm-gnu-toolchain\\bin"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
-        - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\nodejs\\"
-        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\arm-gnu-toolchain\\bin"
-        - "C:\\Program Files (x86)\\GnuWin32\\bin"
-        - "C:\\Windows\\System32\\ninga"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
-        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:\\Users\\farah\\.lmstudio\\bin"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     mode: "program"
     variable: "CMAKE_READELF"
     description: "Path to a program."
@@ -908,7 +1112,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     mode: "program"
     variable: "CMAKE_DLLTOOL"
     description: "Path to a program."
@@ -1067,7 +1271,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     mode: "program"
     variable: "CMAKE_ADDR2LINE"
     description: "Path to a program."
@@ -1136,7 +1340,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     mode: "program"
     variable: "CMAKE_TAPI"
     description: "Path to a program."
@@ -1318,7 +1522,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1560,7 +1764,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1798,61 +2002,11 @@ events:
         - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
         - "C:\\Users\\farah\\.lmstudio\\bin"
   -
-    kind: "find-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:61 (_cmake_find_compiler)"
-      - "CMakeLists.txt:4 (project)"
-    mode: "program"
-    variable: "CMAKE_ASM_COMPILER"
-    description: "ASM compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe"
-    candidate_directories:
-      - "C:/arm-gnu-toolchain/bin/"
-    searched_directories:
-      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe.com"
-    found: "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe"
-    search_context:
-      ENV{PATH}:
-        - "C:\\arm-gnu-toolchain\\bin"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
-        - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\nodejs\\"
-        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\arm-gnu-toolchain\\bin"
-        - "C:\\Program Files (x86)\\GnuWin32\\bin"
-        - "C:\\Windows\\System32\\ninga"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
-        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:\\Users\\farah\\.lmstudio\\bin"
-  -
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:1296 (message)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:170 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     message: |
       Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
       arm-none-eabi-gcc.exe (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 14.3.1 20250623
@@ -1865,7 +2019,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     mode: "program"
     variable: "CMAKE_ASM_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -2050,7 +2204,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     mode: "program"
     variable: "CMAKE_ASM_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -2231,231 +2385,16 @@ events:
         - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
         - "C:\\Users\\farah\\.lmstudio\\bin"
   -
-    kind: "find-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU.cmake:167 (enable_language)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU-C.cmake:2 (__windows_compiler_gnu)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake:48 (include)"
-      - "CMakeLists.txt:4 (project)"
-    mode: "program"
-    variable: "CMAKE_RC_COMPILER"
-    description: "RC compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "arm-none-eabi-windres"
-      - "windres"
-    candidate_directories:
-      - "C:/arm-gnu-toolchain/bin/"
-      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/"
-      - "C:/Windows/System32/"
-      - "C:/Windows/"
-      - "C:/Windows/System32/wbem/"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
-      - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/nodejs/"
-      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/"
-      - "C:/Users/farah/AppData/Roaming/npm/"
-      - "C:/mingw64/bin/"
-      - "C:/Program Files (x86)/GnuWin32/bin/"
-      - "C:/Windows/System32/ninga/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Program Files/Git/cmd/"
-      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/"
-      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/"
-      - "C:/Users/farah/.lmstudio/bin/"
-      - "C:/Program Files/bin/"
-      - "C:/Program Files/sbin/"
-      - "C:/Program Files/"
-      - "C:/Program Files (x86)/bin/"
-      - "C:/Program Files (x86)/sbin/"
-      - "C:/Program Files (x86)/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Program Files/CMake/sbin/"
-      - "C:/Program Files/CMake/"
-      - "C:/Program Files (x86)/Embedded_finalProj/bin/"
-      - "C:/Program Files (x86)/Embedded_finalProj/sbin/"
-      - "C:/Program Files (x86)/Embedded_finalProj/"
-    searched_directories:
-      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-windres.com"
-      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-windres.exe"
-      - "C:/arm-gnu-toolchain/bin/arm-none-eabi-windres"
-      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-windres.com"
-      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-windres.exe"
-      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/arm-none-eabi-windres"
-      - "C:/Windows/System32/arm-none-eabi-windres.com"
-      - "C:/Windows/System32/arm-none-eabi-windres.exe"
-      - "C:/Windows/System32/arm-none-eabi-windres"
-      - "C:/Windows/arm-none-eabi-windres.com"
-      - "C:/Windows/arm-none-eabi-windres.exe"
-      - "C:/Windows/arm-none-eabi-windres"
-      - "C:/Windows/System32/wbem/arm-none-eabi-windres.com"
-      - "C:/Windows/System32/wbem/arm-none-eabi-windres.exe"
-      - "C:/Windows/System32/wbem/arm-none-eabi-windres"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-windres.com"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-windres.exe"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-windres"
-      - "C:/Windows/System32/OpenSSH/arm-none-eabi-windres.com"
-      - "C:/Windows/System32/OpenSSH/arm-none-eabi-windres.exe"
-      - "C:/Windows/System32/OpenSSH/arm-none-eabi-windres"
-      - "C:/Program Files/nodejs/arm-none-eabi-windres.com"
-      - "C:/Program Files/nodejs/arm-none-eabi-windres.exe"
-      - "C:/Program Files/nodejs/arm-none-eabi-windres"
-      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-windres.com"
-      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-windres.exe"
-      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-windres"
-      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-windres.com"
-      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-windres.exe"
-      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-windres"
-      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-windres.com"
-      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-windres.exe"
-      - "C:/Users/farah/AppData/Roaming/npm/arm-none-eabi-windres"
-      - "C:/mingw64/bin/arm-none-eabi-windres.com"
-      - "C:/mingw64/bin/arm-none-eabi-windres.exe"
-      - "C:/mingw64/bin/arm-none-eabi-windres"
-      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-windres.com"
-      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-windres.exe"
-      - "C:/Program Files (x86)/GnuWin32/bin/arm-none-eabi-windres"
-      - "C:/Windows/System32/ninga/arm-none-eabi-windres.com"
-      - "C:/Windows/System32/ninga/arm-none-eabi-windres.exe"
-      - "C:/Windows/System32/ninga/arm-none-eabi-windres"
-      - "C:/Program Files/CMake/bin/arm-none-eabi-windres.com"
-      - "C:/Program Files/CMake/bin/arm-none-eabi-windres.exe"
-      - "C:/Program Files/CMake/bin/arm-none-eabi-windres"
-      - "C:/Program Files/Git/cmd/arm-none-eabi-windres.com"
-      - "C:/Program Files/Git/cmd/arm-none-eabi-windres.exe"
-      - "C:/Program Files/Git/cmd/arm-none-eabi-windres"
-      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-windres.com"
-      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-windres.exe"
-      - "C:/Users/farah/AppData/Local/Programs/Antigravity/bin/arm-none-eabi-windres"
-      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-windres.com"
-      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-windres.exe"
-      - "C:/Users/farah/AppData/Local/GitHubDesktop/bin/arm-none-eabi-windres"
-      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-windres.com"
-      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-windres.exe"
-      - "C:/Users/farah/.lmstudio/bin/arm-none-eabi-windres"
-      - "C:/Program Files/bin/arm-none-eabi-windres.com"
-      - "C:/Program Files/bin/arm-none-eabi-windres.exe"
-      - "C:/Program Files/bin/arm-none-eabi-windres"
-      - "C:/Program Files/sbin/arm-none-eabi-windres.com"
-      - "C:/Program Files/sbin/arm-none-eabi-windres.exe"
-      - "C:/Program Files/sbin/arm-none-eabi-windres"
-      - "C:/Program Files/arm-none-eabi-windres.com"
-      - "C:/Program Files/arm-none-eabi-windres.exe"
-      - "C:/Program Files/arm-none-eabi-windres"
-      - "C:/Program Files (x86)/bin/arm-none-eabi-windres.com"
-      - "C:/Program Files (x86)/bin/arm-none-eabi-windres.exe"
-      - "C:/Program Files (x86)/bin/arm-none-eabi-windres"
-      - "C:/Program Files (x86)/sbin/arm-none-eabi-windres.com"
-      - "C:/Program Files (x86)/sbin/arm-none-eabi-windres.exe"
-      - "C:/Program Files (x86)/sbin/arm-none-eabi-windres"
-      - "C:/Program Files (x86)/arm-none-eabi-windres.com"
-      - "C:/Program Files (x86)/arm-none-eabi-windres.exe"
-      - "C:/Program Files (x86)/arm-none-eabi-windres"
-      - "C:/Program Files/CMake/bin/arm-none-eabi-windres.com"
-      - "C:/Program Files/CMake/bin/arm-none-eabi-windres.exe"
-      - "C:/Program Files/CMake/bin/arm-none-eabi-windres"
-      - "C:/Program Files/CMake/sbin/arm-none-eabi-windres.com"
-      - "C:/Program Files/CMake/sbin/arm-none-eabi-windres.exe"
-      - "C:/Program Files/CMake/sbin/arm-none-eabi-windres"
-      - "C:/Program Files/CMake/arm-none-eabi-windres.com"
-      - "C:/Program Files/CMake/arm-none-eabi-windres.exe"
-      - "C:/Program Files/CMake/arm-none-eabi-windres"
-      - "C:/Program Files (x86)/Embedded_finalProj/bin/arm-none-eabi-windres.com"
-      - "C:/Program Files (x86)/Embedded_finalProj/bin/arm-none-eabi-windres.exe"
-      - "C:/Program Files (x86)/Embedded_finalProj/bin/arm-none-eabi-windres"
-      - "C:/Program Files (x86)/Embedded_finalProj/sbin/arm-none-eabi-windres.com"
-      - "C:/Program Files (x86)/Embedded_finalProj/sbin/arm-none-eabi-windres.exe"
-      - "C:/Program Files (x86)/Embedded_finalProj/sbin/arm-none-eabi-windres"
-      - "C:/Program Files (x86)/Embedded_finalProj/arm-none-eabi-windres.com"
-      - "C:/Program Files (x86)/Embedded_finalProj/arm-none-eabi-windres.exe"
-      - "C:/Program Files (x86)/Embedded_finalProj/arm-none-eabi-windres"
-      - "C:/arm-gnu-toolchain/bin/windres.com"
-      - "C:/arm-gnu-toolchain/bin/windres.exe"
-      - "C:/arm-gnu-toolchain/bin/windres"
-      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/windres.com"
-      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/windres.exe"
-      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/windres"
-      - "C:/Windows/System32/windres.com"
-      - "C:/Windows/System32/windres.exe"
-      - "C:/Windows/System32/windres"
-      - "C:/Windows/windres.com"
-      - "C:/Windows/windres.exe"
-      - "C:/Windows/windres"
-      - "C:/Windows/System32/wbem/windres.com"
-      - "C:/Windows/System32/wbem/windres.exe"
-      - "C:/Windows/System32/wbem/windres"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/windres.com"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/windres.exe"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/windres"
-      - "C:/Windows/System32/OpenSSH/windres.com"
-      - "C:/Windows/System32/OpenSSH/windres.exe"
-      - "C:/Windows/System32/OpenSSH/windres"
-      - "C:/Program Files/nodejs/windres.com"
-      - "C:/Program Files/nodejs/windres.exe"
-      - "C:/Program Files/nodejs/windres"
-      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/windres.com"
-      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/windres.exe"
-      - "C:/Users/farah/AppData/Local/Microsoft/WindowsApps/windres"
-      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/windres.com"
-      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/windres.exe"
-      - "C:/Users/farah/AppData/Local/Programs/Microsoft VS Code/bin/windres"
-      - "C:/Users/farah/AppData/Roaming/npm/windres.com"
-      - "C:/Users/farah/AppData/Roaming/npm/windres.exe"
-      - "C:/Users/farah/AppData/Roaming/npm/windres"
-      - "C:/mingw64/bin/windres.com"
-    found: "C:/mingw64/bin/windres.exe"
-    search_context:
-      ENV{PATH}:
-        - "C:\\arm-gnu-toolchain\\bin"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
-        - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\nodejs\\"
-        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\arm-gnu-toolchain\\bin"
-        - "C:\\Program Files (x86)\\GnuWin32\\bin"
-        - "C:\\Windows\\System32\\ninga"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
-        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:\\Users\\farah\\.lmstudio\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Embedded_finalProj"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/Embedded_finalProj"
-  -
     kind: "try_compile-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:7 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-k64ixy"
-      binary: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-k64ixy"
+      source: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-qeu90i"
+      binary: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-qeu90i"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -2464,10 +2403,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-k64ixy'
+        Change Dir: 'D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-qeu90i'
         
-        Run Build Command(s): C:/Windows/System32/ninga/ninja.exe -v cmTC_950d4
-        [1/2] C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c"
+        Run Build Command(s): C:/Windows/System32/ninga/ninja.exe -v cmTC_1893c
+        [1/2] C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles/cmTC_1893c.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c"
         Using built-in specs.
         COLLECT_GCC=C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe
         Target: arm-none-eabi
@@ -2475,8 +2414,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_950d4.dir/'
-         C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot C:/arm-gnu-toolchain/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_950d4.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\farah\\AppData\\Local\\Temp\\ccUnxYgZ.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1893c.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1893c.dir/'
+         C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot C:/arm-gnu-toolchain/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1893c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\farah\\AppData\\Local\\Temp\\cchBzP2c.s
         GNU C17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
         	compiled by GNU C version 10-win32 20220113, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -2493,590 +2432,92 @@ events:
          C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: b7d3e61a3c100ce920bcfa732511112e
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_950d4.dir/'
-         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj C:\\Users\\farah\\AppData\\Local\\Temp\\ccUnxYgZ.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1893c.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1893c.dir/'
+         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_1893c.dir/CMakeCCompilerABI.c.obj C:\\Users\\farah\\AppData\\Local\\Temp\\cchBzP2c.s
         GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
         COMPILER_PATH=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../libexec/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../lib/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;C:/arm-gnu-toolchain/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe  -v -Wl,-v CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj -o cmTC_950d4.exe -Wl,--out-implib,libcmTC_950d4.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
-        FAILED: [code=1] cmTC_950d4.exe 
-        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe  -v -Wl,-v CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj -o cmTC_950d4.exe -Wl,--out-implib,libcmTC_950d4.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
-        Using built-in specs.
-        COLLECT_GCC=C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe
-        COLLECT_LTO_WRAPPER=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe
-        Target: arm-none-eabi
-        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=i686-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)'
-        Thread model: single
-        Supported LTO compression algorithms: zlib
-        gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
-        COMPILER_PATH=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../libexec/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
-        LIBRARY_PATH=C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../lib/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;C:/arm-gnu-toolchain/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_950d4.exe' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_950d4.'
-         C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/collect2.exe -plugin C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/liblto_plugin.dll -plugin-opt=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\farah\\AppData\\Local\\Temp\\ccEZHSmd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=C:/arm-gnu-toolchain/bin/../arm-none-eabi -X -o cmTC_950d4.exe C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crti.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtbegin.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/crt0.o -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1 -LC:/arm-gnu-toolchain/bin/../lib/gcc -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib -LC:/arm-gnu-toolchain/bin/../arm-none-eabi/lib -v CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_950d4.dll.a --major-image-version 0 --minor-image-version 0 --start-group -lgcc -lc --end-group C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtend.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtn.o
-        collect2 version 14.3.1 20250623
-        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe -plugin C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/liblto_plugin.dll -plugin-opt=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\farah\\AppData\\Local\\Temp\\ccEZHSmd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=C:/arm-gnu-toolchain/bin/../arm-none-eabi -X -o cmTC_950d4.exe C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crti.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtbegin.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/crt0.o -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1 -LC:/arm-gnu-toolchain/bin/../lib/gcc -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib -LC:/arm-gnu-toolchain/bin/../arm-none-eabi/lib -v CMakeFiles/cmTC_950d4.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_950d4.dll.a --major-image-version 0 --minor-image-version 0 --start-group -lgcc -lc --end-group C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtend.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtn.o
-        GNU ld (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
-        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
-        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
-        collect2.exe: error: ld returned 1 exit status
-        ninja: build stopped: subcommand failed.
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1893c.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1893c.dir/CMakeCCompilerABI.c.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_1893c.a && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-ar.exe qc libcmTC_1893c.a  CMakeFiles/cmTC_1893c.dir/CMakeCCompilerABI.c.obj && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-ranlib.exe libcmTC_1893c.a && cd ."
         
-      exitCode: 1
+      exitCode: 0
   -
-    kind: "try_compile-v1"
+    kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
-      - "CMakeLists.txt:4 (project)"
-    checks:
-      - "Check for working C compiler: C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe"
-    directories:
-      source: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-i8xkgb"
-      binary: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-i8xkgb"
-    cmakeVariables:
-      CMAKE_C_FLAGS: ""
-      CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "CMAKE_C_COMPILER_WORKS"
-      cached: true
-      stdout: |
-        Change Dir: 'D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-i8xkgb'
-        
-        Run Build Command(s): C:/Windows/System32/ninga/ninja.exe -v cmTC_bfc27
-        [1/2] C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe    -o CMakeFiles/cmTC_bfc27.dir/testCCompiler.c.obj -c "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-i8xkgb/testCCompiler.c"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe   CMakeFiles/cmTC_bfc27.dir/testCCompiler.c.obj -o cmTC_bfc27.exe -Wl,--out-implib,libcmTC_bfc27.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        FAILED: [code=1] cmTC_bfc27.exe 
-        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe   CMakeFiles/cmTC_bfc27.dir/testCCompiler.c.obj -o cmTC_bfc27.exe -Wl,--out-implib,libcmTC_bfc27.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
-        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
-        collect2.exe: error: ld returned 1 exit status
-        ninja: build stopped: subcommand failed.
-        
-      exitCode: 1
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+          add: [C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+          add: [C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/include] ==> [C:/arm-gnu-toolchain/lib/gcc/arm-none-eabi/14.3.1/include]
+        collapse include dir [C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed] ==> [C:/arm-gnu-toolchain/lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        collapse include dir [C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include] ==> [C:/arm-gnu-toolchain/arm-none-eabi/include]
+        implicit include dirs: [C:/arm-gnu-toolchain/lib/gcc/arm-none-eabi/14.3.1/include;C:/arm-gnu-toolchain/lib/gcc/arm-none-eabi/14.3.1/include-fixed;C:/arm-gnu-toolchain/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: 'D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-qeu90i']
+        ignore line: []
+        ignore line: [Run Build Command(s): C:/Windows/System32/ninga/ninja.exe -v cmTC_1893c]
+        ignore line: [[1/2] C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles/cmTC_1893c.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=i686-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)']
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1893c.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1893c.dir/']
+        ignore line: [ C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot C:/arm-gnu-toolchain/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1893c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\farah\\AppData\\Local\\Temp\\cchBzP2c.s]
+        ignore line: [GNU C17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 10-win32 20220113  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"]
+        ignore line: [ignoring nonexistent directory "C:/arm-gnu-toolchain/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"]
+        ignore line: [ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"]
+        ignore line: [ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"]
+        ignore line: [ignoring duplicate directory "C:/arm-gnu-toolchain/bin/../arm-none-eabi/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+        ignore line: [ C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        ignore line: [ C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: b7d3e61a3c100ce920bcfa732511112e]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1893c.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1893c.dir/']
+        ignore line: [ C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_1893c.dir/CMakeCCompilerABI.c.obj C:\\Users\\farah\\AppData\\Local\\Temp\\cchBzP2c.s]
+        ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616]
+        ignore line: [COMPILER_PATH=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/]
+        ignore line: [C:/arm-gnu-toolchain/bin/../libexec/gcc/]
+        ignore line: [C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/]
+        ignore line: [C:/arm-gnu-toolchain/bin/../lib/gcc/]
+        ignore line: [C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/]
+        ignore line: [C:/arm-gnu-toolchain/bin/../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1893c.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1893c.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_1893c.a && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-ar.exe qc libcmTC_1893c.a  CMakeFiles/cmTC_1893c.dir/CMakeCCompilerABI.c.obj && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-ranlib.exe libcmTC_1893c.a && cd ."]
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
 ...
-
----
-events:
-  -
-    kind: "find-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:4 (project)"
-    mode: "file"
-    variable: "src_in"
-    description: "Path to a file."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "CMakeCCompilerId.c.in"
-    candidate_directories:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/"
-    found: "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerId.c.in"
-    search_context:
-      ENV{PATH}:
-        - "C:\\arm-gnu-toolchain\\bin"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
-        - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\nodejs\\"
-        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\arm-gnu-toolchain\\bin"
-        - "C:\\Program Files (x86)\\GnuWin32\\bin"
-        - "C:\\Windows\\System32\\ninga"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
-        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:\\Users\\farah\\.lmstudio\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Embedded_finalProj"
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:4 (project)"
-    message: |
-      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe 
-      Build flags: 
-      Id flags:  
-      
-      The output was:
-      1
-      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-exit.o): in function `exit':
-      exit.c:(.text.exit+0x28): undefined reference to `_exit'
-      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-closer.o): in function `_close_r':
-      closer.c:(.text._close_r+0x18): undefined reference to `_close'
-      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-lseekr.o): in function `_lseek_r':
-      lseekr.c:(.text._lseek_r+0x24): undefined reference to `_lseek'
-      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-readr.o): in function `_read_r':
-      readr.c:(.text._read_r+0x24): undefined reference to `_read'
-      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-writer.o): in function `_write_r':
-      writer.c:(.text._write_r+0x24): undefined reference to `_write'
-      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
-      sbrkr.c:(.text._sbrk_r+0x18): undefined reference to `_sbrk'
-      collect2.exe: error: ld returned 1 exit status
-      
-      
-  -
-    kind: "find-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:4 (project)"
-    mode: "file"
-    variable: "src_in"
-    description: "Path to a file."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "CMakeCCompilerId.c.in"
-    candidate_directories:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/"
-    found: "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerId.c.in"
-    search_context:
-      ENV{PATH}:
-        - "C:\\arm-gnu-toolchain\\bin"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
-        - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\nodejs\\"
-        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\arm-gnu-toolchain\\bin"
-        - "C:\\Program Files (x86)\\GnuWin32\\bin"
-        - "C:\\Windows\\System32\\ninga"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
-        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:\\Users\\farah\\.lmstudio\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Embedded_finalProj"
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:4 (project)"
-    message: |
-      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe 
-      Build flags: 
-      Id flags: -c 
-      
-      The output was:
-      0
-      
-      
-      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
-      
-      The C compiler identification is GNU, found in:
-        D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/4.3.2/CompilerIdC/CMakeCCompilerId.o
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:1296 (message)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:170 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "CMakeLists.txt:4 (project)"
-    message: |
-      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
-      arm-none-eabi-gcc.exe (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 14.3.1 20250623
-      Copyright (C) 2024 Free Software Foundation, Inc.
-      This is free software; see the source for copying conditions.  There is NO
-      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-      
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:4 (project)"
-    checks:
-      - "Detecting C compiler ABI info"
-    directories:
-      source: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-kvbyo2"
-      binary: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-kvbyo2"
-    cmakeVariables:
-      CMAKE_C_FLAGS: ""
-      CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "CMAKE_C_ABI_COMPILED"
-      cached: true
-      stdout: |
-        Change Dir: 'D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-kvbyo2'
-        
-        Run Build Command(s): C:/Windows/System32/ninga/ninja.exe -v cmTC_f642f
-        [1/2] C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c"
-        Using built-in specs.
-        COLLECT_GCC=C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe
-        Target: arm-none-eabi
-        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=i686-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)'
-        Thread model: single
-        Supported LTO compression algorithms: zlib
-        gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_f642f.dir/'
-         C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot C:/arm-gnu-toolchain/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f642f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\farah\\AppData\\Local\\Temp\\cccOkAd3.s
-        GNU C17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
-        	compiled by GNU C version 10-win32 20220113, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
-        
-        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"
-        ignoring nonexistent directory "C:/arm-gnu-toolchain/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"
-        ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"
-        ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"
-        ignoring duplicate directory "C:/arm-gnu-toolchain/bin/../arm-none-eabi/include"
-        #include "..." search starts here:
-        #include <...> search starts here:
-         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/include
-         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed
-         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
-        End of search list.
-        Compiler executable checksum: b7d3e61a3c100ce920bcfa732511112e
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_f642f.dir/'
-         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj C:\\Users\\farah\\AppData\\Local\\Temp\\cccOkAd3.s
-        GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
-        COMPILER_PATH=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../libexec/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
-        LIBRARY_PATH=C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../lib/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;C:/arm-gnu-toolchain/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe  -v -Wl,-v CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj -o cmTC_f642f.exe -Wl,--out-implib,libcmTC_f642f.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
-        FAILED: [code=1] cmTC_f642f.exe 
-        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe  -v -Wl,-v CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj -o cmTC_f642f.exe -Wl,--out-implib,libcmTC_f642f.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
-        Using built-in specs.
-        COLLECT_GCC=C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe
-        COLLECT_LTO_WRAPPER=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe
-        Target: arm-none-eabi
-        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=i686-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)'
-        Thread model: single
-        Supported LTO compression algorithms: zlib
-        gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
-        COMPILER_PATH=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../libexec/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
-        LIBRARY_PATH=C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../lib/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;C:/arm-gnu-toolchain/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f642f.exe' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_f642f.'
-         C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/collect2.exe -plugin C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/liblto_plugin.dll -plugin-opt=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\farah\\AppData\\Local\\Temp\\cc22RPpf.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=C:/arm-gnu-toolchain/bin/../arm-none-eabi -X -o cmTC_f642f.exe C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crti.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtbegin.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/crt0.o -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1 -LC:/arm-gnu-toolchain/bin/../lib/gcc -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib -LC:/arm-gnu-toolchain/bin/../arm-none-eabi/lib -v CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_f642f.dll.a --major-image-version 0 --minor-image-version 0 --start-group -lgcc -lc --end-group C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtend.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtn.o
-        collect2 version 14.3.1 20250623
-        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe -plugin C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/liblto_plugin.dll -plugin-opt=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\farah\\AppData\\Local\\Temp\\cc22RPpf.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=C:/arm-gnu-toolchain/bin/../arm-none-eabi -X -o cmTC_f642f.exe C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crti.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtbegin.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/crt0.o -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1 -LC:/arm-gnu-toolchain/bin/../lib/gcc -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib -LC:/arm-gnu-toolchain/bin/../arm-none-eabi/lib -v CMakeFiles/cmTC_f642f.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_f642f.dll.a --major-image-version 0 --minor-image-version 0 --start-group -lgcc -lc --end-group C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtend.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtn.o
-        GNU ld (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
-        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
-        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
-        collect2.exe: error: ld returned 1 exit status
-        ninja: build stopped: subcommand failed.
-        
-      exitCode: 1
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
-      - "CMakeLists.txt:4 (project)"
-    checks:
-      - "Check for working C compiler: C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe"
-    directories:
-      source: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-j3vxjx"
-      binary: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-j3vxjx"
-    cmakeVariables:
-      CMAKE_C_FLAGS: ""
-      CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "CMAKE_C_COMPILER_WORKS"
-      cached: true
-      stdout: |
-        Change Dir: 'D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-j3vxjx'
-        
-        Run Build Command(s): C:/Windows/System32/ninga/ninja.exe -v cmTC_9482e
-        [1/2] C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe    -o CMakeFiles/cmTC_9482e.dir/testCCompiler.c.obj -c "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-j3vxjx/testCCompiler.c"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe   CMakeFiles/cmTC_9482e.dir/testCCompiler.c.obj -o cmTC_9482e.exe -Wl,--out-implib,libcmTC_9482e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        FAILED: [code=1] cmTC_9482e.exe 
-        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe   CMakeFiles/cmTC_9482e.dir/testCCompiler.c.obj -o cmTC_9482e.exe -Wl,--out-implib,libcmTC_9482e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
-        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
-        collect2.exe: error: ld returned 1 exit status
-        ninja: build stopped: subcommand failed.
-        
-      exitCode: 1
-...
-
----
-events:
-  -
-    kind: "find-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:4 (project)"
-    mode: "file"
-    variable: "src_in"
-    description: "Path to a file."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "CMakeCCompilerId.c.in"
-    candidate_directories:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/"
-    found: "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerId.c.in"
-    search_context:
-      ENV{PATH}:
-        - "C:\\arm-gnu-toolchain\\bin"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
-        - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\nodejs\\"
-        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\arm-gnu-toolchain\\bin"
-        - "C:\\Program Files (x86)\\GnuWin32\\bin"
-        - "C:\\Windows\\System32\\ninga"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
-        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:\\Users\\farah\\.lmstudio\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Embedded_finalProj"
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:4 (project)"
-    message: |
-      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe 
-      Build flags: 
-      Id flags:  
-      
-      The output was:
-      1
-      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-exit.o): in function `exit':
-      exit.c:(.text.exit+0x28): undefined reference to `_exit'
-      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-closer.o): in function `_close_r':
-      closer.c:(.text._close_r+0x18): undefined reference to `_close'
-      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-lseekr.o): in function `_lseek_r':
-      lseekr.c:(.text._lseek_r+0x24): undefined reference to `_lseek'
-      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-readr.o): in function `_read_r':
-      readr.c:(.text._read_r+0x24): undefined reference to `_read'
-      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-writer.o): in function `_write_r':
-      writer.c:(.text._write_r+0x24): undefined reference to `_write'
-      C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
-      sbrkr.c:(.text._sbrk_r+0x18): undefined reference to `_sbrk'
-      collect2.exe: error: ld returned 1 exit status
-      
-      
-  -
-    kind: "find-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:4 (project)"
-    mode: "file"
-    variable: "src_in"
-    description: "Path to a file."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "CMakeCCompilerId.c.in"
-    candidate_directories:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/"
-    found: "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerId.c.in"
-    search_context:
-      ENV{PATH}:
-        - "C:\\arm-gnu-toolchain\\bin"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
-        - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\nodejs\\"
-        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\arm-gnu-toolchain\\bin"
-        - "C:\\Program Files (x86)\\GnuWin32\\bin"
-        - "C:\\Windows\\System32\\ninga"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Users\\farah\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Users\\farah\\AppData\\Roaming\\npm"
-        - "C:\\Users\\farah\\AppData\\Local\\Programs\\Antigravity\\bin"
-        - "C:\\Users\\farah\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:\\Users\\farah\\.lmstudio\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Embedded_finalProj"
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:4 (project)"
-    message: |
-      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe 
-      Build flags: 
-      Id flags: -c 
-      
-      The output was:
-      0
-      
-      
-      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
-      
-      The C compiler identification is GNU, found in:
-        D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/4.3.2/CompilerIdC/CMakeCCompilerId.o
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:1296 (message)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:170 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "CMakeLists.txt:4 (project)"
-    message: |
-      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
-      arm-none-eabi-gcc.exe (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 14.3.1 20250623
-      Copyright (C) 2024 Free Software Foundation, Inc.
-      This is free software; see the source for copying conditions.  There is NO
-      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-      
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:4 (project)"
-    checks:
-      - "Detecting C compiler ABI info"
-    directories:
-      source: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-4azr19"
-      binary: "D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-4azr19"
-    cmakeVariables:
-      CMAKE_C_FLAGS: ""
-      CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "CMAKE_C_ABI_COMPILED"
-      cached: true
-      stdout: |
-        Change Dir: 'D:/embedded final proj/Embedded_finalProj/build/CMakeFiles/CMakeScratch/TryCompile-4azr19'
-        
-        Run Build Command(s): C:/Windows/System32/ninga/ninja.exe -v cmTC_cc351
-        [1/2] C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c"
-        Using built-in specs.
-        COLLECT_GCC=C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe
-        Target: arm-none-eabi
-        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=i686-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)'
-        Thread model: single
-        Supported LTO compression algorithms: zlib
-        gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_cc351.dir/'
-         C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot C:/arm-gnu-toolchain/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_cc351.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\farah\\AppData\\Local\\Temp\\ccWlq8fQ.s
-        GNU C17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
-        	compiled by GNU C version 10-win32 20220113, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
-        
-        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"
-        ignoring nonexistent directory "C:/arm-gnu-toolchain/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"
-        ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"
-        ignoring duplicate directory "C:/arm-gnu-toolchain/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"
-        ignoring duplicate directory "C:/arm-gnu-toolchain/bin/../arm-none-eabi/include"
-        #include "..." search starts here:
-        #include <...> search starts here:
-         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/include
-         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed
-         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
-        End of search list.
-        Compiler executable checksum: b7d3e61a3c100ce920bcfa732511112e
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_cc351.dir/'
-         C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.obj C:\\Users\\farah\\AppData\\Local\\Temp\\ccWlq8fQ.s
-        GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
-        COMPILER_PATH=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../libexec/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
-        LIBRARY_PATH=C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../lib/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;C:/arm-gnu-toolchain/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe  -v -Wl,-v CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.obj -o cmTC_cc351.exe -Wl,--out-implib,libcmTC_cc351.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
-        FAILED: [code=1] cmTC_cc351.exe 
-        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe  -v -Wl,-v CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.obj -o cmTC_cc351.exe -Wl,--out-implib,libcmTC_cc351.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
-        Using built-in specs.
-        COLLECT_GCC=C:\\arm-gnu-toolchain\\bin\\arm-none-eabi-gcc.exe
-        COLLECT_LTO_WRAPPER=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe
-        Target: arm-none-eabi
-        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=i686-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)'
-        Thread model: single
-        Supported LTO compression algorithms: zlib
-        gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
-        COMPILER_PATH=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../libexec/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
-        LIBRARY_PATH=C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/;C:/arm-gnu-toolchain/bin/../lib/gcc/;C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;C:/arm-gnu-toolchain/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cc351.exe' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_cc351.'
-         C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/collect2.exe -plugin C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/liblto_plugin.dll -plugin-opt=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\farah\\AppData\\Local\\Temp\\ccanRBLV.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=C:/arm-gnu-toolchain/bin/../arm-none-eabi -X -o cmTC_cc351.exe C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crti.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtbegin.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/crt0.o -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1 -LC:/arm-gnu-toolchain/bin/../lib/gcc -LC:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib -LC:/arm-gnu-toolchain/bin/../arm-none-eabi/lib -v CMakeFiles/cmTC_cc351.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_cc351.dll.a --major-image-version 0 --minor-image-version 0 --start-group -lgcc -lc --end-group C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtend.o C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/crtn.o
-        collect2 version 14.3.1 20250623
-        C:/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe -plugin C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/liblto_plugin.dll -plugin-opt=C:/arm-gnu-toolchain/bin/../libexec/gcc/arm-none-eabi/14.3.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\farah\\AppData\\Local\\Temp\\ccanRBLV.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=C:/arm-gnu-toolchain/bin/../arm-none-eabi -X -o cmTC_cc351.exe C:/arm-gnu-toolchain/bin/../lib/gcc/arm-no

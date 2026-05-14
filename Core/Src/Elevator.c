@@ -290,7 +290,7 @@ void Elevator_Update(void)
         case ELV_MOVING_UP:
         {
             /* Ramp down 1 floor before target */
-            if ((GSS.target > GSS.position) && (GSS.target - GSS.position) <= 1u)
+            if ((GSS.target > GSS.position) && (GSS.target - GSS.position) <= 1)
             {
                 if (GSS.speed != PWM_DUTY_SLOW)
                 {
@@ -326,7 +326,7 @@ void Elevator_Update(void)
         case ELV_MOVING_DOWN:
         {
             /* Ramp down 1 floor before target */
-            if ((GSS.position > GSS.target) && (GSS.position - GSS.target) <= 1u)
+            if ((GSS.position > GSS.target) && (GSS.position - GSS.target) <= 1)
             {
                 if (GSS.speed != PWM_DUTY_SLOW)
                 {

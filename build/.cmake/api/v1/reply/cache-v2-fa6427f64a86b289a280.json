@@ -43,10 +43,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "ASM compiler"
+					"value" : ""
 				}
 			],
-			"type" : "STRING",
+			"type" : "INTERNAL",
 			"value" : "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe"
 		},
 		{
@@ -80,6 +80,18 @@
 			],
 			"type" : "FILEPATH",
 			"value" : "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc-ranlib.exe"
+		},
+		{
+			"name" : "CMAKE_ASM_COMPILER_WORKS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
 		},
 		{
 			"name" : "CMAKE_ASM_FLAGS",
@@ -263,10 +275,10 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : ""
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "INTERNAL",
 			"value" : "C:/arm-gnu-toolchain/bin/arm-none-eabi-g++.exe"
 		},
 		{
@@ -279,10 +291,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : ""
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "INTERNAL",
 			"value" : "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe"
 		},
 		{
@@ -396,22 +408,6 @@
 			],
 			"type" : "STRING",
 			"value" : "-O2 -g -DNDEBUG"
-		},
-		{
-			"name" : "CMAKE_C_STANDARD_LIBRARIES",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Libraries linked by default with all C applications."
-				}
-			],
-			"type" : "STRING",
-			"value" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32"
 		},
 		{
 			"name" : "CMAKE_DLLTOOL",
@@ -814,15 +810,11 @@
 			"properties" : 
 			[
 				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
 					"name" : "HELPSTRING",
-					"value" : "Path to a program."
+					"value" : ""
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "INTERNAL",
 			"value" : "C:/arm-gnu-toolchain/bin/arm-none-eabi-objcopy.exe"
 		},
 		{
@@ -928,114 +920,6 @@
 			],
 			"type" : "FILEPATH",
 			"value" : "C:/arm-gnu-toolchain/bin/arm-none-eabi-ranlib.exe"
-		},
-		{
-			"name" : "CMAKE_RC_COMPILER",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "RC compiler"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "C:/mingw64/bin/windres.exe"
-		},
-		{
-			"name" : "CMAKE_RC_COMPILER_WORKS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : ""
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "1"
-		},
-		{
-			"name" : "CMAKE_RC_FLAGS",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags for Windows Resource Compiler during all build types."
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
-			"name" : "CMAKE_RC_FLAGS_DEBUG",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags for Windows Resource Compiler during DEBUG builds."
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
-			"name" : "CMAKE_RC_FLAGS_MINSIZEREL",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags for Windows Resource Compiler during MINSIZEREL builds."
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
-			"name" : "CMAKE_RC_FLAGS_RELEASE",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags for Windows Resource Compiler during RELEASE builds."
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
-			"name" : "CMAKE_RC_FLAGS_RELWITHDEBINFO",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags for Windows Resource Compiler during RELWITHDEBINFO builds."
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
 		},
 		{
 			"name" : "CMAKE_READELF",
@@ -1144,6 +1028,18 @@
 			],
 			"type" : "STRING",
 			"value" : ""
+		},
+		{
+			"name" : "CMAKE_SIZE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "C:/arm-gnu-toolchain/bin/arm-none-eabi-size.exe"
 		},
 		{
 			"name" : "CMAKE_SKIP_INSTALL_RPATH",
@@ -1290,6 +1186,18 @@
 			"value" : "CMAKE_TAPI-NOTFOUND"
 		},
 		{
+			"name" : "CMAKE_TOOLCHAIN_FILE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The CMake toolchain file"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "D:/embedded final proj/Embedded_finalProj/cmake/arm-none-eabi.cmake"
+		},
+		{
 			"name" : "CMAKE_VERBOSE_MAKEFILE",
 			"properties" : 
 			[
@@ -1304,6 +1212,30 @@
 			],
 			"type" : "BOOL",
 			"value" : "FALSE"
+		},
+		{
+			"name" : "CXX_COMPILER_PATH",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/arm-gnu-toolchain/bin/arm-none-eabi-g++.exe"
+		},
+		{
+			"name" : "C_COMPILER_PATH",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/arm-gnu-toolchain/bin/arm-none-eabi-gcc.exe"
 		},
 		{
 			"name" : "Embedded_finalProj_BINARY_DIR",
@@ -1340,6 +1272,30 @@
 			],
 			"type" : "STATIC",
 			"value" : "D:/embedded final proj/Embedded_finalProj"
+		},
+		{
+			"name" : "OBJCOPY_PATH",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/arm-gnu-toolchain/bin/arm-none-eabi-objcopy.exe"
+		},
+		{
+			"name" : "SIZE_PATH",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/arm-gnu-toolchain/bin/arm-none-eabi-size.exe"
 		}
 	],
 	"kind" : "cache",

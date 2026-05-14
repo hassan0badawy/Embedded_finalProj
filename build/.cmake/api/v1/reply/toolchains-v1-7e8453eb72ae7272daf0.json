@@ -24,7 +24,12 @@
 				"id" : "GNU",
 				"implicit" : 
 				{
-					"includeDirectories" : [],
+					"includeDirectories" : 
+					[
+						"C:/arm-gnu-toolchain/lib/gcc/arm-none-eabi/14.3.1/include",
+						"C:/arm-gnu-toolchain/lib/gcc/arm-none-eabi/14.3.1/include-fixed",
+						"C:/arm-gnu-toolchain/arm-none-eabi/include"
+					],
 					"linkDirectories" : [],
 					"linkFrameworkDirectories" : [],
 					"linkLibraries" : []
@@ -37,19 +42,6 @@
 			[
 				"c",
 				"m"
-			]
-		},
-		{
-			"compiler" : 
-			{
-				"implicit" : {},
-				"path" : "C:/mingw64/bin/windres.exe"
-			},
-			"language" : "RC",
-			"sourceFileExtensions" : 
-			[
-				"rc",
-				"RC"
 			]
 		}
 	],

@@ -122,8 +122,6 @@ typedef struct {
  *   ... critical section ...
  *   Exit_Critical(primask);
  * ───────────────────────────────────────── */
-#define Enter_Critical()    ({ u32 _pm = __get_PRIMASK(); __disable_irq(); _pm; })
-#define Exit_Critical(_pm)  (__set_PRIMASK(_pm))
 
 /* ─────────────────────────────────────────
  * GLOBAL SHARED STATE INSTANCE
